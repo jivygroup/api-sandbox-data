@@ -25,7 +25,7 @@
 								"backColor":"black",
 								"data": 
 								{
-									"q": "/om2.exchange.orders/placeOrder",
+									"q": "/om2.exchange.marketdata/orderBookEvents",
 									"sid": 300, 
 									"d": 
 									{
@@ -49,7 +49,7 @@
 								"backColor":"black",
 								"data": 
 								{
-									"q": "/om2.exchange.orders/placeOrder",
+									"q": "/om2.exchange.marketdata/orderBookEvents",
 									"sid": 300, 
 									"d": 
 									{
@@ -89,7 +89,7 @@
 										"sourceIpAddress" : "127.0.0.1",
 										"orderType": "limit",
 										"side": "buy",
-										"instanceId": "656238A6389DDDA05E59",
+										"instanceId": "8CBE66095B02AC24D7F4",
 										"quantity": 123,
 										"price": 100,
 										"isClosePositionOrder" : true,
@@ -107,12 +107,12 @@
 									"sid": 1, 
 									"d": 
 									{
-										"userId": "1",
+										"userId": "2",
 										"sourceIpAddress" : "127.0.0.1",
 										"orderType": "limit",
 										"side": "sell",
-										"instanceId": "656238A6389DDDA05E59",
-										"quantity": 5,
+										"instanceId": "8CBE66095B02AC24D7F4",
+										"quantity": 123,
 										"price": 100,
 										"isClosePositionOrder" : true,
 										"requestTimestamp": "2018-07-30T21:59:07.739"
@@ -172,7 +172,7 @@
 										"sourceIpAddress" : "127.0.0.1",
 										"orderType": "limit",
 										"side": "aaa",
-										"instanceId": "656238A6389DDDA05E59",
+										"instanceId": "8CBE66095B02AC24D7F4",
 										"quantity": "5",
 										"price": "111",
 										"isClosePositionOrder" : true,
@@ -216,7 +216,7 @@
 										"sourceIpAddress" : "127.0.0.1",
 										"orderType": "limit",
 										"side": "buy",
-										"instanceId": "656238A6389DDDA05E59",
+										"instanceId": "8CBE66095B02AC24D7F4",
 										"quantity": "aa",
 										"price": "111",
 										"isClosePositionOrder" : true,
@@ -238,7 +238,7 @@
 										"sourceIpAddress" : "127.0.0.1",
 										"orderType": "limit",
 										"side": "buy",
-										"instanceId": "656238A6389DDDA05E59",
+										"instanceId": "8CBE66095B02AC24D7F4",
 										"quantity": "aa",
 										"price": "111",
 										"isClosePositionOrder" : true,
@@ -260,7 +260,7 @@
 										"sourceIpAddress" : "127.0.0.1",
 										"orderType": "limit",
 										"side": "sell",
-										"instanceId": "656238A6389DDDA05E59",
+										"instanceId": "8CBE66095B02AC24D7F4",
 										"quantity": 5,
 										"price": "aaa",
 										"isClosePositionOrder" : true,
@@ -326,102 +326,13 @@
 										"sourceIpAddress" : "127.0.0.1",
 										"orderType": "limit",
 										"side": "aaa",
-										"instanceId": "656238A6389DDDA05E59",
+										"instanceId": "8CBE66095B02AC24D7F4",
 										"quantity": "5",
 										"price": "111",
 										"isClosePositionOrder" : true,
 										"requestTimestamp": "2018-07-30T21:59:07.739"
 									}
 								}
-							},
-							{
-								"id" : "4",
-								"text": "Place Order with invalid instanceId",
-								"backColor":"black",
-								"data": 
-								{
-									"q": "/om2.exchange.orders/placeOrder",
-									"sid": 1, 
-									"d": 
-									{
-										"userId": "1",
-										"sourceIpAddress" : "127.0.0.1",
-										"orderType": "limit",
-										"side": "buy",
-										"instanceId": "QQQ",
-										"quantity": "5",
-										"price": "111",
-										"isClosePositionOrder" : true,
-										"requestTimestamp": "2018-07-30T21:59:07.739"
-									}
-								}
-							},
-							{
-								"id" : "5",
-								"text": "Place Order with invalid userId",
-								"backColor":"black",
-								"data": 
-								{
-									"q": "/om2.exchange.orders/placeOrder",
-									"sid": 1, 
-									"d": 
-									{
-										"userId": "!1!",
-										"sourceIpAddress" : "127.0.0.1",
-										"orderType": "limit",
-										"side": "buy",
-										"instanceId": "656238A6389DDDA05E59",
-										"quantity": "aa",
-										"price": "111",
-										"isClosePositionOrder" : true,
-										"requestTimestamp": "2018-07-30T21:59:07.739"
-									}
-								}
-							},
-							{
-								"id" : "5",
-								"text": "Place Order with invalid quantity",
-								"backColor":"black",
-								"data": 
-								{
-									"q": "/om2.exchange.orders/placeOrder",
-									"sid": 1, 
-									"d": 
-									{
-										"userId": "1",
-										"sourceIpAddress" : "127.0.0.1",
-										"orderType": "limit",
-										"side": "buy",
-										"instanceId": "656238A6389DDDA05E59",
-										"quantity": "aa",
-										"price": "111",
-										"isClosePositionOrder" : true,
-										"requestTimestamp": "2018-07-30T21:59:07.739"
-									}
-								}
-							},
-							{
-								"id" : "6",
-								"text": "Place Sell Order with invalid price",
-								"backColor":"black",
-								"data": 
-								{
-									"q": "/om2.exchange.orders/placeOrder",
-									"sid": 1, 
-									"d": 
-									{
-										"userId": "1",
-										"sourceIpAddress" : "127.0.0.1",
-										"orderType": "limit",
-										"side": "sell",
-										"instanceId": "656238A6389DDDA05E59",
-										"quantity": 5,
-										"price": "aaa",
-										"isClosePositionOrder" : true,
-										"requestTimestamp": "2018-07-30T21:59:07.739"
-									}
-								}
-							
 							}
 						]
 					}	
@@ -486,95 +397,6 @@
 										"requestTimestamp": "2018-07-30T21:59:07.739"
 									}
 								}
-							},
-							{
-								"id" : "4",
-								"text": "Place Order with invalid instanceId",
-								"backColor":"black",
-								"data": 
-								{
-									"q": "/om2.exchange.orders/placeOrder",
-									"sid": 1, 
-									"d": 
-									{
-										"userId": "1",
-										"sourceIpAddress" : "127.0.0.1",
-										"orderType": "limit",
-										"side": "buy",
-										"instanceId": "QQQ",
-										"quantity": "5",
-										"price": "111",
-										"isClosePositionOrder" : true,
-										"requestTimestamp": "2018-07-30T21:59:07.739"
-									}
-								}
-							},
-							{
-								"id" : "5",
-								"text": "Place Order with invalid userId",
-								"backColor":"black",
-								"data": 
-								{
-									"q": "/om2.exchange.orders/placeOrder",
-									"sid": 1, 
-									"d": 
-									{
-										"userId": "!1!",
-										"sourceIpAddress" : "127.0.0.1",
-										"orderType": "limit",
-										"side": "buy",
-										"instanceId": "656238A6389DDDA05E59",
-										"quantity": "aa",
-										"price": "111",
-										"isClosePositionOrder" : true,
-										"requestTimestamp": "2018-07-30T21:59:07.739"
-									}
-								}
-							},
-							{
-								"id" : "5",
-								"text": "Place Order with invalid quantity",
-								"backColor":"black",
-								"data": 
-								{
-									"q": "/om2.exchange.orders/placeOrder",
-									"sid": 1, 
-									"d": 
-									{
-										"userId": "1",
-										"sourceIpAddress" : "127.0.0.1",
-										"orderType": "limit",
-										"side": "buy",
-										"instanceId": "656238A6389DDDA05E59",
-										"quantity": "aa",
-										"price": "111",
-										"isClosePositionOrder" : true,
-										"requestTimestamp": "2018-07-30T21:59:07.739"
-									}
-								}
-							},
-							{
-								"id" : "6",
-								"text": "Place Sell Order with invalid price",
-								"backColor":"black",
-								"data": 
-								{
-									"q": "/om2.exchange.orders/placeOrder",
-									"sid": 1, 
-									"d": 
-									{
-										"userId": "1",
-										"sourceIpAddress" : "127.0.0.1",
-										"orderType": "limit",
-										"side": "sell",
-										"instanceId": "656238A6389DDDA05E59",
-										"quantity": 5,
-										"price": "aaa",
-										"isClosePositionOrder" : true,
-										"requestTimestamp": "2018-07-30T21:59:07.739"
-									}
-								}
-							
 							}
 						]
 					}	
