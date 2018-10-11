@@ -125,18 +125,17 @@
 								"backColor":"black",
 								"data": 
 								{
-									"q": "/om2.exchange.orders/orderEvents",
+									"q": "/om2.exchange.orders/userOrderEvents",
 									"sid": 1, 
 									"d": 
 									{
-										"sourceIpAddress": "127.0.0.1",
 										"userId": "1"
 									}
 								}
 							},
 							{
 								"id" : "2",
-								"text": "Get Order Events",
+								"text": "Find Order",
 								"backColor":"black",
 								"data": 
 								{
