@@ -1,0 +1,848 @@
+{
+        "text": "<span class='brand-name icon node-icon'><span style='padding-right: 0px' class='text-white text-bold'>OM2-</span><span class='text-blue text-bold'>EXCHANGE</span></span>",
+        "id" : "2",
+        "type" : "ORG",
+        "backColor":"black",
+        "nodes":
+		[
+            {
+                "text": "InstanceService",
+                "id" : "1",
+                "type" : "API",
+                "backColor":"black",
+                "nodes": 
+				[
+					{
+						"text": "Success Requests",
+						"id" : "1",
+						"type" : "API",
+						"backColor":"black",
+						"nodes": 
+						[
+							{
+								"id" : "1",
+								"text": "Find Instance",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.instruments.InstanceService/find",
+									"sid": 1, 
+									"d": 
+									{
+										"instanceId": "A0A2A3C8FBE160A0A335"
+									}
+								}
+							},
+							{
+								"id" : "2",
+								"text": "Find Extended Instance",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.instruments.InstanceService/findExtended",
+									"sid": 1, 
+									"d": 
+									{
+										"instanceId": "A0A2A3C8FBE160A0A335"
+									}
+								} 
+							},
+							{
+								"id" : "3",
+								"text": "Save Instance",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.instruments.InstanceService/save",
+									"sid": 1, 
+									"d": 
+									{
+										"instrumentId": "BTC",
+										"status": "new",
+										"expiredAt": "2019-04-25T21:59:07.739"
+									}
+								}
+							},
+							{
+								"id" : "4",
+								"text": "Update Instance",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.instruments.InstanceService/update",
+									"sid": 1, 
+									"d": 
+									{
+										"instanceId": "A0A2A3C8FBE160A0A335",
+										"instrumentId": "BTC",
+										"status": "modified",
+										"expiredAt": "2025-04-25T21:59:07.739"
+									} 
+								}
+							}
+						]
+					},
+					{
+						"text": "Bad Requests",
+						"id" : "1",
+						"type" : "API",
+						"backColor":"black",
+						"nodes": 
+						[
+							{
+								"id" : "1",
+								"text": "Find Instance - Not-exist",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.instruments.InstanceService/find",
+									"sid": 1, 
+									"d": 
+									{
+										"instanceId": "Not-exist"
+									}
+								}
+							},
+							{
+								"id" : "2",
+								"text": "Find Extended Instance - Not-exist",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.instruments.InstanceService/findExtended",
+									"sid": 1, 
+									"d": 
+									{
+										"instanceId": "Not-exist"
+									}
+								} 
+							},
+							{
+								"id" : "3",
+								"text": "Save Instance - Instrument Not-exist",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.instruments.InstanceService/save",
+									"sid": 1, 
+									"d": 
+									{
+										"instrumentId": "NotExist",
+										"status": "new",
+										"expiredAt": "2019-04-25T21:59:07.739"
+									}
+								}
+							},
+							{
+								"id" : "3",
+								"text": "Save Instance - invalid status",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.instruments.InstanceService/save",
+									"sid": 1, 
+									"d": 
+									{
+										"instrumentId": "BTC",
+										"status": "invalid",
+										"expiredAt": "2019-04-25T21:59:07.739"
+									}
+								}
+							},
+							{
+								"id" : "3",
+								"text": "Save Instance - invalid date",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.instruments.InstanceService/save",
+									"sid": 1, 
+									"d": 
+									{
+										"instrumentId": "BTC",
+										"status": "new",
+										"expiredAt": "20190425T21:59:07.739"
+									}
+								}
+							},
+							{
+								"id" : "4",
+								"text": "Update Instance - template",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.instruments.InstanceService/update",
+									"sid": 1, 
+									"d": 
+									{
+										"instanceId": "A0A2A3C8FBE160A0A335",
+										"instrumentId": "BTC",
+										"status": "modified",
+										"expiredAt": "2025-04-25T21:59:07.739"
+									} 
+								}
+							}
+						]
+					}						
+                ]
+			},
+			{
+                "text": "InstrumentsService",
+                "id" : "2",
+                "type" : "API",
+                "backColor":"black",
+                "nodes": 
+				[
+                    {
+                        "id" : "1",
+                        "text": "Instrument Creation",
+                        "backColor":"black",
+                        "data": 
+						{
+							"q": "/om2.exchange.instruments.InstrumentService/save",
+							"sid": 1, 
+							"d": 
+							{ 
+								"instrumentId": "BTC", 
+								"name": "Bitcoin", 
+								"precision": 8, 
+								"status": "Active" 
+							}
+						}
+                    },
+					{
+                        "id" : "1",
+                        "text": "Find Instrument",
+                        "backColor":"black",
+                        "data": 
+						{
+							"q": "/om2.exchange.instruments.InstrumentService/find",
+							"sid": 1, 
+							"d": 
+							{ 
+								"instrumentId": "BTC" 
+							}
+						}
+                    },
+					{
+                        "id" : "1",
+                        "text": "Update Instrument",
+                        "backColor":"black",
+                        "data": 
+						{
+							"q": "/om2.exchange.instruments.InstrumentService/update",
+							"sid": 1, 
+							"d": 
+							{
+								"instrumentId": "BTC",
+								"name": "Euro",
+								"precision": 100,
+								"status": "example"
+							}
+						}
+                    }
+					
+					
+					
+                ]
+			},
+			{
+                "text": "OrderBook",
+                "id" : "1",
+                "type" : "API",
+                "backColor":"black",
+                "nodes": 
+				[
+					{
+						"text": "Success Requests",
+						"id" : "1",
+						"type" : "API",
+						"backColor":"black",
+						"nodes": 
+						[
+							{
+								"id" : "1",
+								"text": "Get Order Book Events",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.marketdata/orderBookEvents",
+									"sid": 300, 
+									"d": 
+									{
+										"instanceId": "E79AC63A3ADF5ABD5655"
+									}
+								}
+							}
+						]
+					},	
+					{
+						"text": "Bad Requests",
+						"id" : "1",
+						"type" : "API",
+						"backColor":"black",
+						"nodes": 
+						[
+						
+							{
+								"id" : "1",
+								"text": "Wrong instanceId",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.marketdata/orderBookEvents",
+									"sid": 300, 
+									"d": 
+									{
+										"instanceId": "E111111111111111"
+									}
+								}
+							}
+						]
+					}	
+                ]
+			},		
+			{
+                "text": "OrderService",
+                "id" : "1",
+                "type" : "API",
+                "backColor":"black",
+                "nodes": 
+				[
+					{
+						"text": "Success Requests",
+						"id" : "1",
+						"type" : "API",
+						"backColor":"black",
+						"nodes": 
+						[
+							{
+								"id" : "1",
+								"text": "Place Buy Order",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.orders/placeOrder",
+									"sid": 1, 
+									"d": 
+									{
+										"userId": "1",
+										"sourceIpAddress" : "127.0.0.1",
+										"orderType": "limit",
+										"side": "buy",
+										"instanceId": "E79AC63A3ADF5ABD5655",
+										"quantity": 123,
+										"price": 100,
+										"isClosePositionOrder" : true,
+										"requestTimestamp": "2018-07-25T21:59:07.739"
+									}
+								}
+							},
+							{
+								"id" : "2",
+								"text": "Place Sell Order",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.orders/placeOrder",
+									"sid": 1, 
+									"d": 
+									{
+										"userId": "2",
+										"sourceIpAddress" : "127.0.0.1",
+										"orderType": "limit",
+										"side": "sell",
+										"instanceId": "E79AC63A3ADF5ABD5655",
+										"quantity": 123,
+										"price": 100,
+										"isClosePositionOrder" : true,
+										"requestTimestamp": "2018-07-30T21:59:07.739"
+									}
+								}
+							},
+							{
+								"id" : "2",
+								"text": "Get Order Events",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.orders/userOrderEvents",
+									"sid": 1, 
+									"d": 
+									{
+										"userId": "1"
+									}
+								}
+							},
+							{
+								"id" : "2",
+								"text": "Find Order",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.orders/findOrder",
+									"sid": 1, 
+									"d": 
+									{
+										"orderId": "046012c7-3d64-4a3b-bd32-2e0839e2c332"
+									}
+								}
+							}
+						]
+					},	
+					{
+						"text": "Bad Requests",
+						"id" : "1",
+						"type" : "API",
+						"backColor":"black",
+						"nodes": 
+						[
+						
+							{
+								"id" : "3",
+								"text": "Place Order with invalid side position",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.orders/placeOrder",
+									"sid": 1, 
+									"d": 
+									{
+										"userId": "1",
+										"sourceIpAddress" : "127.0.0.1",
+										"orderType": "limit",
+										"side": "aaa",
+										"instanceId": "E79AC63A3ADF5ABD5655",
+										"quantity": "5",
+										"price": "111",
+										"isClosePositionOrder" : true,
+										"requestTimestamp": "2018-07-30T21:59:07.739"
+									}
+								}
+							},
+							{
+								"id" : "4",
+								"text": "Place Order with invalid instanceId",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.orders/placeOrder",
+									"sid": 1, 
+									"d": 
+									{
+										"userId": "1",
+										"sourceIpAddress" : "127.0.0.1",
+										"orderType": "limit",
+										"side": "buy",
+										"instanceId": "QQQ",
+										"quantity": "5",
+										"price": "111",
+										"isClosePositionOrder" : true,
+										"requestTimestamp": "2018-07-30T21:59:07.739"
+									}
+								}
+							},
+							{
+								"id" : "5",
+								"text": "Place Order with invalid userId",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.orders/placeOrder",
+									"sid": 1, 
+									"d": 
+									{
+										"userId": "!1!",
+										"sourceIpAddress" : "127.0.0.1",
+										"orderType": "limit",
+										"side": "buy",
+										"instanceId": "E79AC63A3ADF5ABD5655",
+										"quantity": "aa",
+										"price": "111",
+										"isClosePositionOrder" : true,
+										"requestTimestamp": "2018-07-30T21:59:07.739"
+									}
+								}
+							},
+							{
+								"id" : "5",
+								"text": "Place Order with invalid quantity",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.orders/placeOrder",
+									"sid": 1, 
+									"d": 
+									{
+										"userId": "1",
+										"sourceIpAddress" : "127.0.0.1",
+										"orderType": "limit",
+										"side": "buy",
+										"instanceId": "E79AC63A3ADF5ABD5655",
+										"quantity": "aa",
+										"price": "111",
+										"isClosePositionOrder" : true,
+										"requestTimestamp": "2018-07-30T21:59:07.739"
+									}
+								}
+							},
+							{
+								"id" : "6",
+								"text": "Place Sell Order with invalid price",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.orders/placeOrder",
+									"sid": 1, 
+									"d": 
+									{
+										"userId": "1",
+										"sourceIpAddress" : "127.0.0.1",
+										"orderType": "limit",
+										"side": "sell",
+										"instanceId": "E79AC63A3ADF5ABD5655",
+										"quantity": 5,
+										"price": "aaa",
+										"isClosePositionOrder" : true,
+										"requestTimestamp": "2018-07-30T21:59:07.739"
+									}
+								}
+							
+							}
+						]
+					}	
+                ]
+			},		
+			{
+                "text": "OrderFilledEvents",
+                "id" : "2",
+                "type" : "API",
+                "backColor":"black",
+                "nodes": 
+				[
+					{
+						"text": "Success Requests",
+						"id" : "1",
+						"type" : "API",
+						"backColor":"black",
+						"nodes": 
+						[
+							{
+								"id" : "1",
+								"text": "Get Filled Events",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.userTrade/orderFilledEvents",
+									"sid": 100, 
+									"d": 
+									{
+										"userId": "1",
+										"numberOfReturnedFillsOnSubscription": 20
+									}
+								}
+							}
+						]
+					},	
+					{
+						"text": "Bad Requests",
+						"id" : "1",
+						"type" : "API",
+						"backColor":"black",
+						"nodes": 
+						[
+						
+							{
+								"id" : "3",
+								"text": "Place Order with invalid side position",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.orders/placeOrder",
+									"sid": 1, 
+									"d": 
+									{
+										"userId": "1",
+										"sourceIpAddress" : "127.0.0.1",
+										"orderType": "limit",
+										"side": "aaa",
+										"instanceId": "E79AC63A3ADF5ABD5655",
+										"quantity": "5",
+										"price": "111",
+										"isClosePositionOrder" : true,
+										"requestTimestamp": "2018-07-30T21:59:07.739"
+									}
+								}
+							}
+						]
+					}	
+                ]
+			},
+			{
+                "text": "PositionEvent",
+                "id" : "3",
+                "type" : "API",
+                "backColor":"black",
+                "nodes": 
+				[
+					{
+						"text": "Success Requests",
+						"id" : "1",
+						"type" : "API",
+						"backColor":"black",
+						"nodes": 
+						[
+							{
+								"id" : "1",
+								"text": "Get Position Events",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.userTrade/positionEvents",
+									"sid": 200, 
+									"d": 
+									{
+										"userId": "1"
+									}
+								}
+							}
+						]
+					},	
+					{
+						"text": "Bad Requests",
+						"id" : "1",
+						"type" : "API",
+						"backColor":"black",
+						"nodes": 
+						[
+						
+							{
+								"id" : "3",
+								"text": "Place Order with invalid side position",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.orders/placeOrder",
+									"sid": 1, 
+									"d": 
+									{
+										"userId": "1",
+										"sourceIpAddress" : "127.0.0.1",
+										"orderType": "limit",
+										"side": "aaa",
+										"instanceId": "656238A6389DDDA05E59",
+										"quantity": "5",
+										"price": "111",
+										"isClosePositionOrder" : true,
+										"requestTimestamp": "2018-07-30T21:59:07.739"
+									}
+								}
+							}
+						]
+					}	
+                ]
+			},						
+			{
+                "text": "UserService",
+                "id" : "4",
+                "type" : "API",
+                "backColor":"black",
+                "nodes": 
+				[
+					{
+						"text": "Create User",
+						"id" : "1",
+						"type" : "API",
+						"backColor":"black",
+						"nodes": 
+						[
+							{
+							"text": "Success Requests",
+							"id" : "1",
+							"type" : "API",
+							"backColor":"black",
+							"nodes": 
+							[
+							{
+								"id" : "1",
+								"text": "User Creation",
+								"backColor":"black",
+								"data": 
+									{
+										"q": "/om2.exchange.users.service.UserService/create",
+										"sid": 1, 
+										"d": 
+										{
+											"userId": "100", 
+											"currency": "EUR", 
+											"ipAddress": "127.0.0.1"
+										}
+									}
+							}		
+							]
+							},
+							{
+								"text": "Bad Requests",
+								"id" : "1",
+								"type" : "API",
+								"backColor":"black",
+								"nodes": 
+								[
+									{
+									"id" : "1",
+									"text": "UserId Duplication",
+									"backColor":"black",
+									"data": 
+										{
+											"q": "/om2.exchange.users.service.UserService/create",
+											"sid": 1, 
+											"d": 
+											{
+												"userId": "1", 
+												"currency": "EUR", 
+												"ipAddress": "127.0.0.1"
+											}
+										}
+									},
+									{
+									"id" : "1",
+									"text": "Request without required object",
+									"backColor":"black",
+									"data": 
+										{
+											"q": "/om2.exchange.users.service.UserService/create",
+											"sid": 1, 
+											"d": 
+											{
+												
+											}
+										}
+									},
+									{
+									"id" : "1",
+									"text": "Request without userId",
+									"backColor":"black",
+									"data": 
+										{
+											"q": "/om2.exchange.users.service.UserService/create",
+											"sid": 1, 
+											"d": 
+											{
+												"currency": "BTC",
+												"ipAddress": "127.0.0.1"
+											}
+										}
+									},
+									{
+									"id" : "1",
+									"text": "User Creation -  with undefined key values in the object",
+									"backColor":"black",
+									"data": 
+										{
+											"q": "/om2.exchange.users.service.UserService/create",
+											"sid": 1, 
+											"d": 
+											{
+												"userId": null,
+												"currency": null,
+												"ipAddress": null
+											}
+										}
+									},
+									{
+									"id" : "1",
+									"text": "User Creation -  with boolean values",
+									"backColor":"black",
+									"data": 
+										{
+											"q": "/om2.exchange.users.service.UserService/create",
+											"sid": 1, 
+											"d": 
+											{
+												"userId": true,
+												"currency": false,
+												"ipAddress": true
+											}
+										}
+									},
+									{
+									"id" : "1",
+									"text": "User Creation -  with any additonal key and value",
+									"backColor":"black",
+									"data": 
+										{
+											"q": "/om2.exchange.users.service.UserService/create",
+											"sid": 1, 
+											"d": 
+											{
+												"userId": "2",
+												"currency": "BTC",
+												"ipAddress": "127.0.0.1",
+												"newValue": "Random"
+											}
+										}
+									}
+								]
+							}
+						]
+					},
+					{
+						"text": "Find User",
+						"id" : "1",
+						"type" : "API",
+						"backColor":"black",
+						"nodes": 
+						[
+							{
+									"text": "Success Requests",
+									"id" : "1",
+									"type" : "API",
+									"backColor":"black",
+									"nodes": 
+									[
+										{
+											"id" : "1",
+											"text": "Find User",
+											"backColor":"black",
+											"data": 
+												{
+													"q": "/om2.exchange.users.service.UserService/find",
+													"sid": 1, 
+													"d": 
+													{
+														"internalUserId": "07502175-ae5c-4d15-b25c-256f3737e947"
+													}
+												}
+										}
+									]
+							},
+							{
+									"text": "Bad Requests",
+									"id" : "1",
+									"type" : "API",
+									"backColor":"black",
+									"nodes": 
+									[
+										{
+											"id" : "1",
+											"text": "Find not-exist UserId",
+											"backColor":"black",
+											"data": 
+												{
+													"q": "/om2.exchange.users.service.UserService/find",
+													"sid": 1, 
+													"d": 
+													{
+														"internalUserId": "07502175ae5c4d1525c256f3737e947"
+													}
+												}
+										}
+									]
+							}
+						]
+					}
+				]
+			}
+		]
+ }
+	
