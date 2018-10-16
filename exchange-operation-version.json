@@ -79,6 +79,22 @@
 										"expiredAt": "2025-04-25T21:59:07.739"
 									} 
 								}
+							},
+							{
+								"id" : "3",
+								"text": "Save Instance",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.instruments.InstanceService/save",
+									"sid": 1, 
+									"d": 
+									{
+										"instrumentId": "BTC",
+										"status": "new",
+										"expiredAt": "2019-04-25T21:59:07.739"
+									}
+								}
 							}
 						]
 					},
@@ -240,7 +256,75 @@
 								"status": "example"
 							}
 						}
-                    }
+                    },
+					{
+                        "id" : "1",
+                        "text": "BTC Instrument Creation",
+                        "backColor":"black",
+                        "data": 
+						{
+							"q": "/om2.exchange.instruments.InstrumentService/save",
+							"sid": 1, 
+							"d": 
+							{ 
+								"instrumentId": "BTC", 
+								"name": "Bitcoin", 
+								"precision": 8, 
+								"status": "Active" 
+							}
+						}
+					},
+					{
+                        "id" : "1",
+                        "text": "XAU Instrument Creation",
+                        "backColor":"black",
+                        "data": 
+						{
+							"q": "/om2.exchange.instruments.InstrumentService/save",
+							"sid": 1, 
+							"d": 
+							{ 
+								"instrumentId": "XAU", 
+								"name": "Gold", 
+								"precision": 8, 
+								"status": "Active" 
+							}
+						}
+					},
+					{
+                        "id" : "1",
+                        "text": "USOIL Instrument Creation",
+                        "backColor":"black",
+                        "data": 
+						{
+							"q": "/om2.exchange.instruments.InstrumentService/save",
+							"sid": 1, 
+							"d": 
+							{ 
+								"instrumentId": "OIL", 
+								"name": "USOIL", 
+								"precision": 8, 
+								"status": "Active" 
+							}
+						}
+					},
+					{
+                        "id" : "1",
+                        "text": "UKOIL Instrument Creation",
+                        "backColor":"black",
+                        "data": 
+						{
+							"q": "/om2.exchange.instruments.InstrumentService/save",
+							"sid": 1, 
+							"d": 
+							{ 
+								"instrumentId": "OIL", 
+								"name": "UKOIL", 
+								"precision": 8, 
+								"status": "Active" 
+							}
+						}
+					}
 					
 					
 					
