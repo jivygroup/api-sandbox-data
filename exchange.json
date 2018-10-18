@@ -601,6 +601,60 @@
 						]
 					}
 				]
+			},		
+			{
+                "text": "marketRateEvents",
+                "id" : "2",
+                "type" : "API",
+                "backColor":"black",
+                "nodes": 
+				[
+					{
+						"text": "Success Requests",
+						"id" : "1",
+						"type" : "API",
+						"backColor":"black",
+						"nodes": 
+						[
+							{
+								"id" : "1",
+								"text": "Get Market Rate",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.trade/marketRateEvents",
+									"sid": 100, 
+									"d": 
+									{
+										"instrumentInstanceId": "E79AC63A3ADF5ABD5655"
+									}
+								}
+							}
+						]
+					},	
+					{
+						"text": "Bad Requests",
+						"id" : "1",
+						"type" : "API",
+						"backColor":"black",
+						"nodes": 
+						[
+							{
+								"id" : "1",
+								"text": "Empty Market Rate",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.trade/marketRateEvents",
+									"sid": 100, 
+									"d": 
+									{
+										"instrumentInstanceId": ""
+									}
+								}
+							}						]
+					}	
+                ]
 			}
 		]
  }
