@@ -146,6 +146,22 @@
 										"orderId": "046012c7-3d64-4a3b-bd32-2e0839e2c332"
 									}
 								}
+							},
+							{
+								"id" : "7",
+								"text": "Cancel Order",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.orders/cancelOrder",
+									"sid": 1, 
+									"d": 
+									{
+										"userId": "1",
+										"orderId": "6e817edc-dcb8-4469-9ad9-023d89898641"
+									}
+								}
+							
 							}
 						]
 					},	
@@ -267,6 +283,22 @@
 									}
 								}
 							
+							},
+							{
+								"id" : "7",
+								"text": "Cancel Order for another userId",
+								"backColor":"black",
+								"data": 
+								{
+									"q": "/om2.exchange.orders/cancelOrder",
+									"sid": 1, 
+									"d": 
+									{
+										"userId": "2",
+										"orderId": "6e817edc-dcb8-4469-9ad9-023d89898641"
+									}
+								}
+							
 							}
 						]
 					}	
@@ -312,24 +344,17 @@
 						[
 						
 							{
-								"id" : "3",
-								"text": "Place Order with invalid side position",
+								"id" : "1",
+								"text": "Get Filled Events not exist userId",
 								"backColor":"black",
 								"data": 
 								{
-									"q": "/om2.exchange.orders/placeOrder",
-									"sid": 1, 
+									"q": "/om2.exchange.userTrade/orderFilledEvents",
+									"sid": 100, 
 									"d": 
 									{
-										"userId": "1",
-										"sourceIpAddress" : "127.0.0.1",
-										"orderType": "limit",
-										"side": "aaa",
-										"instanceId": "E79AC63A3ADF5ABD5655",
-										"quantity": "5",
-										"price": "111",
-										"isClosePositionOrder" : true,
-										"requestTimestamp": "2018-07-30T21:59:07.739"
+										"userId": "",
+										"numberOfReturnedFillsOnSubscription": 20
 									}
 								}
 							}
@@ -376,24 +401,16 @@
 						[
 						
 							{
-								"id" : "3",
-								"text": "Place Order with invalid side position",
+								"id" : "1",
+								"text": "Get Position Events for not exist userId",
 								"backColor":"black",
 								"data": 
 								{
-									"q": "/om2.exchange.orders/placeOrder",
-									"sid": 1, 
+									"q": "/om2.exchange.userTrade/positionEvents",
+									"sid": 200, 
 									"d": 
 									{
-										"userId": "1",
-										"sourceIpAddress" : "127.0.0.1",
-										"orderType": "limit",
-										"side": "aaa",
-										"instanceId": "656238A6389DDDA05E59",
-										"quantity": "5",
-										"price": "111",
-										"isClosePositionOrder" : true,
-										"requestTimestamp": "2018-07-30T21:59:07.739"
+										"userId": ""
 									}
 								}
 							}
