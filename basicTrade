@@ -4,105 +4,119 @@
 	"type": "ORG",
 	"backColor": "black",
 	"nodes": [{
-		"text": "Basic order flow",
-		"id": "1",
-		"type": "API",
-		"backColor": "black",
-		"nodes": [{
-			"text": "OrderService",
-			"id": "2",
+			"text": "Basic order flow",
+			"id": "1",
 			"type": "API",
 			"backColor": "black",
 			"nodes": [{
-					"id": "3",
-					"text": "BUY LIMIT order_User_1",
-					"backColor": "black",
-					"data": {
-						"q": "/om2.exchange.orders/placeOrder",
-						"sid": 2,
-						"d": {
-							"userId": "1",
-							"orderType": "Limit",
-							"side": "Buy",
-							"instrument": "1",
-							"quantity": 50,
-							"price": 100
+				"text": "OrderService",
+				"id": "2",
+				"type": "API",
+				"backColor": "black",
+				"nodes": [{
+						"id": "3",
+						"text": "BUY LIMIT order_User_1",
+						"backColor": "black",
+						"data": {
+							"q": "/om2.exchange.orders/placeOrder",
+							"sid": 2,
+							"d": {
+								"userId": "1",
+								"orderType": "Limit",
+								"side": "Buy",
+								"instrument": "1",
+								"quantity": 50,
+								"price": 100
+							}
 						}
-					}
-				},
+					},
 
-				{
-					"id": "3",
-					"text": "SELL MARKET order_User_2",
-					"backColor": "black",
-					"data": {
-						"q": "/om2.exchange.orders/placeOrder",
-						"sid": 3,
-						"d": {
-							"userId": "2",
-							"orderType": "Market",
-							"side": "Sell",
-							"instrument": "1",
-							"quantity": 50
+					{
+						"id": "3",
+						"text": "SELL MARKET order_User_2",
+						"backColor": "black",
+						"data": {
+							"q": "/om2.exchange.orders/placeOrder",
+							"sid": 3,
+							"d": {
+								"userId": "2",
+								"orderType": "Market",
+								"side": "Sell",
+								"instrument": "1",
+								"quantity": 50
+							}
 						}
-					}
-				},
+					},
 
-				{
-					"id": "4",
-					"text": "SELL LIMIT order_User_2",
-					"backColor": "black",
-					"data": {
-						"q": "/om2.exchange.orders/placeOrder",
-						"sid": 4,
-						"d": {
-							"userId": "2",
-							"orderType": "Limit",
-							"side": "Sell",
-							"instrument": "1",
-							"quantity": 50,
-							"price": 100
+					{
+						"id": "4",
+						"text": "SELL LIMIT order_User_2",
+						"backColor": "black",
+						"data": {
+							"q": "/om2.exchange.orders/placeOrder",
+							"sid": 4,
+							"d": {
+								"userId": "2",
+								"orderType": "Limit",
+								"side": "Sell",
+								"instrument": "1",
+								"quantity": 50,
+								"price": 100
+							}
 						}
-					}
-				},
+					},
 
-				{
-					"id": "5",
-					"text": "BUY MARKET order_User_1",
-					"backColor": "black",
-					"data": {
-						"q": "/om2.exchange.orders/placeOrder",
-						"sid": 5,
-						"d": {
-							"userId": "1",
-							"orderType": "Market",
-							"side": "Buy",
-							"instrument": "1",
-							"quantity": 50
+					{
+						"id": "5",
+						"text": "BUY MARKET order_User_1",
+						"backColor": "black",
+						"data": {
+							"q": "/om2.exchange.orders/placeOrder",
+							"sid": 5,
+							"d": {
+								"userId": "1",
+								"orderType": "Market",
+								"side": "Buy",
+								"instrument": "1",
+								"quantity": 50
+							}
 						}
-					}
-				},
-				{
-					"id": "14",
-					"text": "CancelOrder",
-					"backColor": "black",
-					"data": {
-						"q": "/om2.exchange.orders/cancelOrder",
-						"sid": 10,
-						"d": {
-							"userId": "",
-							"orderId": ""
+					},
+					{
+						"id": "14",
+						"text": "CancelOrder",
+						"backColor": "black",
+						"data": {
+							"q": "/om2.exchange.orders/cancelOrder",
+							"sid": 10,
+							"d": {
+								"userId": "",
+								"orderId": ""
+							}
 						}
-					}
-				},
-				{
-					"q": "/om2.exchange.market/orderBookDepth",
-					"sid": 11,
-					"d": {
-					}
-				}
-			]
-		}]
-	}]
+					},
 
+					{
+						"text": "MarketService",
+						"id": "5",
+						"type": "API",
+						"backColor": "black",
+						"nodes": [{
+							"id": "6",
+							"text": "orderBookDepth",
+							"backColor": "black",
+							"data": {
+								"q": "/om2.exchange.market/orderBookDepth",
+								"sid": 2,
+								"d": {
+
+								}
+							}
+						}]
+					}
+				]
+			}]
+		}
+
+	]
 }
