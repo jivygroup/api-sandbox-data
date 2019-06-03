@@ -94,6 +94,12 @@
 							"orderId": ""
 						}
 					}
+				},
+				{
+					"q": "/om2.exchange.market/orderBookDepth",
+					"sid": 11,
+					"d": {
+					}
 				}
 			]
 		}]
