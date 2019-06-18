@@ -15,16 +15,17 @@
 					"backColor": "black",
 					"nodes": [{
 							"id": "3",
-							"text": "BUY LIMIT order_User_1",
+							"text": "BUY LIMIT order_User_A",
 							"backColor": "black",
 							"data": {
 								"q": "/om2.exchange.orders/placeOrder",
 								"sid": 2,
 								"d": {
-									"userId": "1",
+									"brokerOrderId":"ABC123",
+									"userId": "A",
 									"orderType": "Limit",
 									"side": "Buy",
-									"instrument": "1",
+									"instrument": "BTC",
 									"quantity": 50,
 									"price": 100
 								}
@@ -33,16 +34,17 @@
 
 						{
 							"id": "3",
-							"text": "SELL MARKET order_User_2",
+							"text": "SELL MARKET order_User_B",
 							"backColor": "black",
 							"data": {
 								"q": "/om2.exchange.orders/placeOrder",
 								"sid": 3,
 								"d": {
-									"userId": "2",
+									"brokerOrderId":"DFG456",
+									"userId": "B",
 									"orderType": "Market",
 									"side": "Sell",
-									"instrument": "1",
+									"instrument": "BTC",
 									"quantity": 50
 								}
 							}
@@ -50,16 +52,17 @@
 
 						{
 							"id": "4",
-							"text": "SELL LIMIT order_User_2",
+							"text": "SELL LIMIT order_User_C",
 							"backColor": "black",
 							"data": {
 								"q": "/om2.exchange.orders/placeOrder",
 								"sid": 4,
 								"d": {
-									"userId": "2",
+									"brokerOrderId":"HIJ789",
+									"userId": "C",
 									"orderType": "Limit",
 									"side": "Sell",
-									"instrument": "1",
+									"instrument": "BTC",
 									"quantity": 50,
 									"price": 100
 								}
@@ -68,16 +71,17 @@
 
 						{
 							"id": "5",
-							"text": "BUY MARKET order_User_1",
+							"text": "BUY MARKET order_User_D",
 							"backColor": "black",
 							"data": {
 								"q": "/om2.exchange.orders/placeOrder",
 								"sid": 5,
 								"d": {
-									"userId": "1",
+									"brokerOrderId":"KLM123",
+									"userId": "D",
 									"orderType": "Market",
 									"side": "Buy",
-									"instrument": "1",
+									"instrument": "BTC",
 									"quantity": 50
 								}
 							}
@@ -90,7 +94,7 @@
 								"q": "/om2.exchange.orders/cancelOrder",
 								"sid": 10,
 								"d": {
-									"userId": "",
+									"userId": "ABCD",
 									"orderId": ""
 								}
 							}
