@@ -94,7 +94,7 @@
 								"q": "/om2.exchange.orders/cancelOrder",
 								"sid": 10,
 								"d": {
-									"brokerOrderId": "ABC123"
+									"brokerOrderId": "ABC123",
 									"userId": "ABCD",
 									"orderId": ""
 								}
