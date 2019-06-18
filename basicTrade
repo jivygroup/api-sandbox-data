@@ -95,6 +95,7 @@
 								"sid": 5,
 								"d": {
 									"brokerOrderId": "ABC123",
+									"instrument":"BTC",
 									"userId": "ABCD",
 									"orderId": ""
 								}
