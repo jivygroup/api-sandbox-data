@@ -21,7 +21,7 @@
 								"q": "/om2.exchange.orders/placeOrder",
 								"sid": 1,
 								"d": {
-									"brokerOrderId": "ABC123",
+									"brokerOrderId": "123",
 									"userId": "A",
 									"orderType": "Limit",
 									"side": "Buy",
@@ -40,7 +40,7 @@
 								"q": "/om2.exchange.orders/placeOrder",
 								"sid": 2,
 								"d": {
-									"brokerOrderId": "DFG456",
+									"brokerOrderId": "456",
 									"userId": "B",
 									"orderType": "Market",
 									"side": "Sell",
@@ -58,7 +58,7 @@
 								"q": "/om2.exchange.orders/placeOrder",
 								"sid": 3,
 								"d": {
-									"brokerOrderId": "HIJ789",
+									"brokerOrderId": "789",
 									"userId": "C",
 									"orderType": "Limit",
 									"side": "Sell",
@@ -77,7 +77,7 @@
 								"q": "/om2.exchange.orders/placeOrder",
 								"sid": 4,
 								"d": {
-									"brokerOrderId": "KLM123",
+									"brokerOrderId": "1011",
 									"userId": "D",
 									"orderType": "Market",
 									"side": "Buy",
@@ -94,7 +94,7 @@
 								"q": "/om2.exchange.orders/cancelOrder",
 								"sid": 5,
 								"d": {
-									"brokerOrderId": "ABC123",
+									"brokerOrderId": "1213",
 									"instrument":"BTC",
 									"userId": "ABCD",
 									"orderId": ""
