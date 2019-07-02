@@ -25,7 +25,7 @@
 									"userId": "A",
 									"orderType": "Limit",
 									"side": "Buy",
-									"instrument": "BTC",
+									"instrument": "BTCUSD",
 									"quantity": 50,
 									"price": 100
 								}
@@ -44,7 +44,7 @@
 									"userId": "B",
 									"orderType": "Market",
 									"side": "Sell",
-									"instrument": "BTC",
+									"instrument": "BTCUSD",
 									"quantity": 50
 								}
 							}
@@ -62,7 +62,7 @@
 									"userId": "C",
 									"orderType": "Limit",
 									"side": "Sell",
-									"instrument": "BTC",
+									"instrument": "BTCUSD",
 									"quantity": 50,
 									"price": 100
 								}
@@ -81,7 +81,7 @@
 									"userId": "D",
 									"orderType": "Market",
 									"side": "Buy",
-									"instrument": "BTC",
+									"instrument": "BTCUSD",
 									"quantity": 50
 								}
 							}
@@ -95,7 +95,7 @@
 								"sid": 5,
 								"d": {
 									"brokerOrderId": "1213",
-									"instrument":"BTC",
+									"instrument":"BTCUSD",
 									"userId": "ABCD",
 									"orderId": ""
 								}
