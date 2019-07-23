@@ -9,6 +9,21 @@
 			"type": "API",
 			"backColor": "black",
 			"nodes": [{
+					"id": "2",
+					"text": "Authentication",
+					"backColor": "black",
+					"data": {
+						"q": "/om2.exchange.auth/createSession",
+						"sid": 100,
+						"d": {
+							"apiKey": "name",
+							"timestamp": "UNIX",
+							"signature": ""
+						}
+					}
+				},
+
+				{
 					"text": "OrderService",
 					"id": "2",
 					"type": "API",
@@ -95,7 +110,7 @@
 								"sid": 5,
 								"d": {
 									"brokerOrderId": "1213",
-									"instrument":"BTCUSD",
+									"instrument": "BTCUSD",
 									"userId": "ABCD",
 									"orderId": ""
 								}
