@@ -29,12 +29,12 @@
 			"backColor": "black",
 			"data": {
 				"data": {
-				"qualifier": "CalendarService/get",
-				"data": {
-					"id": ""
+					"qualifier": "CalendarService/get",
+					"data": {
+						"id": ""
+					}
 				}
 			}
-		}
 		},
 		{
 			"id": "4",
