@@ -9,7 +9,7 @@
 			"backColor": "black",
 			"data": {
 				"data": {
-					"qualifier": "CalendarService/update",
+					"qualifier": "CalendarService/create",
 					"data": [{
 						"tradingDays": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
 						"timeZone": "+00:00",
