@@ -8,8 +8,8 @@
 			"text": "Create",
 			"backColor": "black",
 			"data": {
-				"qualifier": "CalendarService/create",
-				"data": [{
+				"qualifier": "CalendarService/update",
+				"data": {
 					"tradingDays": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
 					"timeZone": "+00:00",
 					"calendarName": "",
@@ -20,10 +20,8 @@
 						"closeTime": "14:00",
 						"name": "Some Holiday"
 					}]
-				}]
+				}
 			}
-
-
 		},
 		{
 			"id": "3",
@@ -31,50 +29,39 @@
 			"backColor": "black",
 			"data": {
 				"qualifier": "CalendarService/get",
-				"data": [{
+				"data": {
 					"id": ""
-				}]
+				}
+			}
+		},
+		{
+			"id": "4",
+			"text": "Update",
+			"backColor": "black",
+			"data": {
+				"qualifier": "CalendarService/update",
+				"data": {
+					"id": "",
+					"tradingDays": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+					"timeZone": "+00:00",
+					"calendarName": "",
+					"marketClose": "00:00",
+					"marketOpen": "00:00",
+					"holidays": [{
+						"date": "2019-12-13",
+						"closeTime": "14:00",
+						"name": "Some Holiday"
+					}]
+				}
 			}
 		},
 		{
 			"id": "5",
-			"text": "fetch",
+			"text": "List",
 			"backColor": "black",
 			"data": {
-				"q": "/configuration/fetch",
-				"sid": 4,
-				"d": {
-					"token": "API-KEY",
-					"repository": "REPO-NAME",
-					"key": "KEY-NAME"
-				}
-			}
-		},
-		{
-			"id": "6",
-			"text": "entries",
-			"backColor": "black",
-			"data": {
-				"q": "/configuration/entries",
-				"sid": 5,
-				"d": {
-					"apiKey": "API-KEY",
-					"repository": "REPO-NAME"
-				}
-			}
-		},
-		{
-			"id": "7",
-			"text": "delete",
-			"backColor": "black",
-			"data": {
-				"q": "/configuration/delete",
-				"sid": 6,
-				"d": {
-					"token": "API-KEY",
-					"repository": "REPO-NAME",
-					"key": "KEY-NAME"
-				}
+				"qualifier": "CalendarService/list",
+				"data": []
 			}
 		}
 	]
