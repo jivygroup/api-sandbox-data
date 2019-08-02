@@ -10,16 +10,18 @@
 			"data": {
 				"qualifier": "CalendarService/update",
 				"data": {
-					"tradingDays": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-					"timeZone": "+00:00",
-					"calendarName": "",
-					"marketClose": "00:00",
-					"marketOpen": "00:00",
-					"holidays": [{
-						"date": "2019-12-13",
-						"closeTime": "14:00",
-						"name": "Some Holiday"
-					}]
+					"data": {
+						"tradingDays": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+						"timeZone": "+00:00",
+						"calendarName": "",
+						"marketClose": "00:00",
+						"marketOpen": "00:00",
+						"holidays": [{
+							"date": "2019-12-13",
+							"closeTime": "14:00",
+							"name": "Some Holiday"
+						}]
+					}
 				}
 			}
 		},
@@ -43,17 +45,19 @@
 			"data": {
 				"qualifier": "CalendarService/update",
 				"data": {
-					"id": "",
-					"tradingDays": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-					"timeZone": "+00:00",
-					"calendarName": "",
-					"marketClose": "00:00",
-					"marketOpen": "00:00",
-					"holidays": [{
-						"date": "2019-12-13",
-						"closeTime": "14:00",
-						"name": "Some Holiday"
-					}]
+					"data": {
+						"id": "",
+						"tradingDays": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+						"timeZone": "+00:00",
+						"calendarName": "",
+						"marketClose": "00:00",
+						"marketOpen": "00:00",
+						"holidays": [{
+							"date": "2019-12-13",
+							"closeTime": "14:00",
+							"name": "Some Holiday"
+						}]
+					}
 				}
 			}
 		},
@@ -62,8 +66,10 @@
 			"text": "List",
 			"backColor": "black",
 			"data": {
-				"qualifier": "CalendarService/list",
-				"data": []
+				"data": {
+					"qualifier": "CalendarService/list",
+					"data": []
+				}
 			}
 		}
 	]
