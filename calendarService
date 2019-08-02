@@ -28,11 +28,13 @@
 			"text": "Get",
 			"backColor": "black",
 			"data": {
+				"data": {
 				"qualifier": "CalendarService/get",
 				"data": {
 					"id": ""
 				}
 			}
+		}
 		},
 		{
 			"id": "4",
