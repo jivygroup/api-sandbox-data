@@ -10,7 +10,7 @@
 			"data": {
 				"qualifier": "CalendarService/update",
 				"data": {
-					"data": {
+					"data": [{
 						"tradingDays": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
 						"timeZone": "+00:00",
 						"calendarName": "",
@@ -21,7 +21,7 @@
 							"closeTime": "14:00",
 							"name": "Some Holiday"
 						}]
-					}
+					}]
 				}
 			}
 		},
@@ -32,9 +32,9 @@
 			"data": {
 				"data": {
 					"qualifier": "CalendarService/get",
-					"data": {
+					"data": [{
 						"id": ""
-					}
+					}]
 				}
 			}
 		},
@@ -45,7 +45,7 @@
 			"data": {
 				"qualifier": "CalendarService/update",
 				"data": {
-					"data": {
+					"data": [{
 						"id": "",
 						"tradingDays": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
 						"timeZone": "+00:00",
@@ -57,7 +57,7 @@
 							"closeTime": "14:00",
 							"name": "Some Holiday"
 						}]
-					}
+					}]
 				}
 			}
 		},
