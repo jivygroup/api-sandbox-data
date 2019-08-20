@@ -120,21 +120,82 @@
 				},
 				{
 					"text": "MarketService",
-					"id": "99",
+					"id": "15",
 					"type": "API",
 					"backColor": "black",
 					"nodes": [{
-						"id": "6",
-						"text": "orderBookDepth",
-						"backColor": "black",
-						"data": {
-							"q": "/om2.exchange.market/orderBookDepth",
-							"sid": 6,
-							"d": {
+							"id": "16",
+							"text": "orderBookDepth",
+							"backColor": "black",
+							"data": {
+								"q": "/om2.exchange.market/orderBookDepth",
+								"sid": 6,
+								"d": {
+
+								}
+							}
+						},
+						{
+							"id": "17",
+							"text": "Halt_one_instrument",
+							"backColor": "black",
+							"data": {
+								"q": "/om2.exchange.market/tradingAction",
+								"sid": 17,
+								"d": {
+									"instrument": "BTCUSD",
+									"action": "halt"
+								}
 
 							}
+
+						},
+						{
+							"id": "18",
+							"text": "Halt_all_instruments",
+							"backColor": "black",
+							"data": {
+								"q": "/om2.exchange.market/tradingAction",
+								"sid": 18,
+								"d": {
+									"instrument": [],
+									"action": "halt"
+								}
+
+							}
+
+						},
+						{
+							"id": "19",
+							"text": "Resume_one_instrument",
+							"backColor": "black",
+							"data": {
+								"q": "/om2.exchange.market/tradingAction",
+								"sid": 19,
+								"d": {
+									"instrument": "BTCUSD",
+									"action": "resume"
+								}
+
+							}
+
+						},
+						{
+							"id": "20",
+							"text": "Resume_all_instruments",
+							"backColor": "black",
+							"data": {
+								"q": "/om2.exchange.market/tradingAction",
+								"sid": 20,
+								"d": {
+									"instrument": [],
+									"action": "resume"
+								}
+
+							}
+
 						}
-					}]
+					]
 				}
 			]
 		}
