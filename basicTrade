@@ -158,7 +158,6 @@
 								"q": "/om2.exchange.market/tradingAction",
 								"sid": 18,
 								"d": {
-									"instrument": [],
 									"action": "halt"
 								}
 
@@ -188,7 +187,7 @@
 								"q": "/om2.exchange.market/tradingAction",
 								"sid": 20,
 								"d": {
-									"instrument": [],
+								
 									"action": "resume"
 								}
 
