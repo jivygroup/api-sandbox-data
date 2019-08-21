@@ -1,0 +1,77 @@
+{
+	"text": "<span class='brand-name icon node-icon'><span style='padding-right: 0px' class='text-white text-bold'>BO2-Calendar</span><span class='text-blue text-bold'>Service</span></span>",
+	"id": "1",
+	"type": "ORG",
+	"backColor": "black",
+	"nodes": [{
+			"id": "2",
+			"text": "Create",
+			"backColor": "black",
+			"data": {
+				"data": {
+					"qualifier": "CalendarService/create",
+					"data": [{
+						"tradingDays": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+						"timeZone": "+00:00",
+						"calendarName": "",
+						"marketClose": "00:00",
+						"marketOpen": "00:00",
+						"holidays": [{
+							"date": "2019-12-13",
+							"closeTime": "14:00",
+							"name": "Some Holiday"
+						}]
+					}]
+				}
+			}
+		},
+		{
+			"id": "3",
+			"text": "Get",
+			"backColor": "black",
+			"data": {
+				"data": {
+					"qualifier": "CalendarService/get",
+					"data": [{
+						"id": ""
+					}]
+				}
+			}
+		},
+		{
+			"id": "4",
+			"text": "Update",
+			"backColor": "black",
+			"data": {
+				"data": {
+					"qualifier": "CalendarService/update",
+					"data": [{
+						"id": "",
+						"tradingDays": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+						"timeZone": "+00:00",
+						"calendarName": "",
+						"marketClose": "00:00",
+						"marketOpen": "00:00",
+						"holidays": [{
+							"date": "2019-12-13",
+							"closeTime": "14:00",
+							"name": "Some Holiday"
+						}]
+					}]
+				}
+			}
+		},
+		{
+			"id": "5",
+			"text": "List",
+			"backColor": "black",
+			"data": {
+				"data": {
+					"qualifier": "CalendarService/list",
+					"data": []
+				}
+			}
+		}
+	]
+
+}
