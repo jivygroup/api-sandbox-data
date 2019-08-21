@@ -13,13 +13,13 @@
 				"data": [{
 					"symbol": "$",
 					"quoteCurrency": "USD",
-					"status ": "Active",
+					"status": "Active",
 					"minQuantity": 10,
 					"maxQuantity": 100000,
-					"pricePrecision ": 2,
+					"pricePrecision": 2,
 					"instrumentDescription": "desc",
-					"quantityPrecision ": 2,
-					"calendarId ": "C1"
+					"quantityPrecision": 2,
+					"calendarId": "C1"
 
 				}]
 
@@ -48,13 +48,13 @@
 					"id": "",
 					"symbol": "$",
 					"quoteCurrency": "USD",
-					"status ": "Active",
+					"status": "Active",
 					"minQuantity": 10,
 					"maxQuantity": 100000,
-					"pricePrecision ": 2,
+					"pricePrecision": 2,
 					"instrumentDescription": "desc",
-					"quantityPrecision ": 2,
-					"calendarId ": "C1"
+					"quantityPrecision": 2,
+					"calendarId": "C1"
 				}]
 			}
 		}
