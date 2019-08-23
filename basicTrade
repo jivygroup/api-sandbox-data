@@ -9,196 +9,214 @@
 			"type": "API",
 			"backColor": "black",
 			"nodes": [{
-					"id": "2",
-					"text": "Authentication",
-					"backColor": "black",
-					"data": {
-						"q": "/om2.exchange.auth/createSession",
-						"sid": 100,
-						"d": {
-							"apiKey": "name",
-							"timestamp": "UNIX",
-							"signature": ""
+				"text": "Authentication",
+				"id": "1",
+				"type": "API",
+				"backColor": "black",
+				"nodes": [{
+						"id": "2",
+						"text": "operation_Auth_Halt",
+						"backColor": "black",
+						"data": {
+							"q": "/om2.exchange.operation.auth/createSession",
+							"sid": 1,
+							"d": {
+								"apiKey": "ABC",
+								"timestamp": "UNIX",
+								"signature": ""
+							}
 						}
+					},
+					{
+						"id": "3",
+						"text": "createSession",
+						"backColor": "black",
+						"data": {
+							"q": "/om2.exchange.auth/createSession",
+							"sid": 100,
+							"d": {
+								"apiKey": "ABC",
+								"timestamp": "UNIX",
+								"signature": ""
+							}
+						}
+					},
+
+					{
+						"text": "OrderService",
+						"id": "2",
+						"type": "API",
+						"backColor": "black",
+						"nodes": [{
+								"id": "4",
+								"text": "BUY LIMIT order_User_A",
+								"backColor": "black",
+								"data": {
+									"q": "/om2.exchange.orders/placeOrder",
+									"sid": 1,
+									"d": {
+										"brokerOrderId": "123",
+										"userId": "A",
+										"orderType": "Limit",
+										"side": "Buy",
+										"instrument": "BTCUSD",
+										"quantity": 50,
+										"price": 100
+									}
+								}
+							},
+
+							{
+								"id": "5",
+								"text": "SELL MARKET order_User_B",
+								"backColor": "black",
+								"data": {
+									"q": "/om2.exchange.orders/placeOrder",
+									"sid": 2,
+									"d": {
+										"brokerOrderId": "456",
+										"userId": "B",
+										"orderType": "Market",
+										"side": "Sell",
+										"instrument": "BTCUSD",
+										"quantity": 50
+									}
+								}
+							},
+
+							{
+								"id": "6",
+								"text": "SELL LIMIT order_User_C",
+								"backColor": "black",
+								"data": {
+									"q": "/om2.exchange.orders/placeOrder",
+									"sid": 3,
+									"d": {
+										"brokerOrderId": "789",
+										"userId": "C",
+										"orderType": "Limit",
+										"side": "Sell",
+										"instrument": "BTCUSD",
+										"quantity": 50,
+										"price": 100
+									}
+								}
+							},
+
+							{
+								"id": "7",
+								"text": "BUY MARKET order_User_D",
+								"backColor": "black",
+								"data": {
+									"q": "/om2.exchange.orders/placeOrder",
+									"sid": 4,
+									"d": {
+										"brokerOrderId": "1011",
+										"userId": "D",
+										"orderType": "Market",
+										"side": "Buy",
+										"instrument": "BTCUSD",
+										"quantity": 50
+									}
+								}
+							},
+							{
+								"id": "8",
+								"text": "CancelOrder",
+								"backColor": "black",
+								"data": {
+									"q": "/om2.exchange.orders/cancelOrder",
+									"sid": 5,
+									"d": {
+										"brokerOrderId": "1213",
+										"instrument": "BTCUSD",
+										"userId": "ABCD",
+										"orderId": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"text": "MarketService",
+						"id": "3",
+						"type": "API",
+						"backColor": "black",
+						"nodes": [{
+								"id": "9",
+								"text": "orderBookDepth",
+								"backColor": "black",
+								"data": {
+									"q": "/om2.exchange.market/orderBookDepth",
+									"sid": 6,
+									"d": {
+
+									}
+								}
+							},
+							{
+								"id": "10",
+								"text": "Halt_one_instrument",
+								"backColor": "black",
+								"data": {
+									"q": "/om2.exchange.market/tradingAction",
+									"sid": 17,
+									"d": {
+										"instrument": "BTCUSD",
+										"action": "halt"
+									}
+
+								}
+
+							},
+							{
+								"id": "11",
+								"text": "Halt_all_instruments",
+								"backColor": "black",
+								"data": {
+									"q": "/om2.exchange.market/tradingAction",
+									"sid": 18,
+									"d": {
+										"action": "halt"
+									}
+
+								}
+
+							},
+							{
+								"id": "12",
+								"text": "Resume_one_instrument",
+								"backColor": "black",
+								"data": {
+									"q": "/om2.exchange.market/tradingAction",
+									"sid": 19,
+									"d": {
+										"instrument": "BTCUSD",
+										"action": "resume"
+									}
+
+								}
+
+							},
+							{
+								"id": "13",
+								"text": "Resume_all_instruments",
+								"backColor": "black",
+								"data": {
+									"q": "/om2.exchange.market/tradingAction",
+									"sid": 20,
+									"d": {
+
+										"action": "resume"
+									}
+
+								}
+
+							}
+						]
 					}
-				},
-
-				{
-					"text": "OrderService",
-					"id": "2",
-					"type": "API",
-					"backColor": "black",
-					"nodes": [{
-							"id": "3",
-							"text": "BUY LIMIT order_User_A",
-							"backColor": "black",
-							"data": {
-								"q": "/om2.exchange.orders/placeOrder",
-								"sid": 1,
-								"d": {
-									"brokerOrderId": "123",
-									"userId": "A",
-									"orderType": "Limit",
-									"side": "Buy",
-									"instrument": "BTCUSD",
-									"quantity": 50,
-									"price": 100
-								}
-							}
-						},
-
-						{
-							"id": "3",
-							"text": "SELL MARKET order_User_B",
-							"backColor": "black",
-							"data": {
-								"q": "/om2.exchange.orders/placeOrder",
-								"sid": 2,
-								"d": {
-									"brokerOrderId": "456",
-									"userId": "B",
-									"orderType": "Market",
-									"side": "Sell",
-									"instrument": "BTCUSD",
-									"quantity": 50
-								}
-							}
-						},
-
-						{
-							"id": "4",
-							"text": "SELL LIMIT order_User_C",
-							"backColor": "black",
-							"data": {
-								"q": "/om2.exchange.orders/placeOrder",
-								"sid": 3,
-								"d": {
-									"brokerOrderId": "789",
-									"userId": "C",
-									"orderType": "Limit",
-									"side": "Sell",
-									"instrument": "BTCUSD",
-									"quantity": 50,
-									"price": 100
-								}
-							}
-						},
-
-						{
-							"id": "5",
-							"text": "BUY MARKET order_User_D",
-							"backColor": "black",
-							"data": {
-								"q": "/om2.exchange.orders/placeOrder",
-								"sid": 4,
-								"d": {
-									"brokerOrderId": "1011",
-									"userId": "D",
-									"orderType": "Market",
-									"side": "Buy",
-									"instrument": "BTCUSD",
-									"quantity": 50
-								}
-							}
-						},
-						{
-							"id": "14",
-							"text": "CancelOrder",
-							"backColor": "black",
-							"data": {
-								"q": "/om2.exchange.orders/cancelOrder",
-								"sid": 5,
-								"d": {
-									"brokerOrderId": "1213",
-									"instrument": "BTCUSD",
-									"userId": "ABCD",
-									"orderId": ""
-								}
-							}
-						}
-					]
-				},
-				{
-					"text": "MarketService",
-					"id": "15",
-					"type": "API",
-					"backColor": "black",
-					"nodes": [{
-							"id": "16",
-							"text": "orderBookDepth",
-							"backColor": "black",
-							"data": {
-								"q": "/om2.exchange.market/orderBookDepth",
-								"sid": 6,
-								"d": {
-
-								}
-							}
-						},
-						{
-							"id": "17",
-							"text": "Halt_one_instrument",
-							"backColor": "black",
-							"data": {
-								"q": "/om2.exchange.market/tradingAction",
-								"sid": 17,
-								"d": {
-									"instrument": "BTCUSD",
-									"action": "halt"
-								}
-
-							}
-
-						},
-						{
-							"id": "18",
-							"text": "Halt_all_instruments",
-							"backColor": "black",
-							"data": {
-								"q": "/om2.exchange.market/tradingAction",
-								"sid": 18,
-								"d": {
-									"action": "halt"
-								}
-
-							}
-
-						},
-						{
-							"id": "19",
-							"text": "Resume_one_instrument",
-							"backColor": "black",
-							"data": {
-								"q": "/om2.exchange.market/tradingAction",
-								"sid": 19,
-								"d": {
-									"instrument": "BTCUSD",
-									"action": "resume"
-								}
-
-							}
-
-						},
-						{
-							"id": "20",
-							"text": "Resume_all_instruments",
-							"backColor": "black",
-							"data": {
-								"q": "/om2.exchange.market/tradingAction",
-								"sid": 20,
-								"d": {
-								
-									"action": "resume"
-								}
-
-							}
-
-						}
-					]
-				}
-			]
+				]
+			}]
 		}
-
-
 	]
 }
