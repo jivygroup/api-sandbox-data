@@ -1,6 +1,7 @@
 {
-  "exchange/develop6": {
+  "exchange/develop": {
     "url": "wss://develop.exchange.om2.com",
+      "provider": "websocket",
     "methods": [
       {
         "methodName": "createSession - Broker",
