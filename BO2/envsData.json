@@ -1,0 +1,116 @@
+{
+  "backoffice": {
+    "url": "wss://develop.admin.exchange.om2.com/api",
+    "provider": "rsocket",
+    "order": 1,
+    "methods": [
+      {
+        "methodName": "list",
+        "groupName": "CBRService",
+        "asyncModel": "requestResponse",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [],
+              "qualifier": "CBRService/list",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      {
+        "methodName": "list$",
+        "groupName": "CBRService",
+        "asyncModel": "requestStream",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [],
+              "qualifier": "CBRService/list$",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      {
+        "methodName": "create",
+        "groupName": "CBRService",
+        "asyncModel": "requestResponse",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [{
+                "instruments": [101, 102],
+                "actionType": "HALT_TRADING",
+                "actionValue": "30",
+                "ruleName": "CBR decline 20%",
+                "type": "MARKET_RATE",
+                "priority": "50",
+                "value": "0.8",
+                "status": "ACTIVE"
+              }],
+              "qualifier": "CBRService/create",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      {
+        "methodName": "update",
+        "groupName": "CBRService",
+        "asyncModel": "requestResponse",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [{
+                "id": 1,
+                "instruments": ["101", "102", "103"],
+                "actionType": "HALT_TRADING",
+                "actionValue": "30",
+                "ruleName": "CBR decline 20%",
+                "type": "MARKET_RATE",
+                "priority": "50",
+                "value": "0.8",
+                "status": "ACTIVE"
+              }],
+              "qualifier": "CBRService/update",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      {
+        "methodName": "delete",
+        "groupName": "CBRService",
+        "asyncModel": "requestResponse",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [{
+                "id": 1
+              }],
+              "qualifier": "CBRService/delete",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      {
+        "methodName": "get",
+        "groupName": "CBRService",
+        "asyncModel": "requestResponse",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [{
+                "id": 1
+              }],
+              "qualifier": "CBRService/get",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
