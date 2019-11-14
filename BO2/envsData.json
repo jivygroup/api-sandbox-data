@@ -6,8 +6,8 @@
     "methods": [
       {
         "methodName": "list",
-        "groupName": "CBRService",
-        "asyncModel": "requestResponse",
+        "group": "CBRService",
+        "asyncModel": "request/response",
         "payload": {
           "sample": {
             "data": {
@@ -20,8 +20,8 @@
       },
       {
         "methodName": "list$",
-        "groupName": "CBRService",
-        "asyncModel": "requestStream",
+        "group": "CBRService",
+        "asyncModel": "request/stream",
         "payload": {
           "sample": {
             "data": {
@@ -34,8 +34,8 @@
       },
       {
         "methodName": "create",
-        "groupName": "CBRService",
-        "asyncModel": "requestResponse",
+        "group": "CBRService",
+        "asyncModel": "request/response",
         "payload": {
           "sample": {
             "data": {
@@ -57,8 +57,8 @@
       },
       {
         "methodName": "update",
-        "groupName": "CBRService",
-        "asyncModel": "requestResponse",
+        "group": "CBRService",
+        "asyncModel": "request/response",
         "payload": {
           "sample": {
             "data": {
@@ -81,8 +81,8 @@
       },
       {
         "methodName": "delete",
-        "groupName": "CBRService",
-        "asyncModel": "requestResponse",
+        "group": "CBRService",
+        "asyncModel": "request/response",
         "payload": {
           "sample": {
             "data": {
@@ -97,8 +97,8 @@
       },
       {
         "methodName": "get",
-        "groupName": "CBRService",
-        "asyncModel": "requestResponse",
+        "group": "CBRService",
+        "asyncModel": "request/response",
         "payload": {
           "sample": {
             "data": {
