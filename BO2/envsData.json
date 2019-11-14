@@ -64,7 +64,7 @@
             "data": {
               "data": [{
                 "id": 1,
-                "instruments": ["101", "102", "103"],
+                "instruments": [101, 102, 103],
                 "actionType": "HALT_TRADING",
                 "actionValue": "30",
                 "ruleName": "CBR decline 20%",
