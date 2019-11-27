@@ -360,7 +360,7 @@
 				}
 			},
 			{
-				"methodName": "tradingAction",
+				"methodName": "adminAction",
 				"group": "Operations API",
 				"payload": {
 					"sample": {
