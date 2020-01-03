@@ -444,6 +444,27 @@
 					}
 				}
 
+			},
+			{
+				"methodName": "updateInstrument",
+				"group": "Operation API",
+				"payload": {
+					"sample": {
+						"q": "/om2.exchange.operations/updateInstrument",
+						"sid": 1,
+						"d": {
+							"correlationId": 100,
+							"instrumentId": 55,
+							"symbol": "FB",
+							"activityStatus": "Active",
+							"minQuantity": 10,
+							"maxQuantity": 100000,
+							"pricePrecision": 2,
+							"quantityPrecision": 2,
+							"quantityIncrement": 0.01
+						}
+					}
+				}
 			}
 		]
 	},
