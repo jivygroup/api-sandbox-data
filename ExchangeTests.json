@@ -465,9 +465,97 @@
 						}
 					}
 				}
+			},
+			{
+				"methodName": "assignCalendar",
+				"group": "Operation API",
+				"payload": {
+					"sample": {
+						"q": "/om2.exchange.operations/assignCalendar",
+						"sid": 1,
+						"d": {
+							"correlationId": 100,
+							"instrumentId": 10,
+							"calendar": {
+								"id": 1,
+								"version": 10,
+								"tradingDays": [
+									"Monday",
+									"Tuesday",
+									"Wednesday",
+									"Thursday",
+									"Friday"
+								],
+								"timeZone": "+02:00",
+								"marketClose": "16:00",
+								"marketOpen": "09:30",
+								"holidays": [{
+									"date": "2019-04-19",
+									"closeTime": ""
+								}]
+							}
+						}
+					}
+				}
+			},
+			{
+				"methodName": "assignCBR",
+				"group": "Operation API",
+				"payload": {
+					"sample": {
+						"q": "/om2.exchange.operations/assignCircuitBreakerRule",
+						"sid": 1,
+						"d": {
+							"correlationId": 100,
+							"instrumentId": 10,
+							"circuitBreakerRule": {
+								"id": 11,
+								"type": "MARKET_RATE",
+								"actionType": "HALT_TRADING",
+								"actionValue": 5,
+								"priority": 1000,
+								"value": 1.2
+							}
+						}
+					}
+				}
+			},
+			{
+				"methodName": "removeCBR",
+				"group": "Operation API",
+				"payload": {
+					"sample": {
+						"q": "/om2.exchange.operations/removeCircuitBreakerRule",
+						"sid": 1,
+						"d": {
+							"correlationId": 100,
+							"instrumentId": 10,
+							"id": 11
+						}
+					}
+				}
+			},
+			{
+				"methodName": "tradingState",
+				"group": "Operation API",
+				"payload": {
+					"sample": {
+						"q": "/om2.exchange.operations/tradingActions",
+						"sid": 1,
+						"d": {
+							"correlationId": 100,
+							"instrumentId": 1,
+							"tradingState ": "Trade"
+						}
+					}
+				}
 			}
+
+
 		]
 	},
+
+
 
 	"exchange/staging": {
 
