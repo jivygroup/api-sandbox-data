@@ -545,7 +545,7 @@
 						"d": {
 							"correlationId": 100,
 							"instrumentId": 1,
-							"tradingState ": "Trade/Halt"
+							"tradingState ": "Trade / Halt"
 						}
 					}
 				}
