@@ -81,7 +81,7 @@
 					}
 				}
 			}, {
-				"methodName": "createSession - Operation",
+				"methodName": "createSession - Operator",
 				"group": "Authentication API",
 				"payload": {
 					"sample": {
@@ -274,8 +274,6 @@
 							"required": false
 						},
 
-
-
 						"brokerOrderId": {
 							"id": "brokerOrderId",
 							"label": "brokerOrderId",
@@ -346,9 +344,20 @@
 					}
 				}
 			},
+			    {
+				"methodName": "operationEvents",
+				"group": "Market Data API",
+				"payload": {
+					"sample": {
+						"q": "/om2.exchange.operations/operationEvents",
+						"sid": 11,
+						"d": {}
+					}
+				}
+			},
 			{
-				"methodName": "clusterAction",
-				"group": "Operations API",
+				"methodName": "clusterAction-SnapShot",
+				"group": "Operation API",
 				"payload": {
 					"sample": {
 						"q": "/om2.exchange.system/clusterAction",
@@ -360,7 +369,7 @@
 				}
 			},
 			{
-				"methodName": "adminAction",
+				"methodName": "adminAction-HaltResume",
 				"group": "Operations API",
 				"payload": {
 					"sample": {
@@ -460,7 +469,7 @@
 				}
 			},
 			{
-				"methodName": "createSession - Operation",
+				"methodName": "createSession - Operator",
 				"group": "Staging - Authentication API",
 				"payload": {
 					"sample": {
