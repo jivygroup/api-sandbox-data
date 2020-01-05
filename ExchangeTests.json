@@ -365,44 +365,8 @@
             "d": {
               "action": "SHUTDOWN"
             }
-          },
-          "metadata": {
-            "q": {
-              "hidden": true,
-              "valueType": "text",
-              "id": "q",
-              "label": "q",
-              "type": "input",
-              "initialValue": "/om2.exchange.system/clusterAction",
-              "required": true
-            },
-            "sid": {
-              "id": "sid",
-              "label": "sid",
-              "type": "input",
-              "initialValue": 1,
-              "required": true,
-              "valueType": "number"
-            },
-            "action": {
-              "id": "action",
-              "label": "action",
-              "type": "select",
-              "data": [
-                "SNAPSHOT",
-                "SHUTDOWN"
-              ],
-              "initialValue": "SHUTDOWN",
-              "required": true,
-              "valueType": "text"
-            },
-            "structure": {
-               "sid": "sid",
-		    "q": "q"
-            }
           }
-        }
-      },
+	}},
 			{
 				"methodName": "tradingAction - OLD",
 				"group": "Operation API",
