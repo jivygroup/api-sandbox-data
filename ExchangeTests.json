@@ -402,9 +402,9 @@
           "structure": {
             "q": "q",
             "sid": "sid",
-            "d": {
+            "d": [
               "action": "action"
-	    }
+	    ]
           }
 			}	}},
 			{
