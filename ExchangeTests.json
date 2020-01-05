@@ -365,7 +365,7 @@
             "d": {
               "action": "SHUTDOWN"
             }
-          }
+          
 	},
 		  "metadata": {
             "q": {
@@ -400,7 +400,7 @@
             "structure": {
                "sid": "sid",
 		    "q": "q"
-            }
+            }}
 		 },
 			{
 				"methodName": "tradingAction - OLD",
