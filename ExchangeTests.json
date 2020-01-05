@@ -116,7 +116,7 @@
 							"id": "apiKey",
 							"label": "apiKey",
 							"valueType": "text",
-							"initialValue": "ABC",
+							"initialValue": "lpdr61qn8r3tf1annpqmquqpczixli58ylgqcwucmkittlbs96kpd5zi81ynul1r",
 							"required": true
 						},
 						"secret": {
@@ -124,7 +124,7 @@
 							"id": "secret",
 							"label": "secret",
 							"valueType": "text",
-							"initialValue": "oMQMgLLNVF8XzH1zVgCKtbiqjbG7rp05V4MKQ88PIox1gK6UaBTvoMKQ88PY6mS2uY",
+							"initialValue": "i56lpyt47mpsd1db5j4k1rqcw3amq77g0nuxf4f9gbus99h5uzow1n5wmv6c2scj",
 							"required": true
 						},
 						"timestamp": {
