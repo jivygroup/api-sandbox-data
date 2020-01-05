@@ -404,10 +404,7 @@
             "sid": "sid",
             "d": [
               "action": "action"
-            ],
-		   "dd": {
-              "action": "action"
-		   }
+            ]
           }
 			}	}},
 			{
