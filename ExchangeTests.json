@@ -399,8 +399,9 @@
             "structure": {
               "q": "q",
               "sid": "sid",
+		"hh":{},
               "d": [
-                "action"
+                "action":"action"
               ]
             }
           }
