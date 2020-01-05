@@ -395,15 +395,16 @@
               ],
               "initialValue": "SHUTDOWN",
               "required": true,
-              "valueType": "text"
-          
-            
+              "valueType": "text"            
           },
           "structure": {
             "q": "q",
             "sid": "sid",
             "d": [
               "action"
+	    ],
+		   "dd": [
+              "bb":"sid"
 	    ]
           }
 			}	}},
