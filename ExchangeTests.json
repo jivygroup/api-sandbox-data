@@ -365,8 +365,8 @@
 						"d": {
 							"action": "SHUTDOWN"
 						}
-					}
-				},
+					},
+				
 				 "metadata": {
             "q": {
               "hidden": true,
@@ -406,7 +406,7 @@
               "action"
             ]
           }
-			}	},
+			}	}},
 			{
 				"methodName": "tradingAction - OLD",
 				"group": "Operation API",
