@@ -397,14 +397,14 @@
               "required": true,
               "valueType": "text"            
           },
-          "structure": {
-            "q": "q",
-            "sid": "sid",
-             "dd": {
-              "bb":"sid"
-		   },
-"kk" {}
-          }
+        	"structure": {
+						"d": [
+							"action",
+							"ggg"
+						],
+						"q": "q",
+						"sid": "sid"
+					}
 			}	}},
 			{
 				"methodName": "tradingAction - OLD",
