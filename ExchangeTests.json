@@ -400,10 +400,7 @@
           "structure": {
             "q": "q",
             "sid": "sid",
-            "d": [
-              "action"
-	    ],
-		   "dd": {
+             "dd": {
               "bb":"sid"
 		   },
 "kk" {}
