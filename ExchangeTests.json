@@ -355,19 +355,18 @@
 					}
 				}
 			},
-			{
-				"methodName": "clusterAction",
-				"group": "System API",
-				"payload": {
-					"sample": {
-						"q": "/om2.exchange.system/clusterAction",
-						"sid": 11,
-						"d": {
-							"action": "SHUTDOWN"
-						}
-					},
-				
-				 "metadata": {
+		 {
+        "methodName": "clusterAction",
+        "group": "System API",
+        "payload": {
+          "sample": {
+            "q": "/om2.exchange.system/clusterAction",
+            "sid": 11,
+            "d": {
+              "action": "SHUTDOWN"
+            }
+          },
+          "metadata": {
             "q": {
               "hidden": true,
               "valueType": "text",
@@ -377,7 +376,7 @@
               "initialValue": "/om2.exchange.system/clusterAction",
               "required": true
             },
-	 "sid": {
+            "sid": {
               "id": "sid",
               "label": "sid",
               "type": "input",
@@ -395,17 +394,18 @@
               ],
               "initialValue": "SHUTDOWN",
               "required": true,
-              "valueType": "text"            
-          },
-        	"structure": {
-						"d": [
-							"action",
-							"ggg"
-						],
-						"q": "q",
-						"sid": "sid"
-					}
-			}	}},
+              "valueType": "text"
+            },
+            "structure": {
+              "q": "q",
+              "sid": "sid",
+              "d": [
+                "action"
+              ]
+            }
+          }
+        }
+      },
 			{
 				"methodName": "tradingAction - OLD",
 				"group": "Operation API",
