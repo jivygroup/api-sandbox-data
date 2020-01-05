@@ -397,12 +397,8 @@
               "valueType": "text"
             },
             "structure": {
-              "q": "q",
-              "sid": "sid",
-		"hh":{},
-              "d": {
-                "action":"action"
-	      }
+               "sid": "sid",
+		    "q": "q"
             }
           }
         }
