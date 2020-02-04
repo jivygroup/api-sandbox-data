@@ -575,7 +575,7 @@
 				"group": "Operation API",
 				"payload": {
 					"sample": {
-						"q": "/om2.exchange.operations/tradingActions",
+						"q": "/om2.exchange.operations/tradingAction",
 						"sid": 1,
 						"d": {
 							"correlationId": "fd9c1d02-1d3f-48eb-bf73-15faf8da4c8d",
