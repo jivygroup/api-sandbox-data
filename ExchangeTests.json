@@ -423,61 +423,57 @@
 				"methodName": "newInstrument",
 				"group": "Operation API",
 				"payload": {
-					"sample": {
-						"q": "/om2.exchange.operations/newInstrument",
-						"sid": 1,
-						"d": {
-							"correlationId": 100,
-							"tradingState": "Trade",
-							"symbol": "FB",
-							"activityStatus": "Active",
-							"minQuantity": 10,
-							"maxQuantity": 100000,
-							"pricePrecision": 2,
-							"quantityPrecision": 0,
-							"quantityIncrement": 1,
-							"calendar": {
-								"id": 1,
-								"version": 10,
-								"tradingDays": [
-									"Monday",
-									"Tuesday",
-									"Wednesday",
-									"Thursday",
-									"Friday"
-								],
-								"timeZone": "+02:00",
-								"marketClose": "16:00",
-								"marketOpen": "09:30",
-								"holidays": [{
-										"date": "2019-04-19",
-										"closeTime": ""
-									},
-									{
-										"date": "2019-12-24",
-										"closeTime": "13:00"
-									}
-								]
-							},
-							"circuitBreakerRules": [{
-									"id": 11,
-									"type": "MARKET_RATE",
-									"actionType": "HALT_TRADING",
-									"actionValue": 5,
-									"priority": 1000,
-									"value": 1.2
-								},
-								{
-									"id": 12,
-									"type": "MARKET_RATE",
-									"actionType": "HALT_TRADING",
-									"actionValue": 5,
-									"priority": 999,
-									"value": 1.15
-								}
-							]
-						}
-					}
+					"sample": 
+{
+  "q": "/om2.exchange.operations/newInstrument",
+  "sid": 1,
+  "d": {
+    "correlationId": "fd9c1d02-1d3f-48eb-bf73-15faf8da4c8d",
+    "tradingState": "TRADE",
+    "symbol": "FBDudi",
+    "activityStatus": "ACTIVE",
+    "minQuantity": 10,
+    "maxQuantity": 100000,
+    "pricePrecision": 2,
+    "quantityPrecision": 0,
+    "quantityIncrement": 1,
+    "calendar": {
+    "tradingDays": [
+        "Monday"
+      ],
+      "timeZone": "+02:00",
+      "marketClose": "16:00",
+      "marketOpen": "09:30",
+      "holidays": [
+        {
+          "date": "2019-04-19"
+        },
+        {
+          "date": "2019-12-24",
+          "closeTime": "13:00"
+        }
+      ]
+    },
+    "circuitBreakerRules": [
+      {
+        "id": 11,
+        "type": "MARKET_RATE",
+        "actionType": "HALT_TRADING",
+        "actionValue": 5,
+        "priority": 1000,
+        "value": 1.2
+      },
+      {
+        "id": 12,
+        "type": "MARKET_RATE",
+        "actionType": "HALT_TRADING",
+        "actionValue": 5,
+        "priority": 999,
+        "value": 1.15
+      }
+    ]
+  }
+}
 				}
 
 			},
