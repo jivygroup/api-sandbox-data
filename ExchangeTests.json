@@ -506,10 +506,7 @@
 				"group": "Operation API",
 				"payload": {
 					"sample": {
-						"q": "/om2.exchange.operations/assignCalendar",
-						"sid": 1,
-						"d": {
-                                "q": "/om2.exchange.operations/assignCalendar",
+						        "q": "/om2.exchange.operations/assignCalendar",
                                 "sid": 1,
                                 "d": {
                                     "correlationId": "fd9c1d02-1d3f-48eb-bf73-15faf8da4c8d",
@@ -534,43 +531,43 @@
                                 }
                                 }
 					}
-				}
-			},
+				},
 			{
 				"methodName": "assignCBR",
 				"group": "Operation API",
 				"payload": {
 					"sample": {
-						"q": "/om2.exchange.operations/assignCircuitBreakerRule",
-						"sid": 1,
-						"d": {
-							"correlationId": 100,
-							"instrumentId": 10,
-							"circuitBreakerRule": {
-								"id": 11,
-								"type": "MARKET_RATE",
-								"actionType": "HALT_TRADING",
-								"actionValue": 5,
-								"priority": 1000,
-								"value": 1.2
-							}
-						}
-					}
+                        "q": "/om2.exchange.operations/assignCircuitBreakerRule",
+                        "sid": 1,
+                        "d": {
+                            "correlationId": "fd9c1d02-1d3f-48eb-bf73-15faf8da4c8d",
+                            "instrumentIds": [10,11],
+                            "circuitBreakerRule": {
+                            "id": 11,
+                            "type": "MARKET_RATE",
+                            "actionType": "HALT_TRADING",
+                            "actionValue": 5,
+                            "priority": 1000,
+                            "value": 1.2
+                            }
+                        }
+                        }
 				}
 			},
 			{
 				"methodName": "removeCBR",
 				"group": "Operation API",
 				"payload": {
-					"sample": {
-						"q": "/om2.exchange.operations/removeCircuitBreakerRule",
-						"sid": 1,
-						"d": {
-							"correlationId": 100,
-							"instrumentId": 10,
-							"id": 11
-						}
-					}
+					"sample": 
+                            {
+                            "q": "/om2.exchange.operations/removeCircuitBreakerRule",
+                            "sid": 1,
+                            "d": {
+                                "correlationId": "fd9c1d02-1d3f-48eb-bf73-15faf8da4c8d",
+                                "instrumentIds": [10,11],
+                                "id": 11
+                            }
+                            }
 				}
 			},
 			{
@@ -581,9 +578,9 @@
 						"q": "/om2.exchange.operations/tradingActions",
 						"sid": 1,
 						"d": {
-							"correlationId": 100,
-							"instrumentId": 1,
-							"tradingState ": "Trade / Halt"
+							"correlationId": "fd9c1d02-1d3f-48eb-bf73-15faf8da4c8d",
+							 "instrumentIds": [10,11],
+							"tradingState ": "TRADE / HALT"
 						}
 					}
 				}
