@@ -579,8 +579,8 @@
 						"sid": 1,
 						"d": {
 							"correlationId": "fd9c1d02-1d3f-48eb-bf73-15faf8da4c8d",
-							 "instrumentIds": [10,11],
-							"tradingState ": "TRADE / HALT"
+							"instrumentIds": [10,11],
+							"tradingState": "TRADE / HALT"
 						}
 					}
 				}
