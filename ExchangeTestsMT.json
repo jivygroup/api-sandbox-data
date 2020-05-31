@@ -562,7 +562,7 @@
   "[custom]-new-env-2": {
     "url": "wss://exchange-auth-service-develop.cloud.exberry.io",
     "provider": "websocket",
-    "order": 62,
+    "order": 72,
     "methods": [
       {
         "group": "Authentication Service",
@@ -1161,18 +1161,21 @@
           "sample": {
             "q": "/om2.exchange.operations/operationEvents",
             "sid": 11,
-            "d": {}
+            "d": {
+              "exchangeId": 1
+            }
           }
         }
       },
       {
-        "methodName": "clusterAction",
         "group": "System API",
+        "methodName": "clusterAction",
         "payload": {
           "sample": {
             "q": "/om2.exchange.system/clusterAction",
             "sid": 11,
             "d": {
+              "exchangeId": 1,
               "action": "SHUTDOWN"
             }
           },
@@ -1231,13 +1234,14 @@
         }
       },
       {
-        "methodName": "newInstrument",
         "group": "Operation API",
+        "methodName": "newInstrument",
         "payload": {
           "sample": {
             "q": "/om2.exchange.operations/newInstrument",
             "sid": 1,
             "d": {
+              "exchangeId": 1,
               "correlationId": "fd9c1d02-1d3f-48eb-bf73-15faf8da4c8d",
               "tradingState": "TRADE",
               "symbol": "FBDudi",
@@ -1291,13 +1295,14 @@
         }
       },
       {
-        "methodName": "updateInstrument",
         "group": "Operation API",
+        "methodName": "updateInstrument",
         "payload": {
           "sample": {
             "q": "/om2.exchange.operations/updateInstrument",
             "sid": 1,
             "d": {
+              "exchangeId": 1,
               "correlationId": "fd9c1d02-1d3f-48eb-bf73-15faf8da4c8d",
               "instrumentId": 67,
               "symbol": "FBDudi3",
@@ -1312,13 +1317,14 @@
         }
       },
       {
-        "methodName": "assignCalendar",
         "group": "Operation API",
+        "methodName": "assignCalendar",
         "payload": {
           "sample": {
             "q": "/om2.exchange.operations/assignCalendar",
             "sid": 1,
             "d": {
+              "exchangeId": 1,
               "correlationId": "fd9c1d02-1d3f-48eb-bf73-15faf8da4c8d",
               "instrumentIds": [
                 67
@@ -1345,13 +1351,14 @@
         }
       },
       {
-        "methodName": "assignCBR",
         "group": "Operation API",
+        "methodName": "assignCBR",
         "payload": {
           "sample": {
             "q": "/om2.exchange.operations/assignCircuitBreakerRule",
             "sid": 1,
             "d": {
+              "exchangeId": 1,
               "correlationId": "fd9c1d02-1d3f-48eb-bf73-15faf8da4c8d",
               "instrumentIds": [
                 10,
@@ -1370,13 +1377,14 @@
         }
       },
       {
-        "methodName": "removeCBR",
         "group": "Operation API",
+        "methodName": "removeCBR",
         "payload": {
           "sample": {
             "q": "/om2.exchange.operations/removeCircuitBreakerRule",
             "sid": 1,
             "d": {
+              "exchangeId": 1,
               "correlationId": "fd9c1d02-1d3f-48eb-bf73-15faf8da4c8d",
               "instrumentIds": [
                 10,
@@ -1388,19 +1396,20 @@
         }
       },
       {
-        "methodName": "tradingState",
         "group": "Operation API",
+        "methodName": "tradingState",
         "payload": {
           "sample": {
             "q": "/om2.exchange.operations/tradingAction",
             "sid": 1,
             "d": {
+              "exchangeId": 1,
               "correlationId": "fd9c1d02-1d3f-48eb-bf73-15faf8da4c8d",
               "instrumentIds": [
                 10,
                 11
               ],
-              "tradingState ": "TRADE / HALT"
+              "tradingState": "TRADE/ HALT"
             }
           }
         }
