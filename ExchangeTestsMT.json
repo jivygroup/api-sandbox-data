@@ -121,7 +121,7 @@
             "instrument": {
               "id": "instrument",
               "label": "instrument",
-             "data": [
+              "data": [
                 "Gold",
                 "ITL"
               ],
@@ -276,7 +276,7 @@
     "order": 2
   },
   "[custom]-new-env-1": {
-      "url": "wss://exchange-gateway-develop-2.demo.exberry.io",
+    "url": "wss://exchange-gateway-develop-2.demo.exberry.io",
     "provider": "websocket",
     "methods": [
       {
@@ -397,7 +397,7 @@
             "instrument": {
               "id": "instrument",
               "label": "instrument",
-                "data": [
+              "data": [
                 "Gold2",
                 "Silver2"
               ],
@@ -554,7 +554,7 @@
   "[custom]-new-env-2": {
     "url": "wss://exchange-auth-service-develop.cloud.exberry.io",
     "provider": "websocket",
-    "order": 75,
+    "order": 76,
     "methods": [
       {
         "group": "Authentication Service",
@@ -697,7 +697,7 @@
             "instrument": {
               "id": "instrument",
               "label": "instrument",
-            "data": [
+              "data": [
                 "ABC",
                 "AMI1",
                 "AMZ",
@@ -710,7 +710,7 @@
                 "Dudi11",
                 "Dudi12",
                 "Erez1"
-              ]   ,         
+              ],
               "type": "select",
               "required": true
             },
@@ -862,7 +862,7 @@
     "order": 29
   },
   "[custom]-new-env-5": {
-       "url": "wss://exchange-gateway-master-2.demo.exberry.io",
+    "url": "wss://exchange-gateway-master-2.demo.exberry.io",
     "provider": "websocket",
     "methods": [
       {
@@ -983,10 +983,11 @@
             "instrument": {
               "id": "instrument",
               "label": "instrument",
-            "data": [
+              "data": [
                 "AMZ2",
                 "AMI2"
-              ],              "type": "select",
+              ],
+              "type": "select",
               "required": true
             },
             "side": {
@@ -1461,6 +1462,35 @@
               "token": "G4Fuv7qdIUDZiNF4Crw",
               "data": [],
               "qualifier": "HistoryService/getOrderEvents"
+            }
+          }
+        }
+      },
+      {
+        "group": "Actions",
+        "methodName": "NewInstrument",
+        "asyncModel": "request/response",
+        "payload": {
+          "sample": {
+            "data": {
+              "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlJqa3hORGN4T0RKRlF6VkNPRGd3UVRreFJUZEZNa05HT0VJMU9FRkNSall6UVRsR1JEWXhOZyJ9.eyJodHRwczovL2JhY2tvZmZpY2UvZXhjaGFuZ2VzIjpbeyJpZCI6MywibGFiZWwiOiJFeGNoYW5nZSBNYXN0ZXIifSx7ImlkIjo0LCJsYWJlbCI6IkV4Y2hhbmdlIE1hc3RlciAyIn1dLCJodHRwczovL2JhY2tvZmZpY2UvY3VycmVudEV4Y2hhbmdlSWQiOjQsImlzcyI6Imh0dHBzOi8vc3RhZ2luZy1hZG1pbi1leGNoYW5nZS1vbTIuZXUuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVkZDI0ZDMzZDM1MTFkMGYwM2E3OGE3MSIsImF1ZCI6WyJiby1nYXRld2F5IiwiaHR0cHM6Ly9zdGFnaW5nLWFkbWluLWV4Y2hhbmdlLW9tMi5ldS5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNTkxNTI1NDc1LCJleHAiOjE1OTE2MTE4NzUsImF6cCI6IkF4S0xaQXJIVzhBT2hqTzM5MVlFQ0xLMXZFYnpObDg5Iiwic2NvcGUiOiJvcGVuaWQgSGFsdFJlc3VtZS9yZXN1bWUgSGFsdFJlc3VtZS9oYWx0QWxsIEhhbHRSZXN1bWUvcmVzdW1lQWxsIEhhbHRSZXN1bWUvaGFsdCBDYWxlbmRhci91cGRhdGUgQ2FsZW5kYXIvbGlzdCBCcm9rZXIvY3JlYXRlIEJyb2tlci91cGRhdGUgQnJva2VyL2xpc3QgSW5zdHJ1bWVudC9saXN0IEFQSUtleS9jcmVhdGUgSW5zdHJ1bWVudC91cGRhdGUgQVBJS2V5L2RlbGV0ZSBJbnN0cnVtZW50L2NyZWF0ZSBDQlIvY3JlYXRlIGVtYWlsIENCUi91cGRhdGUgcHJvZmlsZSBDQlIvbGlzdCBDYWxlbmRhci9jcmVhdGUifQ.SlSnvqj0ozv5W1pkbpuTNTsG7lAnNJP2q0fkcxOuucMYptoWKaRvYZ09AjaDZRcW-4NtXGY4rAIomMXFFR3egBTs7XNsX2Adx-TVY3j1PlNNKQZJtEaR0keRLxW0Aww8W_jIsEXuB8YoyvNZGCt299Is6cCnhhPzFcSJVHYTjKFCRsE3qhlOVzLBsYeT5qHmlhC-Yt5sx7qD-8TSTeFZZhqE65_zTX6akP4OAzaP45cRNiSKmUPpsMK8sFgIG1WgXlgg3nxiRec87mBSGqHID-sB33GO-7TFopRm1GdjZ9a4S9o7KSjKLHTpuVfhyuJ9-uiO6wW9I58twRZrlECl3w",
+              "user": {
+                "email": "dudi.krisher@om2.com"
+              },
+              "data": [
+                {
+                  "symbol": "INSTest6",
+                  "quoteCurrency": "USD",
+                  "instrumentDescription": "instrument Test",
+                  "calendarId": "1806293404",
+                  "pricePrecision": 8,
+                  "quantityPrecision": 6,
+                  "minQuantity": 0.001,
+                  "maxQuantity": 1000000,
+                  "status": "Active"
+                }
+              ],
+              "qualifier": "InstrumentService/create"
             }
           }
         }
