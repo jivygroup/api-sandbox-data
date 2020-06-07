@@ -562,7 +562,7 @@
   "[custom]-new-env-2": {
     "url": "wss://exchange-auth-service-develop.cloud.exberry.io",
     "provider": "websocket",
-    "order": 72,
+    "order": 75,
     "methods": [
       {
         "group": "Authentication Service",
@@ -1205,16 +1205,30 @@
                 "SNAPSHOT",
                 "SHUTDOWN"
               ],
-              "initialValue": "SHUTDOWN",
+              "initialValue": "SNAPSHOT",
               "required": true,
               "valueType": "text"
+            },
+            "exchangeId": {
+              "id": "exchangeId",
+              "label": "exchangeId",
+              "type": "select",
+              "data": [
+                "1",
+                "2",
+                "3",
+                "4"
+              ],
+              "initialValue": "4",
+              "required": true,
+              "valueType": "number"
             }
           },
           "structure": {
             "q": "q",
             "sid": "sid",
             "d": [
-              "action"
+             "exchangeId", "action"
             ]
           }
         }
