@@ -710,7 +710,7 @@
                 "Dudi11",
                 "Dudi12",
                 "Erez1"
-              ]            
+              ]   ,         
               "type": "select",
               "required": true
             },
