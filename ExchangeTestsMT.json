@@ -8,7 +8,7 @@
         "methodName": "createSession - Broker",
         "payload": {
           "sample": {
-            "q": "/om2.exchange.auth/createSession",
+            "q": "exchange.market/createSession",
             "sid": 1,
             "d": {
               "apiKey": "",
@@ -22,7 +22,7 @@
               "id": "q",
               "label": "q",
               "valueType": "text",
-              "initialValue": "/om2.exchange.auth/createSession",
+              "initialValue": "exchange.market/createSession",
               "hidden": true,
               "required": true
             },
@@ -93,7 +93,7 @@
               "brokerOrderId": 1564403702076,
               "userId": "UserTest1"
             },
-            "q": "/om2.exchange.orders/placeOrder",
+            "q": "exchange.market/placeOrder",
             "sid": 1
           },
           "metadata": {
@@ -104,7 +104,7 @@
               "id": "q",
               "label": "q",
               "type": "input",
-              "initialValue": "/om2.exchange.orders/placeOrder",
+              "initialValue": "exchange.market/placeOrder",
               "required": true
             },
             "orderType": {
@@ -251,7 +251,7 @@
         "group": "Trading API",
         "payload": {
           "sample": {
-            "q": "/om2.exchange.orders/cancelOrder",
+            "q": "exchange.market/cancelOrder",
             "sid": 1,
             "d": {
               "orderId": "",
@@ -266,7 +266,7 @@
         "group": "Market Data API",
         "payload": {
           "sample": {
-            "q": "/om2.exchange.market/orderBookDepth",
+            "q": "exchange.market/orderBookDepth",
             "sid": 10,
             "d": {}
           }
@@ -284,7 +284,7 @@
         "methodName": "createSession - Broker",
         "payload": {
           "sample": {
-            "q": "/om2.exchange.auth/createSession",
+            "q": "exchange.market/createSession",
             "sid": 1,
             "d": {
               "apiKey": "",
@@ -298,7 +298,7 @@
               "id": "q",
               "label": "q",
               "valueType": "text",
-              "initialValue": "/om2.exchange.auth/createSession",
+              "initialValue": "exchange.market/createSession",
               "hidden": true,
               "required": true
             },
@@ -369,7 +369,7 @@
               "brokerOrderId": 1564403702076,
               "userId": "UserTest1"
             },
-            "q": "/om2.exchange.orders/placeOrder",
+            "q": "exchange.market/placeOrder",
             "sid": 1
           },
           "metadata": {
@@ -380,7 +380,7 @@
               "id": "q",
               "label": "q",
               "type": "input",
-              "initialValue": "/om2.exchange.orders/placeOrder",
+              "initialValue": "exchange.market/placeOrder",
               "required": true
             },
             "orderType": {
@@ -527,7 +527,7 @@
         "group": "Trading API",
         "payload": {
           "sample": {
-            "q": "/om2.exchange.orders/cancelOrder",
+            "q": "exchange.market/cancelOrder",
             "sid": 1,
             "d": {
               "orderId": "",
@@ -542,7 +542,7 @@
         "group": "Market Data API",
         "payload": {
           "sample": {
-            "q": "/om2.exchange.market/orderBookDepth",
+            "q": "exchange.market/orderBookDepth",
             "sid": 10,
             "d": {}
           }
@@ -584,7 +584,7 @@
         "methodName": "createSession - Broker",
         "payload": {
           "sample": {
-            "q": "/om2.exchange.auth/createSession",
+            "q": "exchange.market/createSession",
             "sid": 1,
             "d": {
               "apiKey": "",
@@ -598,7 +598,7 @@
               "id": "q",
               "label": "q",
               "valueType": "text",
-              "initialValue": "/om2.exchange.auth/createSession",
+              "initialValue": "exchange.market/createSession",
               "hidden": true,
               "required": true
             },
@@ -669,7 +669,7 @@
               "brokerOrderId": 1564403702076,
               "userId": "UserTest1"
             },
-            "q": "/om2.exchange.orders/placeOrder",
+            "q": "exchange.market/placeOrder",
             "sid": 1
           },
           "metadata": {
@@ -680,7 +680,7 @@
               "id": "q",
               "label": "q",
               "type": "input",
-              "initialValue": "/om2.exchange.orders/placeOrder",
+              "initialValue": "exchange.market/placeOrder",
               "required": true
             },
             "orderType": {
@@ -837,7 +837,7 @@
         "group": "Trading API",
         "payload": {
           "sample": {
-            "q": "/om2.exchange.orders/cancelOrder",
+            "q": "exchange.market/cancelOrder",
             "sid": 1,
             "d": {
               "orderId": "",
@@ -852,7 +852,7 @@
         "group": "Market Data API",
         "payload": {
           "sample": {
-            "q": "/om2.exchange.market/orderBookDepth",
+            "q": "exchange.market/orderBookDepth",
             "sid": 10,
             "d": {}
           }
@@ -870,7 +870,7 @@
         "methodName": "createSession - Broker",
         "payload": {
           "sample": {
-            "q": "/om2.exchange.auth/createSession",
+            "q": "exchange.market/createSession",
             "sid": 1,
             "d": {
               "apiKey": "",
@@ -884,7 +884,7 @@
               "id": "q",
               "label": "q",
               "valueType": "text",
-              "initialValue": "/om2.exchange.auth/createSession",
+              "initialValue": "exchange.market/createSession",
               "hidden": true,
               "required": true
             },
@@ -955,7 +955,7 @@
               "brokerOrderId": 1564403702234,
               "userId": "UserTest1"
             },
-            "q": "/om2.exchange.orders/placeOrder",
+            "q": "exchange.market/placeOrder",
             "sid": 1
           },
           "metadata": {
@@ -966,7 +966,7 @@
               "id": "q",
               "label": "q",
               "type": "input",
-              "initialValue": "/om2.exchange.orders/placeOrder",
+              "initialValue": "exchange.market/placeOrder",
               "required": true
             },
             "orderType": {
@@ -1113,7 +1113,7 @@
         "group": "Trading API",
         "payload": {
           "sample": {
-            "q": "/om2.exchange.orders/cancelOrder",
+            "q": "exchange.market/cancelOrder",
             "sid": 1,
             "d": {
               "orderId": "",
@@ -1128,7 +1128,7 @@
         "group": "Market Data API",
         "payload": {
           "sample": {
-            "q": "/om2.exchange.market/orderBookDepth",
+            "q": "exchange.market/orderBookDepth",
             "sid": 10,
             "d": {}
           }
@@ -1146,7 +1146,7 @@
         "methodName": "operationEvents",
         "payload": {
           "sample": {
-            "q": "/om2.exchange.operations/operationEvents",
+            "q": "exchange.operations/operationEvents",
             "sid": 11,
             "d": {
               "exchangeId": 1
@@ -1159,7 +1159,7 @@
         "methodName": "clusterAction",
         "payload": {
           "sample": {
-            "q": "/om2.exchange.system/clusterAction",
+            "q": "exchange.system/clusterAction",
             "sid": 11,
             "d": {
               "exchangeId": 1,
@@ -1173,7 +1173,7 @@
               "id": "q",
               "label": "q",
               "type": "input",
-              "initialValue": "/om2.exchange.system/clusterAction",
+              "initialValue": "exchange.system/clusterAction",
               "required": true
             },
             "sid": {
@@ -1240,7 +1240,7 @@
         "methodName": "newInstrument",
         "payload": {
           "sample": {
-            "q": "/om2.exchange.operations/newInstrument",
+            "q": "exchange.operations/newInstrument",
             "sid": 1,
             "d": {
               "exchangeId": 1,
@@ -1301,7 +1301,7 @@
         "methodName": "updateInstrument",
         "payload": {
           "sample": {
-            "q": "/om2.exchange.operations/updateInstrument",
+            "q": "exchange.operations/updateInstrument",
             "sid": 1,
             "d": {
               "exchangeId": 1,
@@ -1323,7 +1323,7 @@
         "methodName": "assignCalendar",
         "payload": {
           "sample": {
-            "q": "/om2.exchange.operations/assignCalendar",
+            "q": "exchange.operations/assignCalendar",
             "sid": 1,
             "d": {
               "exchangeId": 1,
@@ -1357,7 +1357,7 @@
         "methodName": "assignCBR",
         "payload": {
           "sample": {
-            "q": "/om2.exchange.operations/assignCircuitBreakerRule",
+            "q": "exchange.operations/assignCircuitBreakerRule",
             "sid": 1,
             "d": {
               "exchangeId": 1,
@@ -1383,7 +1383,7 @@
         "methodName": "removeCBR",
         "payload": {
           "sample": {
-            "q": "/om2.exchange.operations/removeCircuitBreakerRule",
+            "q": "exchange.operations/removeCircuitBreakerRule",
             "sid": 1,
             "d": {
               "exchangeId": 1,
@@ -1402,7 +1402,7 @@
         "methodName": "tradingState",
         "payload": {
           "sample": {
-            "q": "/om2.exchange.operations/tradingAction",
+            "q": "exchange.operations/tradingAction",
             "sid": 1,
             "d": {
               "exchangeId": 1,
@@ -1426,7 +1426,7 @@
     "methods": [
       {
         "group": "Lists",
-        "methodName": "Calendar List",
+        "methodName": "Calendar List Stream",
         "asyncModel": "request/stream",
         "payload": {
           "sample": {
@@ -1434,6 +1434,20 @@
               "token": "eyJhblzL4uG4Fuv7qdIUDZiNF4Crw",
               "data": [],
               "qualifier": "CalendarService/list$"
+            }
+          }
+        }
+      },
+	  {
+        "group": "Lists",
+        "methodName": "Calendar List",
+        "asyncModel": "request/response",
+        "payload": {
+          "sample": {
+            "data": {
+              "token": "eyJhblzL4uG4Fuv7qdIUDZiNF4Crw",
+              "data": [],
+              "qualifier": "CalendarService/list"
             }
           }
         }
