@@ -63,7 +63,7 @@
           "sample": {
             "data": {
               "data": [{
-                "id": 1,
+                "id": "1",
                 "instruments": [101, 102, 103],
                 "actionType": "HALT_TRADING",
                 "actionValue": 30,
@@ -80,22 +80,6 @@
         }
       },
       {
-        "methodName": "delete",
-        "group": "CBRService",
-        "asyncModel": "request/response",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [{
-                "id": 1
-              }],
-              "qualifier": "CBRService/delete",
-              "token": "auth0AccessToken"
-            }
-          }
-        }
-      },
-      {
         "methodName": "get",
         "group": "CBRService",
         "asyncModel": "request/response",
@@ -103,9 +87,103 @@
           "sample": {
             "data": {
               "data": [{
-                "id": 1
+                "id": "1"
               }],
               "qualifier": "CBRService/get",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      
+      {
+        "methodName": "list",
+        "group": "InstrumentService",
+        "asyncModel": "request/response",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [],
+              "qualifier": "InstrumentService/list",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      {
+        "methodName": "list$",
+        "group": "InstrumentService",
+        "asyncModel": "request/stream",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [],
+              "qualifier": "InstrumentService/list$",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      {
+        "methodName": "create",
+        "group": "InstrumentService",
+        "asyncModel": "request/response",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [{
+                "symbol": "Instrument1",
+                "instrumentDescription": "Dash",
+                "quoteCurrency": "USD",
+                "status": "Active",
+                "minQuantity": 1,
+                "maxQuantity": 12345,
+                "pricePrecision": 10,
+                "quantityPrecision": 0,
+                "calendarId": "555"
+              }],
+              "qualifier": "InstrumentService/create",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      {
+        "methodName": "update",
+        "group": "InstrumentService",
+        "asyncModel": "request/response",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [{
+                "id": "1",
+                "symbol": "Instrument1",
+                "instrumentDescription": "Dash",
+                "quoteCurrency": "USD",
+                "status": "Active",
+                "minQuantity": 1,
+                "maxQuantity": 12345,
+                "pricePrecision": 10,
+                "quantityPrecision": 0,
+                "calendarId": "555"
+              }],
+              "qualifier": "InstrumentService/update",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      {
+        "methodName": "get",
+        "group": "InstrumentService",
+        "asyncModel": "request/response",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [{
+                "id": "1"
+              }],
+              "qualifier": "InstrumentService/get",
               "token": "auth0AccessToken"
             }
           }
