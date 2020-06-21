@@ -188,6 +188,106 @@
             }
           }
         }
+      },
+      
+      {
+        "methodName": "list",
+        "group": "CalendarService",
+        "asyncModel": "request/response",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [],
+              "qualifier": "CalendarService/list",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      {
+        "methodName": "list$",
+        "group": "CalendarService",
+        "asyncModel": "request/stream",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [],
+              "qualifier": "CalendarService/list$",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      {
+        "methodName": "create",
+        "group": "CalendarService",
+        "asyncModel": "request/response",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [{
+                "calendarName": "Calendar1",
+                "timeZone": "+03:00",
+                "marketOpen": "09:30",
+                "marketClose": "16:00",
+                "tradingDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "holidays": [
+                  {
+                    "name": "Some Holiday",
+                    "date": "2019-12-13",
+                    "closeTime": "14:00",
+                  },
+                ]
+              }],
+              "qualifier": "CalendarService/create",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      {
+        "methodName": "update",
+        "group": "CalendarService",
+        "asyncModel": "request/response",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [{
+                "id": "1",
+                "calendarName": "Calendar1",
+                "timeZone": "+03:00",
+                "marketOpen": "09:30",
+                "marketClose": "16:00",
+                "tradingDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "holidays": [
+                  {
+                    "name": "Some Holiday",
+                    "date": "2019-12-13",
+                    "closeTime": "14:00",
+                  },
+                ]
+              }],
+              "qualifier": "CalendarService/update",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      {
+        "methodName": "get",
+        "group": "CalendarService",
+        "asyncModel": "request/response",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [{
+                "id": "1"
+              }],
+              "qualifier": "CalendarService/get",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
       }
     ]
   }
