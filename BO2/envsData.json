@@ -235,8 +235,8 @@
                   {
                     "name": "Some Holiday",
                     "date": "2019-12-13",
-                    "closeTime": "14:00",
-                  },
+                    "closeTime": "14:00"
+                  }
                 ]
               }],
               "qualifier": "CalendarService/create",
