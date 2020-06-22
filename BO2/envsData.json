@@ -1,6 +1,6 @@
 {
   "backoffice": {
-    "url": "wss://develop.admin.exchange.om2.com/api",
+    "url": "wss://exchange-backoffice-master.cloud.exberry.io/api",
     "provider": "rsocket",
     "order": 1,
     "methods": [
