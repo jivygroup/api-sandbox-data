@@ -288,7 +288,149 @@
             }
           }
         }
+      },
+      
+      {
+        "methodName": "list",
+        "group": "BrokerService",
+        "asyncModel": "request/response",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [],
+              "qualifier": "BrokerService/list",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      {
+        "methodName": "list$",
+        "group": "BrokerService",
+        "asyncModel": "request/stream",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [],
+              "qualifier": "BrokerService/list$",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      {
+        "methodName": "create",
+        "group": "BrokerService",
+        "asyncModel": "request/response",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [{
+                "brokerName": "Broker1"
+              }],
+              "qualifier": "BrokerService/create",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      {
+        "methodName": "update",
+        "group": "BrokerService",
+        "asyncModel": "request/response",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [{
+                "id": "1",
+                "brokerName": "Broker1"
+              }],
+              "qualifier": "BrokerService/update",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      {
+        "methodName": "get",
+        "group": "BrokerService",
+        "asyncModel": "request/response",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [{
+                "id": "1"
+              }],
+              "qualifier": "BrokerService/get",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      
+      {
+        "methodName": "list",
+        "group": "APIKeyService",
+        "asyncModel": "request/response",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [],
+              "qualifier": "APIKeyService/list",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      {
+        "methodName": "list$",
+        "group": "APIKeyService",
+        "asyncModel": "request/stream",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [],
+              "qualifier": "APIKeyService/list$",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      {
+        "methodName": "create",
+        "group": "APIKeyService",
+        "asyncModel": "request/response",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [{
+                 "brokerId": "1",
+                 "label": "Place order permission",
+                 "permissions": ["market-service:market:place_order"]
+              }],
+              "qualifier": "APIKeyService/create",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
+      },
+      {
+        "methodName": "delete",
+        "group": "APIKeyService",
+        "asyncModel": "request/response",
+        "payload": {
+          "sample": {
+            "data": {
+              "data": [{
+                "id": "1"
+              }],
+              "qualifier": "APIKeyService/delete",
+              "token": "auth0AccessToken"
+            }
+          }
+        }
       }
+      
     ]
   }
 }
