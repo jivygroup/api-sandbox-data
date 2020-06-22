@@ -6,7 +6,7 @@
     "methods": [
       {
         "methodName": "list",
-        "group": "CBRService",
+        "group": "CBR",
         "asyncModel": "request/response",
         "payload": {
           "sample": {
@@ -20,7 +20,7 @@
       },
       {
         "methodName": "list$",
-        "group": "CBRService",
+        "group": "CBR",
         "asyncModel": "request/stream",
         "payload": {
           "sample": {
@@ -34,7 +34,7 @@
       },
       {
         "methodName": "create",
-        "group": "CBRService",
+        "group": "CBR",
         "asyncModel": "request/response",
         "payload": {
           "sample": {
@@ -57,7 +57,7 @@
       },
       {
         "methodName": "update",
-        "group": "CBRService",
+        "group": "CBR",
         "asyncModel": "request/response",
         "payload": {
           "sample": {
@@ -81,7 +81,7 @@
       },
       {
         "methodName": "get",
-        "group": "CBRService",
+        "group": "CBR",
         "asyncModel": "request/response",
         "payload": {
           "sample": {
@@ -98,7 +98,7 @@
       
       {
         "methodName": "list",
-        "group": "InstrumentService",
+        "group": "Instrument",
         "asyncModel": "request/response",
         "payload": {
           "sample": {
@@ -112,7 +112,7 @@
       },
       {
         "methodName": "list$",
-        "group": "InstrumentService",
+        "group": "Instrument",
         "asyncModel": "request/stream",
         "payload": {
           "sample": {
@@ -126,7 +126,7 @@
       },
       {
         "methodName": "create",
-        "group": "InstrumentService",
+        "group": "Instrument",
         "asyncModel": "request/response",
         "payload": {
           "sample": {
@@ -150,7 +150,7 @@
       },
       {
         "methodName": "update",
-        "group": "InstrumentService",
+        "group": "Instrument",
         "asyncModel": "request/response",
         "payload": {
           "sample": {
@@ -175,7 +175,7 @@
       },
       {
         "methodName": "get",
-        "group": "InstrumentService",
+        "group": "Instrument",
         "asyncModel": "request/response",
         "payload": {
           "sample": {
@@ -192,7 +192,7 @@
       
       {
         "methodName": "list",
-        "group": "CalendarService",
+        "group": "Instrument",
         "asyncModel": "request/response",
         "payload": {
           "sample": {
@@ -206,7 +206,7 @@
       },
       {
         "methodName": "list$",
-        "group": "CalendarService",
+        "group": "Calendar",
         "asyncModel": "request/stream",
         "payload": {
           "sample": {
@@ -220,7 +220,7 @@
       },
       {
         "methodName": "create",
-        "group": "CalendarService",
+        "group": "Calendar",
         "asyncModel": "request/response",
         "payload": {
           "sample": {
@@ -247,7 +247,7 @@
       },
       {
         "methodName": "update",
-        "group": "CalendarService",
+        "group": "Calendar",
         "asyncModel": "request/response",
         "payload": {
           "sample": {
@@ -275,7 +275,7 @@
       },
       {
         "methodName": "get",
-        "group": "CalendarService",
+        "group": "Calendar",
         "asyncModel": "request/response",
         "payload": {
           "sample": {
@@ -292,7 +292,7 @@
       
       {
         "methodName": "list",
-        "group": "BrokerService",
+        "group": "Broker",
         "asyncModel": "request/response",
         "payload": {
           "sample": {
@@ -306,7 +306,7 @@
       },
       {
         "methodName": "list$",
-        "group": "BrokerService",
+        "group": "Broker",
         "asyncModel": "request/stream",
         "payload": {
           "sample": {
@@ -320,7 +320,7 @@
       },
       {
         "methodName": "create",
-        "group": "BrokerService",
+        "group": "Broker",
         "asyncModel": "request/response",
         "payload": {
           "sample": {
@@ -336,7 +336,7 @@
       },
       {
         "methodName": "update",
-        "group": "BrokerService",
+        "group": "Broker",
         "asyncModel": "request/response",
         "payload": {
           "sample": {
@@ -353,7 +353,7 @@
       },
       {
         "methodName": "get",
-        "group": "BrokerService",
+        "group": "Broker",
         "asyncModel": "request/response",
         "payload": {
           "sample": {
@@ -370,7 +370,7 @@
       
       {
         "methodName": "list",
-        "group": "APIKeyService",
+        "group": "APIKey",
         "asyncModel": "request/response",
         "payload": {
           "sample": {
@@ -384,7 +384,7 @@
       },
       {
         "methodName": "list$",
-        "group": "APIKeyService",
+        "group": "APIKey",
         "asyncModel": "request/stream",
         "payload": {
           "sample": {
@@ -398,7 +398,7 @@
       },
       {
         "methodName": "create",
-        "group": "APIKeyService",
+        "group": "APIKey",
         "asyncModel": "request/response",
         "payload": {
           "sample": {
@@ -416,7 +416,7 @@
       },
       {
         "methodName": "delete",
-        "group": "APIKeyService",
+        "group": "APIKey",
         "asyncModel": "request/response",
         "payload": {
           "sample": {
