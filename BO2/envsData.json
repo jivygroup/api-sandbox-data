@@ -1,436 +1,568 @@
 {
-  "backoffice": {
-    "url": "wss://exchange-backoffice-master.cloud.exberry.io/api",
-    "provider": "rsocket",
-    "order": 1,
-    "methods": [
-      {
-        "methodName": "list",
-        "group": "CBR",
-        "asyncModel": "request/response",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [],
-              "qualifier": "CBRService/list",
-              "token": "auth0AccessToken"
-            }
-          }
-        }
-      },
-      {
-        "methodName": "list$",
-        "group": "CBR",
-        "asyncModel": "request/stream",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [],
-              "qualifier": "CBRService/list$",
-              "token": "auth0AccessToken"
-            }
-          }
-        }
-      },
-      {
-        "methodName": "create",
-        "group": "CBR",
-        "asyncModel": "request/response",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [{
-                "instruments": [101, 102],
-                "actionType": "HALT_TRADING",
-                "actionValue": 30,
-                "ruleName": "CBR decline 20%",
-                "type": "MARKET_RATE",
-                "priority": 50,
-                "value": 0.8,
-                "status": "ACTIVE"
-              }],
-              "qualifier": "CBRService/create",
-              "token": "auth0AccessToken"
-            }
-          }
-        }
-      },
-      {
-        "methodName": "update",
-        "group": "CBR",
-        "asyncModel": "request/response",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [{
-                "id": "1",
-                "instruments": [101, 102, 103],
-                "actionType": "HALT_TRADING",
-                "actionValue": 30,
-                "ruleName": "CBR decline 20%",
-                "type": "MARKET_RATE",
-                "priority": 50,
-                "value": 0.8,
-                "status": "ACTIVE"
-              }],
-              "qualifier": "CBRService/update",
-              "token": "auth0AccessToken"
-            }
-          }
-        }
-      },
-      {
-        "methodName": "get",
-        "group": "CBR",
-        "asyncModel": "request/response",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [{
-                "id": "1"
-              }],
-              "qualifier": "CBRService/get",
-              "token": "auth0AccessToken"
-            }
-          }
-        }
-      },
-      
-      {
-        "methodName": "list",
-        "group": "Instrument",
-        "asyncModel": "request/response",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [],
-              "qualifier": "InstrumentService/list",
-              "token": "auth0AccessToken"
-            }
-          }
-        }
-      },
-      {
-        "methodName": "list$",
-        "group": "Instrument",
-        "asyncModel": "request/stream",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [],
-              "qualifier": "InstrumentService/list$",
-              "token": "auth0AccessToken"
-            }
-          }
-        }
-      },
-      {
-        "methodName": "create",
-        "group": "Instrument",
-        "asyncModel": "request/response",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [{
-                "symbol": "Instrument1",
-                "instrumentDescription": "Dash",
-                "quoteCurrency": "USD",
-                "status": "Active",
-                "minQuantity": 1,
-                "maxQuantity": 12345,
-                "pricePrecision": 10,
-                "quantityPrecision": 0,
-                "calendarId": "555"
-              }],
-              "qualifier": "InstrumentService/create",
-              "token": "auth0AccessToken"
-            }
-          }
-        }
-      },
-      {
-        "methodName": "update",
-        "group": "Instrument",
-        "asyncModel": "request/response",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [{
-                "id": "1",
-                "symbol": "Instrument1",
-                "instrumentDescription": "Dash",
-                "quoteCurrency": "USD",
-                "status": "Active",
-                "minQuantity": 1,
-                "maxQuantity": 12345,
-                "pricePrecision": 10,
-                "quantityPrecision": 0,
-                "calendarId": "555"
-              }],
-              "qualifier": "InstrumentService/update",
-              "token": "auth0AccessToken"
-            }
-          }
-        }
-      },
-      {
-        "methodName": "get",
-        "group": "Instrument",
-        "asyncModel": "request/response",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [{
-                "id": "1"
-              }],
-              "qualifier": "InstrumentService/get",
-              "token": "auth0AccessToken"
-            }
-          }
-        }
-      },
-      
-      {
-        "methodName": "list",
-        "group": "Instrument",
-        "asyncModel": "request/response",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [],
-              "qualifier": "CalendarService/list",
-              "token": "auth0AccessToken"
-            }
-          }
-        }
-      },
-      {
-        "methodName": "list$",
-        "group": "Calendar",
-        "asyncModel": "request/stream",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [],
-              "qualifier": "CalendarService/list$",
-              "token": "auth0AccessToken"
-            }
-          }
-        }
-      },
-      {
-        "methodName": "create",
-        "group": "Calendar",
-        "asyncModel": "request/response",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [{
-                "calendarName": "Calendar1",
-                "timeZone": "+03:00",
-                "marketOpen": "09:30",
-                "marketClose": "16:00",
-                "tradingDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "holidays": [
-                  {
-                    "name": "Some Holiday",
-                    "date": "2019-12-13",
-                    "closeTime": "14:00"
+   "backoffice":{
+      "url":"wss://exchange-backoffice-master.cloud.exberry.io/api",
+      "provider":"rsocket",
+      "order":1,
+      "methods":[
+         {
+            "methodName":"list",
+            "group":"CBR",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+
+                     ],
+                     "qualifier":"CBRService/list",
+                     "token":"auth0AccessToken"
                   }
-                ]
-              }],
-              "qualifier": "CalendarService/create",
-              "token": "auth0AccessToken"
+               }
             }
-          }
-        }
-      },
-      {
-        "methodName": "update",
-        "group": "Calendar",
-        "asyncModel": "request/response",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [{
-                "id": "1",
-                "calendarName": "Calendar1",
-                "timeZone": "+03:00",
-                "marketOpen": "09:30",
-                "marketClose": "16:00",
-                "tradingDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "holidays": [
-                  {
-                    "name": "Some Holiday",
-                    "date": "2019-12-13",
-                    "closeTime": "14:00"
+         },
+         {
+            "methodName":"list$",
+            "group":"CBR",
+            "asyncModel":"request/stream",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+
+                     ],
+                     "qualifier":"CBRService/list$",
+                     "token":"auth0AccessToken"
                   }
-                ]
-              }],
-              "qualifier": "CalendarService/update",
-              "token": "auth0AccessToken"
+               }
             }
-          }
-        }
-      },
-      {
-        "methodName": "get",
-        "group": "Calendar",
-        "asyncModel": "request/response",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [{
-                "id": "1"
-              }],
-              "qualifier": "CalendarService/get",
-              "token": "auth0AccessToken"
+         },
+         {
+            "methodName":"create",
+            "group":"CBR",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+                        {
+                           "instruments":[
+                              101,
+                              102
+                           ],
+                           "actionType":"HALT_TRADING",
+                           "actionValue":30,
+                           "ruleName":"CBR decline 20%",
+                           "type":"MARKET_RATE",
+                           "priority":50,
+                           "value":0.8,
+                           "status":"ACTIVE"
+                        }
+                     ],
+                     "qualifier":"CBRService/create",
+                     "token":"auth0AccessToken"
+                  }
+               }
             }
-          }
-        }
-      },
-      
-      {
-        "methodName": "list",
-        "group": "Broker",
-        "asyncModel": "request/response",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [],
-              "qualifier": "BrokerService/list",
-              "token": "auth0AccessToken"
+         },
+         {
+            "methodName":"update",
+            "group":"CBR",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+                        {
+                           "id":"1",
+                           "instruments":[
+                              101,
+                              102,
+                              103
+                           ],
+                           "actionType":"HALT_TRADING",
+                           "actionValue":30,
+                           "ruleName":"CBR decline 20%",
+                           "type":"MARKET_RATE",
+                           "priority":50,
+                           "value":0.8,
+                           "status":"ACTIVE"
+                        }
+                     ],
+                     "qualifier":"CBRService/update",
+                     "token":"auth0AccessToken"
+                  }
+               }
             }
-          }
-        }
-      },
-      {
-        "methodName": "list$",
-        "group": "Broker",
-        "asyncModel": "request/stream",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [],
-              "qualifier": "BrokerService/list$",
-              "token": "auth0AccessToken"
+         },
+         {
+            "methodName":"get",
+            "group":"CBR",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+                        {
+                           "id":"1"
+                        }
+                     ],
+                     "qualifier":"CBRService/get",
+                     "token":"auth0AccessToken"
+                  }
+               }
             }
-          }
-        }
-      },
-      {
-        "methodName": "create",
-        "group": "Broker",
-        "asyncModel": "request/response",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [{
-                "brokerName": "Broker1"
-              }],
-              "qualifier": "BrokerService/create",
-              "token": "auth0AccessToken"
+         },
+         {
+            "methodName":"list",
+            "group":"Instrument",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+
+                     ],
+                     "qualifier":"InstrumentService/list",
+                     "token":"auth0AccessToken"
+                  }
+               }
             }
-          }
-        }
-      },
-      {
-        "methodName": "update",
-        "group": "Broker",
-        "asyncModel": "request/response",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [{
-                "id": "1",
-                "brokerName": "Broker1"
-              }],
-              "qualifier": "BrokerService/update",
-              "token": "auth0AccessToken"
+         },
+         {
+            "methodName":"list$",
+            "group":"Instrument",
+            "asyncModel":"request/stream",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+
+                     ],
+                     "qualifier":"InstrumentService/list$",
+                     "token":"auth0AccessToken"
+                  }
+               }
             }
-          }
-        }
-      },
-      {
-        "methodName": "get",
-        "group": "Broker",
-        "asyncModel": "request/response",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [{
-                "id": "1"
-              }],
-              "qualifier": "BrokerService/get",
-              "token": "auth0AccessToken"
+         },
+         {
+            "methodName":"create",
+            "group":"Instrument",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+                        {
+                           "symbol":"Instrument1",
+                           "instrumentDescription":"Dash",
+                           "quoteCurrency":"USD",
+                           "status":"Active",
+                           "minQuantity":1,
+                           "maxQuantity":12345,
+                           "pricePrecision":10,
+                           "quantityPrecision":0,
+                           "calendarId":"555"
+                        }
+                     ],
+                     "qualifier":"InstrumentService/create",
+                     "token":"auth0AccessToken"
+                  }
+               }
             }
-          }
-        }
-      },
-      
-      {
-        "methodName": "list",
-        "group": "APIKey",
-        "asyncModel": "request/response",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [],
-              "qualifier": "APIKeyService/list",
-              "token": "auth0AccessToken"
+         },
+         {
+            "methodName":"update",
+            "group":"Instrument",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+                        {
+                           "id":"1",
+                           "symbol":"Instrument1",
+                           "instrumentDescription":"Dash",
+                           "quoteCurrency":"USD",
+                           "status":"Active",
+                           "minQuantity":1,
+                           "maxQuantity":12345,
+                           "pricePrecision":10,
+                           "quantityPrecision":0,
+                           "calendarId":"555"
+                        }
+                     ],
+                     "qualifier":"InstrumentService/update",
+                     "token":"auth0AccessToken"
+                  }
+               }
             }
-          }
-        }
-      },
-      {
-        "methodName": "list$",
-        "group": "APIKey",
-        "asyncModel": "request/stream",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [],
-              "qualifier": "APIKeyService/list$",
-              "token": "auth0AccessToken"
+         },
+         {
+            "methodName":"get",
+            "group":"Instrument",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+                        {
+                           "id":"1"
+                        }
+                     ],
+                     "qualifier":"InstrumentService/get",
+                     "token":"auth0AccessToken"
+                  }
+               }
             }
-          }
-        }
-      },
-      {
-        "methodName": "create",
-        "group": "APIKey",
-        "asyncModel": "request/response",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [{
-                 "brokerId": "1",
-                 "label": "Place order permission",
-                 "permissions": ["market-service:market:place_order"]
-              }],
-              "qualifier": "APIKeyService/create",
-              "token": "auth0AccessToken"
+         },
+         {
+            "methodName":"list",
+            "group":"Instrument",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+
+                     ],
+                     "qualifier":"CalendarService/list",
+                     "token":"auth0AccessToken"
+                  }
+               }
             }
-          }
-        }
-      },
-      {
-        "methodName": "delete",
-        "group": "APIKey",
-        "asyncModel": "request/response",
-        "payload": {
-          "sample": {
-            "data": {
-              "data": [{
-                "id": "1"
-              }],
-              "qualifier": "APIKeyService/delete",
-              "token": "auth0AccessToken"
+         },
+         {
+            "methodName":"list$",
+            "group":"Calendar",
+            "asyncModel":"request/stream",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+
+                     ],
+                     "qualifier":"CalendarService/list$",
+                     "token":"auth0AccessToken"
+                  }
+               }
             }
-          }
-        }
-      }
-      
-    ]
-  }
+         },
+         {
+            "methodName":"create",
+            "group":"Calendar",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+                        {
+                           "calendarName":"Calendar1",
+                           "timeZone":"+03:00",
+                           "marketOpen":"09:30",
+                           "marketClose":"16:00",
+                           "tradingDays":[
+                              "Monday",
+                              "Tuesday",
+                              "Wednesday",
+                              "Thursday",
+                              "Friday"
+                           ],
+                           "holidays":[
+                              {
+                                 "name":"Some Holiday",
+                                 "date":"2019-12-13",
+                                 "closeTime":"14:00"
+                              }
+                           ]
+                        }
+                     ],
+                     "qualifier":"CalendarService/create",
+                     "token":"auth0AccessToken"
+                  }
+               }
+            }
+         },
+         {
+            "methodName":"update",
+            "group":"Calendar",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+                        {
+                           "id":"1",
+                           "calendarName":"Calendar1",
+                           "timeZone":"+03:00",
+                           "marketOpen":"09:30",
+                           "marketClose":"16:00",
+                           "tradingDays":[
+                              "Monday",
+                              "Tuesday",
+                              "Wednesday",
+                              "Thursday",
+                              "Friday"
+                           ],
+                           "holidays":[
+                              {
+                                 "name":"Some Holiday",
+                                 "date":"2019-12-13",
+                                 "closeTime":"14:00"
+                              }
+                           ]
+                        }
+                     ],
+                     "qualifier":"CalendarService/update",
+                     "token":"auth0AccessToken"
+                  }
+               }
+            }
+         },
+         {
+            "methodName":"get",
+            "group":"Calendar",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+                        {
+                           "id":"1"
+                        }
+                     ],
+                     "qualifier":"CalendarService/get",
+                     "token":"auth0AccessToken"
+                  }
+               }
+            }
+         },
+         {
+            "methodName":"list",
+            "group":"Broker",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+
+                     ],
+                     "qualifier":"BrokerService/list",
+                     "token":"auth0AccessToken"
+                  }
+               }
+            }
+         },
+         {
+            "methodName":"list$",
+            "group":"Broker",
+            "asyncModel":"request/stream",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+
+                     ],
+                     "qualifier":"BrokerService/list$",
+                     "token":"auth0AccessToken"
+                  }
+               }
+            }
+         },
+         {
+            "methodName":"create",
+            "group":"Broker",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+                        {
+                           "brokerName":"Broker1"
+                        }
+                     ],
+                     "qualifier":"BrokerService/create",
+                     "token":"auth0AccessToken"
+                  }
+               }
+            }
+         },
+         {
+            "methodName":"update",
+            "group":"Broker",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+                        {
+                           "id":"1",
+                           "brokerName":"Broker1"
+                        }
+                     ],
+                     "qualifier":"BrokerService/update",
+                     "token":"auth0AccessToken"
+                  }
+               }
+            }
+         },
+         {
+            "methodName":"get",
+            "group":"Broker",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+                        {
+                           "id":"1"
+                        }
+                     ],
+                     "qualifier":"BrokerService/get",
+                     "token":"auth0AccessToken"
+                  }
+               }
+            }
+         },
+         {
+            "methodName":"list",
+            "group":"APIKey",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+
+                     ],
+                     "qualifier":"APIKeyService/list",
+                     "token":"auth0AccessToken"
+                  }
+               }
+            }
+         },
+         {
+            "methodName":"list$",
+            "group":"APIKey",
+            "asyncModel":"request/stream",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+
+                     ],
+                     "qualifier":"APIKeyService/list$",
+                     "token":"auth0AccessToken"
+                  }
+               }
+            }
+         },
+         {
+            "methodName":"create",
+            "group":"APIKey",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+                        {
+                           "brokerId":"1",
+                           "label":"Place order permission",
+                           "permissions":[
+                              "market-service:market:place_order"
+                           ]
+                        }
+                     ],
+                     "qualifier":"APIKeyService/create",
+                     "token":"auth0AccessToken"
+                  }
+               }
+            }
+         },
+         {
+            "methodName":"delete",
+            "group":"APIKey",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+                        {
+                           "id":"1"
+                        }
+                     ],
+                     "qualifier":"APIKeyService/delete",
+                     "token":"auth0AccessToken"
+                  }
+               }
+            }
+         },
+         {
+            "methodName":"halt",
+            "group":"APIKey",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+                        {
+                           "id":"1"
+                        }
+                     ],
+                     "qualifier":"HaltResumeService/halt",
+                     "token":"auth0AccessToken"
+                  }
+               }
+            }
+         },
+         {
+            "methodName":"resume",
+            "group":"APIKey",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+                        {
+                           "id":"1"
+                        }
+                     ],
+                     "qualifier":"HaltResumeService/resume",
+                     "token":"auth0AccessToken"
+                  }
+               }
+            }
+         },
+         {
+            "methodName":"haltAll",
+            "group":"APIKey",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+
+                     ],
+                     "qualifier":"HaltResumeService/haltAll",
+                     "token":"auth0AccessToken"
+                  }
+               }
+            }
+         },
+         {
+            "methodName":"resumeAll",
+            "group":"APIKey",
+            "asyncModel":"request/response",
+            "payload":{
+               "sample":{
+                  "data":{
+                     "data":[
+
+                     ],
+                     "qualifier":"HaltResumeService/resumeAll",
+                     "token":"auth0AccessToken"
+                  }
+               }
+            }
+         }
+      ]
+   }
 }
