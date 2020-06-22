@@ -497,7 +497,7 @@
          },
          {
             "methodName":"halt",
-            "group":"APIKey",
+            "group":"HaltResume",
             "asyncModel":"request/response",
             "payload":{
                "sample":{
@@ -515,7 +515,7 @@
          },
          {
             "methodName":"resume",
-            "group":"APIKey",
+            "group":"HaltResume",
             "asyncModel":"request/response",
             "payload":{
                "sample":{
@@ -533,7 +533,7 @@
          },
          {
             "methodName":"haltAll",
-            "group":"APIKey",
+            "group":"HaltResume",
             "asyncModel":"request/response",
             "payload":{
                "sample":{
@@ -549,7 +549,7 @@
          },
          {
             "methodName":"resumeAll",
-            "group":"APIKey",
+            "group":"HaltResume",
             "asyncModel":"request/response",
             "payload":{
                "sample":{
