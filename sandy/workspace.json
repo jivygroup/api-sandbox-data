@@ -86,7 +86,7 @@
         }
       },
       "config": {
-        "token": "https://raw.githubusercontent.com/jivygroup/api-sandbox-data/master/sandy/envs-data.json",
+        "token": "https://raw.githubusercontent.com/jivygroup/api-sandbox-data/master/sandy",
         "configProvider": "httpFile"
       }
     },
