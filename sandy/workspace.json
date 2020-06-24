@@ -22,7 +22,7 @@
     },
     {
       "serviceName": "EnvironmentSelectorService",
-      "path": "https://capsulajs.s3.amazonaws.com/develop/capsulahub-service-selector/index.js",
+      "path": "https://capsulajs.s3.amazonaws.com/master/capsulahub-service-selector/index.js",
       "definition": {
         "serviceName": "EnvironmentSelectorService",
         "methods": {
@@ -46,7 +46,7 @@
     },
     {
       "serviceName": "MethodSelectorService",
-      "path": "https://capsulajs.s3.amazonaws.com/develop/capsulahub-service-selector/index.js",
+      "path": "https://capsulajs.s3.amazonaws.com/master/capsulahub-service-selector/index.js",
       "definition": {
         "serviceName": "MethodSelectorService",
         "methods": {
@@ -70,7 +70,7 @@
     },
     {
       "serviceName": "EnvironmentRegistryService",
-      "path": "/exchange-sandbox-application-environment-registry/index.js",
+      "path": "https://sandbox.exberry.io/exchange-sandbox-application-environment-registry/index.js",
       "definition": {
         "serviceName": "EnvironmentRegistryService",
         "methods": {
@@ -92,7 +92,7 @@
     },
     {
       "serviceName": "ApplicationFlowService",
-      "path": "/exchange-sandbox-application-flow/index.js",
+      "path": "https://sandbox.exberry.io/exchange-sandbox-application-flow/index.js",
       "definition": {
         "serviceName": "ApplicationFlowService",
         "methods": {}
@@ -107,7 +107,7 @@
     },
     {
       "serviceName": "WebSocketConnectionService",
-      "path": "https://capsulajs.s3.amazonaws.com/develop/capsulahub-service-connection/index.js",
+      "path": "https://capsulajs.s3.amazonaws.com/master/capsulahub-service-connection/index.js",
       "definition": {
         "serviceName": "WebSocketConnectionService",
         "methods": {
@@ -132,7 +132,7 @@
     },
     {
       "serviceName": "RSocketConnectionService",
-      "path": "https://capsulajs.s3.amazonaws.com/develop/capsulahub-service-connection/index.js",
+      "path": "https://capsulajs.s3.amazonaws.com/master/capsulahub-service-connection/index.js",
       "definition": {
         "serviceName": "RSocketConnectionService",
         "methods": {
@@ -157,7 +157,7 @@
     },
     {
       "serviceName": "AuthService",
-      "path": "https://capsulajs.s3.amazonaws.com/develop/capsulahub-service-auth/index.js",
+      "path": "https://capsulajs.s3.amazonaws.com/master/capsulahub-service-auth/index.js",
       "definition": {
         "serviceName": "AuthService",
         "methods": {
@@ -186,7 +186,7 @@
     "layouts": {
       "capsulahub-root": {
         "componentName": "web-exchange-sandbox",
-        "path": "/exchange-sandbox-application-widget/index.js",
+        "path": "https://sandbox.exberry.io/exchange-sandbox-application-widget/index.js",
         "config": {}
       }
     },
