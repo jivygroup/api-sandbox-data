@@ -284,6 +284,19 @@
             "d": {}
           }
         }
+      },
+      {
+        "group": "Trading API",
+        "methodName": "massCancel",
+        "payload": {
+          "sample": {
+            "q": "exchange.market/massCancel",
+            "sid": 1,
+            "d": {
+              "instrument": "ABC"
+            }
+          }
+        }
       }
     ],
     "order": 2
@@ -291,7 +304,7 @@
   "[custom]-new-env-2": {
     "url": "wss://exchange-auth-service-develop.dev.ops.exberry.io",
     "provider": "websocket",
-    "order": 95,
+    "order": 98,
     "methods": [
       {
         "group": "Authentication Service",
@@ -598,9 +611,22 @@
             "d": {}
           }
         }
+      },
+      {
+        "group": "Trading API",
+        "methodName": "massCancel",
+        "payload": {
+          "sample": {
+            "q": "exchange.market/massCancel",
+            "sid": 1,
+            "d": {
+              "instrument": "AMZ"
+            }
+          }
+        }
       }
     ],
-    "order": 34
+    "order": 35
   },
   "[custom]-new-env-6": {
     "url": "wss://exchange-operation-gateway-master.dev.exchange.exberry.io",
@@ -882,12 +908,12 @@
         }
       }
     ],
-    "order": 64
+    "order": 67
   },
   "[custom]-new-env-7": {
     "url": "wss://exchange-backoffice-master.dev.ops.exberry.io/api",
     "provider": "rsocket",
-    "order": 78,
+    "order": 81,
     "methods": [
       {
         "group": "Lists",
@@ -1271,8 +1297,21 @@
             "d": {}
           }
         }
+      },
+      {
+        "group": "Trading API",
+        "methodName": "massCancel",
+        "payload": {
+          "sample": {
+            "q": "exchange.market/massCancel",
+            "sid": 1,
+            "d": {
+              "instrument": "AMZ"
+            }
+          }
+        }
       }
     ],
-    "order": 37
+    "order": 39
   }
 }
