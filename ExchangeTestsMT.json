@@ -39,7 +39,7 @@
               "id": "apiKey",
               "label": "apiKey",
               "valueType": "text",
-              "initialValue": "b7cdba1d-fa02-4d98-b0cd-6638a120ac0a",
+              "initialValue": "1acfa012-0dcb-42e0-936c-a35f556e06cc",
               "required": true
             },
             "secret": {
@@ -47,7 +47,7 @@
               "id": "secret",
               "label": "secret",
               "valueType": "text",
-              "initialValue": "c860a3094eab6e4bd57f82586fcb8e77438b183ffc0d91c47fae3598d9c7b363",
+              "initialValue": "87611c9fc1162a74ca566a52cbd3559a68904b95189893caea561ab21db3d6a7",
               "required": true
             },
             "timestamp": {
@@ -1042,7 +1042,7 @@
               "id": "apiKey",
               "label": "apiKey",
               "valueType": "text",
-              "initialValue": "7ba816b0-fb0e-4d8d-97d8-e911bf2afe67",
+              "initialValue": "2688e25c-10ca-480a-a31c-a0eb7eaaf1eb",
               "required": true
             },
             "secret": {
@@ -1050,7 +1050,7 @@
               "id": "secret",
               "label": "secret",
               "valueType": "text",
-              "initialValue": "d5d47eb4bba68a4af2ead76bc5032d0b502d105fb723251be2138f0960c1c87a",
+              "initialValue": "a2f3b133b59d1660cd4dcb1b366b75c89657a0fac62fab818a3abbe0813570e5",
               "required": true
             },
             "timestamp": {
