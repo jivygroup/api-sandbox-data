@@ -39,7 +39,7 @@
               "id": "apiKey",
               "label": "apiKey",
               "valueType": "text",
-              "initialValue": "b26d3c03-1bab-4941-9dc9-77a16ab1225f",
+              "initialValue": "d4fdfdd5-2d2f-4263-8965-3a2c568af59a",
               "required": true
             },
             "secret": {
@@ -47,7 +47,7 @@
               "id": "secret",
               "label": "secret",
               "valueType": "text",
-              "initialValue": "ac70ac0076dcf51b9b034831c98ce9dfc852ca410e772231960711f278d8d87a",
+              "initialValue": "0a374a2184d2a63de3356bb51cc5bc26fbbf0e450cf9c462868e90791a9b43e3",
               "required": true
             },
             "timestamp": {
