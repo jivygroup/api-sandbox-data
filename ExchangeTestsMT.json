@@ -709,7 +709,7 @@
       ]
    },
    "[custom]-new-env-8":{
-      "url":"wss://exchange-gateway-uat.uat.exchange.exberry.io",
+      "url":"wss://exchange-gateway-uat.gw.uat.exchange.exberry.io",
       "provider":"websocket",
       "methods":[
          {
