@@ -304,7 +304,7 @@
    "[custom]-new-env-2":{
       "url":"wss://exchange-auth-service-develop.dev.ops.exberry.io",
       "provider":"websocket",
-      "order":149,
+      "order":155,
       "methods":[
          {
             "group":"Authentication Service",
@@ -605,12 +605,12 @@
             }
          }
       ],
-      "order":118
+      "order":124
    },
    "[custom]-new-env-7":{
       "url":"wss://exchange-backoffice-master.dev.ops.exberry.io/api",
       "provider":"rsocket",
-      "order":132,
+      "order":138,
       "methods":[
          {
             "group":"Lists",
@@ -1008,10 +1008,10 @@
             }
          }
       ],
-      "order":80
+      "order":86
    },
    "[custom]-new-env-9":{
-      "url":"wss://exchange-gateway-rc.dev.exchange.exberry.io",
+      "url":"wss://exchange-gateway-rc.gw.rnd.exchange.exberry.io",
       "provider":"websocket",
       "methods":[
          {
@@ -1050,7 +1050,7 @@
                      "id":"apiKey",
                      "label":"apiKey",
                      "valueType":"text",
-                     "initialValue":"dec52636-968f-4f77-8dc3-c3f38630cbec",
+                     "initialValue":"c86ce45d-b9a9-4eed-932e-cce526a97b19",
                      "required":true
                   },
                   "secret":{
@@ -1058,7 +1058,7 @@
                      "id":"secret",
                      "label":"secret",
                      "valueType":"text",
-                     "initialValue":"d66bcf4bde3d69db2875c218236563ffbb913225e6cbb7099f38884ec541ca2b",
+                     "initialValue":"1e83b8e0b652fdd579f55bcd77a7afddbc115b62ccb97b39ed9ed7adb91eb21b",
                      "required":true
                   },
                   "timestamp":{
@@ -1918,6 +1918,6 @@
             }
          }
       ],
-      "order":30
+      "order":36
    }
 }
