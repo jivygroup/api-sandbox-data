@@ -304,7 +304,7 @@
    "[custom]-new-env-2":{
       "url":"wss://exchange-auth-service-develop.dev.ops.exberry.io",
       "provider":"websocket",
-      "order":146,
+      "order":149,
       "methods":[
          {
             "group":"Authentication Service",
@@ -605,12 +605,12 @@
             }
          }
       ],
-      "order":115
+      "order":118
    },
    "[custom]-new-env-7":{
       "url":"wss://exchange-backoffice-master.dev.ops.exberry.io/api",
       "provider":"rsocket",
-      "order":129,
+      "order":132,
       "methods":[
          {
             "group":"Lists",
@@ -1008,7 +1008,7 @@
             }
          }
       ],
-      "order":77
+      "order":80
    },
    "[custom]-new-env-9":{
       "url":"wss://exchange-gateway-rc.dev.exchange.exberry.io",
@@ -1312,10 +1312,10 @@
             }
          }
       ],
-      "order":18
+      "order":21
    },
    "[custom]-new-env-10":{
-      "url":"wss://exchange-gateway-master.dev.exchange.exberry.io",
+      "url":"wss://exchange-gateway-master.gw.rnd.exchange.exberry.io",
       "provider":"websocket",
       "methods":[
          {
@@ -1354,7 +1354,7 @@
                      "id":"apiKey",
                      "label":"apiKey",
                      "valueType":"text",
-                     "initialValue":"2688e25c-10ca-480a-a31c-a0eb7eaaf1eb",
+                     "initialValue":"11707389-0162-4d2b-8005-9bd52e60bde9",
                      "required":true
                   },
                   "secret":{
@@ -1362,7 +1362,7 @@
                      "id":"secret",
                      "label":"secret",
                      "valueType":"text",
-                     "initialValue":"a2f3b133b59d1660cd4dcb1b366b75c89657a0fac62fab818a3abbe0813570e5",
+                     "initialValue":"521c65cf5b6a8439669184d7a0b935e57670b3c1cd00be420661dfd75a17d7cc",
                      "required":true
                   },
                   "timestamp":{
@@ -1918,6 +1918,6 @@
             }
          }
       ],
-      "order":27
+      "order":30
    }
 }
