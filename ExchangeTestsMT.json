@@ -1,6 +1,6 @@
 {
    "exchange/develop":{
-      "url":"wss://exchange-gateway-develop.dev.exchange.exberry.io",
+      "url":"wss://exchange-gateway-develop.gw.rnd.exchange.exberry.io",
       "provider":"websocket",
       "methods":[
          {
@@ -39,7 +39,7 @@
                      "id":"apiKey",
                      "label":"apiKey",
                      "valueType":"text",
-                     "initialValue":"1acfa012-0dcb-42e0-936c-a35f556e06cc",
+                     "initialValue":"cadd3e0d-c1a0-4db9-a3d5-c7692675a1d3",
                      "required":true
                   },
                   "secret":{
@@ -47,7 +47,7 @@
                      "id":"secret",
                      "label":"secret",
                      "valueType":"text",
-                     "initialValue":"87611c9fc1162a74ca566a52cbd3559a68904b95189893caea561ab21db3d6a7",
+                     "initialValue":"3159c12a72b4dff068d362ad8818663407d2a42e5014be12cc871230f16e5795",
                      "required":true
                   },
                   "timestamp":{
@@ -85,12 +85,12 @@
                "sample":{
                   "d":{
                      "orderType":"Limit",
-                     "instrument":"ABC",
+                     "instrument":"AMZ",
                      "side":"Buy",
                      "quantity":1.3,
                      "price":100.33,
                      "timeInForce":"GTC",
-                     "mpOrderId":1564403702076,
+                     "mpOrderId":10,
                      "userId":"UserTest1"
                   },
                   "q":"exchange.market/placeOrder",
@@ -122,8 +122,7 @@
                      "id":"instrument",
                      "label":"instrument",
                      "data":[
-                        "ABC",
-                        "123"
+                        "AMZ"
                      ],
                      "type":"select",
                      "required":true
@@ -255,7 +254,7 @@
                   "sid":1,
                   "d":{
                      "orderId":"",
-                     "instrument":"ABC"
+                     "instrument":"AMZ"
                   }
                }
             }
@@ -281,7 +280,7 @@
                   "q":"exchange.market/orderBookState",
                   "sid":100,
                   "d":{
-
+                     
                   }
                }
             }
@@ -294,7 +293,7 @@
                   "q":"exchange.market/massCancel",
                   "sid":1,
                   "d":{
-                     "instrument":"ABC"
+                     "instrument":"AMZ"
                   }
                }
             }
@@ -305,7 +304,7 @@
    "[custom]-new-env-2":{
       "url":"wss://exchange-auth-service-develop.dev.ops.exberry.io",
       "provider":"websocket",
-      "order":141,
+      "order":146,
       "methods":[
          {
             "group":"Authentication Service",
@@ -606,12 +605,12 @@
             }
          }
       ],
-      "order":110
+      "order":115
    },
    "[custom]-new-env-7":{
       "url":"wss://exchange-backoffice-master.dev.ops.exberry.io/api",
       "provider":"rsocket",
-      "order":124,
+      "order":129,
       "methods":[
          {
             "group":"Lists",
@@ -622,7 +621,7 @@
                   "data":{
                      "token":"eyJhblzL4uG4Fuv7qdIUDZiNF4Crw",
                      "data":[
-
+                        
                      ],
                      "qualifier":"CalendarService/list$"
                   }
@@ -638,7 +637,7 @@
                   "data":{
                      "token":"eyJhblzL4uG4Fuv7qdIUDZiNF4Crw",
                      "data":[
-
+                        
                      ],
                      "qualifier":"CalendarService/list"
                   }
@@ -654,7 +653,7 @@
                   "data":{
                      "token":"eyJhbGcrw",
                      "data":[
-
+                        
                      ],
                      "qualifier":"HistoryService/getOrders"
                   }
@@ -670,7 +669,7 @@
                   "data":{
                      "token":"G4Fuv7qdIUDZiNF4Crw",
                      "data":[
-
+                        
                      ],
                      "qualifier":"HistoryService/getOrderEvents"
                   }
@@ -990,7 +989,7 @@
                   "q":"exchange.market/orderBookState",
                   "sid":100,
                   "d":{
-
+                     
                   }
                }
             }
@@ -1009,7 +1008,7 @@
             }
          }
       ],
-      "order":72
+      "order":77
    },
    "[custom]-new-env-9":{
       "url":"wss://exchange-gateway-rc.dev.exchange.exberry.io",
@@ -1294,7 +1293,7 @@
                   "q":"exchange.market/orderBookState",
                   "sid":100,
                   "d":{
-
+                     
                   }
                }
             }
@@ -1313,7 +1312,7 @@
             }
          }
       ],
-      "order":13
+      "order":18
    },
    "[custom]-new-env-10":{
       "url":"wss://exchange-gateway-master.dev.exchange.exberry.io",
@@ -1597,7 +1596,7 @@
                   "q":"exchange.market/orderBookState",
                   "sid":100,
                   "d":{
-
+                     
                   }
                }
             }
@@ -1616,7 +1615,7 @@
             }
          }
       ],
-      "order":4
+      "order":9
    },
    "[custom]-new-env-11":{
       "url":"wss://exchange-gateway-release.dev.exchange.exberry.io",
@@ -1900,7 +1899,7 @@
                   "q":"exchange.market/orderBookState",
                   "sid":100,
                   "d":{
-
+                     
                   }
                }
             }
@@ -1919,6 +1918,6 @@
             }
          }
       ],
-      "order":22
+      "order":27
    }
 }
