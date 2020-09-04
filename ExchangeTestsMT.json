@@ -304,7 +304,7 @@
    "[custom]-new-env-2":{
       "url":"wss://exchange-auth-service-develop.dev.ops.exberry.io",
       "provider":"websocket",
-      "order":158,
+      "order":163,
       "methods":[
          {
             "group":"Authentication Service",
@@ -605,12 +605,12 @@
             }
          }
       ],
-      "order":127
+      "order":132
    },
    "[custom]-new-env-7":{
       "url":"wss://exchange-backoffice-master.dev.ops.exberry.io/api",
       "provider":"rsocket",
-      "order":141,
+      "order":146,
       "methods":[
          {
             "group":"Lists",
@@ -1008,7 +1008,7 @@
             }
          }
       ],
-      "order":89
+      "order":94
    },
    "[custom]-new-env-9":{
       "url":"wss://exchange-gateway-rc.gw.rnd.exchange.exberry.io",
@@ -1616,7 +1616,7 @@
       "order":9
    },
    "[custom]-new-env-11":{
-      "url":"wss://exchange-gateway-release.dev.exchange.exberry.io",
+      "url":"wss://exchange-gateway-release.gw.rnd.exchange.exberry.io",
       "provider":"websocket",
       "methods":[
          {
@@ -1655,7 +1655,7 @@
                      "id":"apiKey",
                      "label":"apiKey",
                      "valueType":"text",
-                     "initialValue":"d7754229-5cbf-4de8-9e5a-31940f5ca27d",
+                     "initialValue":"057640a5-0cda-42d4-ab55-f1dd12c4c585",
                      "required":true
                   },
                   "secret":{
@@ -1663,7 +1663,7 @@
                      "id":"secret",
                      "label":"secret",
                      "valueType":"text",
-                     "initialValue":"cbba6feda9cbb88a6e71330aa8d13a086d8629830b69cc1a52c41056965e845f",
+                     "initialValue":"f32154bcb8abc16c756fa1bf45f7fe96fb237d8432b5c8adfcb2a8b9775e7984",
                      "required":true
                   },
                   "timestamp":{
@@ -1701,7 +1701,7 @@
                "sample":{
                   "d":{
                      "orderType":"Limit",
-                     "instrument":"Silver",
+                     "instrument":"AMZ",
                      "side":"Buy",
                      "quantity":1.3,
                      "price":100.33,
@@ -1738,8 +1738,7 @@
                      "id":"instrument",
                      "label":"instrument",
                      "data":[
-                        "Silver",
-                        "Gold"
+                        "AMZ"
                      ],
                      "type":"select",
                      "required":true
@@ -1871,7 +1870,7 @@
                   "sid":1,
                   "d":{
                      "orderId":"",
-                     "instrument":"Silver"
+                     "instrument":"AMZ"
                   }
                }
             }
@@ -1910,7 +1909,7 @@
                   "q":"exchange.market/massCancel",
                   "sid":1,
                   "d":{
-                     "instrument":"Silver"
+                     "instrument":"AMZ"
                   }
                }
             }
