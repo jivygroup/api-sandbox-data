@@ -524,7 +524,7 @@
    "[custom]-new-env-2":{
       "url":"wss://exchange-auth-service-develop.rnd.ops.exberry.io",
       "provider":"websocket",
-      "order":225,
+      "order":227,
       "methods":[
          {
             "group":"Authentication Service",
@@ -825,12 +825,12 @@
             }
          }
       ],
-      "order":192
+      "order":194
    },
    "[custom]-new-env-7":{
       "url":"wss://exchange-backoffice-master.bo.rnd.ops.exberry.io/api",
       "provider":"rsocket",
-      "order":207,
+      "order":209,
       "methods":[
          {
             "group":"Lists",
@@ -1448,7 +1448,7 @@
             }
          }
       ],
-      "order":148
+      "order":150
    },
    "[custom]-new-env-9":{
       "url":"wss://exchange-gateway-rc.gw.rnd.exchange.exberry.io",
@@ -1775,7 +1775,7 @@
                      "id":"q",
                      "label":"q",
                      "type":"input",
-                     "initialValue":"exchange.market/placeOrder",
+                     "initialValue":"v1/exchange.market/placeOrder",
                      "required":true
                   },
                   "orderType":{
@@ -1970,7 +1970,7 @@
             }
          }
       ],
-      "order":62
+      "order":63
    },
    "[custom]-new-env-10":{
       "url":"wss://exchange-gateway-master.gw.rnd.exchange.exberry.io",
@@ -2272,7 +2272,7 @@
                      "id":"q",
                      "label":"q",
                      "type":"input",
-                     "initialValue":"exchange.market/placeOrder",
+                     "initialValue":"v1/exchange.market/placeOrder",
                      "required":true
                   },
                   "orderType":{
@@ -3015,6 +3015,6 @@
             }
          }
       ],
-      "order":86
+      "order":88
    }
 }
