@@ -450,7 +450,7 @@
 	"[custom]-new-env-2": {
 		"url": "wss://exchange-auth-service-develop.rnd.ops.exberry.io",
 		"provider": "websocket",
-		"order": 231,
+		"order": 232,
 		"methods": [{
 			"group": "Authentication Service",
 			"methodName": "createAccessKey",
@@ -697,12 +697,12 @@
 				}
 			}
 		}],
-		"order": 198
+		"order": 199
 	},
 	"[custom]-new-env-7": {
 		"url": "wss://exchange-backoffice-master.bo.rnd.ops.exberry.io/api",
 		"provider": "rsocket",
-		"order": 213,
+		"order": 214,
 		"methods": [{
 			"group": "Lists",
 			"methodName": "Calendar List Stream",
@@ -1229,7 +1229,7 @@
 				}
 			}
 		}],
-		"order": 154
+		"order": 155
 	},
 	"[custom]-new-env-9": {
 		"url": "wss://exchange-gateway-rc.exchange.rnd.exberry.io",
@@ -1677,10 +1677,10 @@
 				}
 			}
 		}],
-		"order": 65
+		"order": 66
 	},
 	"[custom]-new-env-10": {
-		"url": "wss://exchange-gateway-master.exchange.rnd.exberry.io ",
+		"url": "wss://exchange-gateway-master.gw.rnd.exchange.exberry.io",
 		"provider": "websocket",
 		"methods": [{
 			"group": "Authentication API",
@@ -2573,6 +2573,6 @@
 				}
 			}
 		}],
-		"order": 91
+		"order": 92
 	}
 }
