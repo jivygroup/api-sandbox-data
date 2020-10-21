@@ -39,7 +39,7 @@
                      "id":"apiKey",
                      "label":"apiKey",
                      "valueType":"text",
-                     "initialValue":"cadd3e0d-c1a0-4db9-a3d5-c7692675a1d3",
+                     "initialValue":"d28f3a06-407a-4d0f-afb7-020ca768ecd9",
                      "required":true
                   },
                   "secret":{
@@ -47,7 +47,7 @@
                      "id":"secret",
                      "label":"secret",
                      "valueType":"text",
-                     "initialValue":"3159c12a72b4dff068d362ad8818663407d2a42e5014be12cc871230f16e5795",
+                     "initialValue":"0cbe4adf1735917cfe800069ea7bbda421c4180e91143aa64e7a9ab2f218defe",
                      "required":true
                   },
                   "timestamp":{
@@ -539,7 +539,7 @@
    "[custom]-new-env-2":{
       "url":"wss://exchange-auth-service-develop.rnd.ops.exberry.io",
       "provider":"websocket",
-      "order":236,
+      "order":238,
       "methods":[
          {
             "group":"Authentication Service",
@@ -840,12 +840,12 @@
             }
          }
       ],
-      "order":203
+      "order":205
    },
    "[custom]-new-env-7":{
       "url":"wss://exchange-backoffice-master.bo.rnd.ops.exberry.io/api",
       "provider":"rsocket",
-      "order":218,
+      "order":220,
       "methods":[
          {
             "group":"Lists",
@@ -1463,7 +1463,7 @@
             }
          }
       ],
-      "order":159
+      "order":161
    },
    "[custom]-new-env-9":{
       "url":"wss://exchange-gateway-rc.exchange.rnd.exberry.io",
@@ -1985,7 +1985,7 @@
             }
          }
       ],
-      "order":70
+      "order":72
    },
    "[custom]-new-env-10":{
       "url":"wss://exchange-gateway-master.exchange.rnd.exberry.io",
@@ -2027,7 +2027,7 @@
                      "id":"apiKey",
                      "label":"apiKey",
                      "valueType":"text",
-                     "initialValue":"11707389-0162-4d2b-8005-9bd52e60bde9",
+                     "initialValue":"67d7817d-548e-4e71-b78e-6aac601f1460",
                      "required":true
                   },
                   "secret":{
@@ -2035,7 +2035,7 @@
                      "id":"secret",
                      "label":"secret",
                      "valueType":"text",
-                     "initialValue":"521c65cf5b6a8439669184d7a0b935e57670b3c1cd00be420661dfd75a17d7cc",
+                     "initialValue":"b2ce67870f74e1bc26c804adb814269f9d42cabac96967b32e945ba237b170a8",
                      "required":true
                   },
                   "timestamp":{
@@ -2523,7 +2523,7 @@
             }
          }
       ],
-      "order":33
+      "order":34
    },
    "[custom]-new-env-11":{
       "url":"wss://exchange-gateway-release.exchange.rnd.exberry.io",
@@ -3045,6 +3045,6 @@
             }
          }
       ],
-      "order":96
+      "order":98
    }
 }
