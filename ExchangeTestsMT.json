@@ -517,6 +517,21 @@
                   }
                }
             }
+         },
+         {
+            "group":"Trading API -v1",
+            "methodName":"modifyOrder-v1",
+            "payload":{
+               "sample":{
+                  "d":{
+                     "orderId":1,
+                     "instrument":"AMZ",
+                     "quantity":1
+                  },
+                  "q":"v1/exchange.market/modifyOrder",
+                  "sid":1
+               }
+            }
          }
       ],
       "order":2
@@ -524,7 +539,7 @@
    "[custom]-new-env-2":{
       "url":"wss://exchange-auth-service-develop.rnd.ops.exberry.io",
       "provider":"websocket",
-      "order":234,
+      "order":236,
       "methods":[
          {
             "group":"Authentication Service",
@@ -825,12 +840,12 @@
             }
          }
       ],
-      "order":201
+      "order":203
    },
    "[custom]-new-env-7":{
       "url":"wss://exchange-backoffice-master.bo.rnd.ops.exberry.io/api",
       "provider":"rsocket",
-      "order":216,
+      "order":218,
       "methods":[
          {
             "group":"Lists",
@@ -1448,7 +1463,7 @@
             }
          }
       ],
-      "order":157
+      "order":159
    },
    "[custom]-new-env-9":{
       "url":"wss://exchange-gateway-rc.exchange.rnd.exberry.io",
@@ -1970,7 +1985,7 @@
             }
          }
       ],
-      "order":68
+      "order":70
    },
    "[custom]-new-env-10":{
       "url":"wss://exchange-gateway-master.exchange.rnd.exberry.io",
@@ -2491,9 +2506,24 @@
                   }
                }
             }
+         },
+         {
+            "group":"Trading API -v1",
+            "methodName":"modifyOrder-v1",
+            "payload":{
+               "sample":{
+                  "d":{
+                     "orderId":1,
+                     "instrument":"AMZ",
+                     "quantity":1
+                  },
+                  "q":"v1/exchange.market/modifyOrder",
+                  "sid":1
+               }
+            }
          }
       ],
-      "order":32
+      "order":33
    },
    "[custom]-new-env-11":{
       "url":"wss://exchange-gateway-release.exchange.rnd.exberry.io",
@@ -3015,6 +3045,6 @@
             }
          }
       ],
-      "order":94
+      "order":96
    }
 }
