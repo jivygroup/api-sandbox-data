@@ -539,7 +539,7 @@
    "[custom]-new-env-2":{
       "url":"wss://exchange-auth-service-develop.rnd.ops.exberry.io",
       "provider":"websocket",
-      "order":238,
+      "order":242,
       "methods":[
          {
             "group":"Authentication Service",
@@ -840,12 +840,12 @@
             }
          }
       ],
-      "order":205
+      "order":209
    },
    "[custom]-new-env-7":{
       "url":"wss://exchange-backoffice-master.bo.rnd.ops.exberry.io/api",
       "provider":"rsocket",
-      "order":220,
+      "order":224,
       "methods":[
          {
             "group":"Lists",
@@ -1461,9 +1461,24 @@
                   }
                }
             }
+         },
+         {
+            "group":"Trading API -v1",
+            "methodName":"modifyOrder-v1",
+            "payload":{
+               "sample":{
+                  "d":{
+                     "orderId":1,
+                     "instrument":"AMZ",
+                     "quantity":1
+                  },
+                  "q":"v1/exchange.market/modifyOrder",
+                  "sid":1
+               }
+            }
          }
       ],
-      "order":161
+      "order":163
    },
    "[custom]-new-env-9":{
       "url":"wss://exchange-gateway-rc.exchange.rnd.exberry.io",
@@ -1981,6 +1996,21 @@
                   "d":{
                      
                   }
+               }
+            }
+         },
+         {
+            "group":"Trading API -v1",
+            "methodName":"modifyOrder-v1",
+            "payload":{
+               "sample":{
+                  "d":{
+                     "orderId":1,
+                     "instrument":"AMZ",
+                     "quantity":1
+                  },
+                  "q":"v1/exchange.market/modifyOrder",
+                  "sid":1
                }
             }
          }
@@ -3043,8 +3073,23 @@
                   }
                }
             }
+         },
+         {
+            "group":"Trading API -v1",
+            "methodName":"modifyOrder-v1",
+            "payload":{
+               "sample":{
+                  "d":{
+                     "orderId":1,
+                     "instrument":"AMZ",
+                     "quantity":1
+                  },
+                  "q":"v1/exchange.market/modifyOrder",
+                  "sid":1
+               }
+            }
          }
       ],
-      "order":98
+      "order":99
    }
 }
