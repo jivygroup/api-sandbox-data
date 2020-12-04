@@ -524,7 +524,7 @@
    "[custom]-new-env-2":{
       "url":"wss://exchange-auth-service-develop.rnd.ops.exberry.io",
       "provider":"websocket",
-      "order":291,
+      "order":292,
       "methods":[
          {
             "group":"Authentication Service",
@@ -828,7 +828,7 @@
       "order":258
    },
    "[custom]-new-env-7":{
-      "url":"wss://exchange-backoffice-master.bo.rnd.ops.exberry.io/api",
+      "url":"wss://exchange-backoffice-master.ops.rnd.exberry.io/api",
       "provider":"rsocket",
       "order":273,
       "methods":[
