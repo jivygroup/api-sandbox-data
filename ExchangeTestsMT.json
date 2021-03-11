@@ -539,7 +539,7 @@
    "[custom]-new-env-2":{
       "url":"wss://exchange-auth-service-develop.rnd.ops.exberry.io",
       "provider":"websocket",
-      "order":297,
+      "order":301,
       "methods":[
          {
             "group":"Authentication Service",
@@ -840,12 +840,12 @@
             }
          }
       ],
-      "order":263
+      "order":267
    },
    "[custom]-new-env-7":{
       "url":"wss://exchange-backoffice-master.ops.rnd.exberry.io/api",
       "provider":"rsocket",
-      "order":278,
+      "order":282,
       "methods":[
          {
             "group":"Lists",
@@ -1477,7 +1477,7 @@
             }
          }
       ],
-      "order":205
+      "order":209
    },
    "[custom]-new-env-9":{
       "url":"wss://exchange-gateway-rc.exchange.rnd.exberry.io",
@@ -2014,7 +2014,7 @@
             }
          }
       ],
-      "order":94
+      "order":98
    },
    "[custom]-new-env-10":{
       "url":"wss://exchange-gateway-master.exchange.rnd.exberry.io",
@@ -2056,7 +2056,7 @@
                      "id":"apiKey",
                      "label":"apiKey",
                      "valueType":"text",
-                     "initialValue":"67d7817d-548e-4e71-b78e-6aac601f1460",
+                     "initialValue":"a554a2a2-a024-4c11-bf4f-772c92be067d",
                      "required":true
                   },
                   "secret":{
@@ -2064,7 +2064,7 @@
                      "id":"secret",
                      "label":"secret",
                      "valueType":"text",
-                     "initialValue":"b2ce67870f74e1bc26c804adb814269f9d42cabac96967b32e945ba237b170a8",
+                     "initialValue":"0ffffe139b307f7cfac6921fb5bf4e4e1c9cbf8a953fec0429aac8b489a0e320",
                      "required":true
                   },
                   "timestamp":{
@@ -2546,6 +2546,32 @@
                   "sid":10,
                   "d":{
                      "trackingNumber":0
+                  }
+               }
+            }
+         },
+         {
+            "group":"Market Data API -v1",
+            "methodName":"executionReports-v1",
+            "payload":{
+               "sample":{
+                  "q":"v1/exchange.market/executionReports",
+                  "sid":12,
+                  "d":{
+                     "trackingNumber":0
+                  }
+               }
+            }
+         },
+         {
+            "group":"Market Data API -v1",
+            "methodName":"massOrderStatus-v1",
+            "payload":{
+               "sample":{
+                  "q":"v1/exchange.market/massOrderStatus",
+                  "sid":13,
+                  "d":{
+                     
                   }
                }
             }
@@ -3062,6 +3088,6 @@
             }
          }
       ],
-      "order":132
+      "order":136
    }
 }
