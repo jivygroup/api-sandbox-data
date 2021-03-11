@@ -517,6 +517,21 @@
                   }
                }
             }
+         },
+         {
+            "group":"Trading API -v1",
+            "methodName":"modifyOrder-v1",
+            "payload":{
+               "sample":{
+                  "d":{
+                     "orderId":1,
+                     "instrument":"AMZ",
+                     "quantity":1
+                  },
+                  "q":"v1/exchange.market/modifyOrder",
+                  "sid":1
+               }
+            }
          }
       ],
       "order":2
@@ -524,7 +539,7 @@
    "[custom]-new-env-2":{
       "url":"wss://exchange-auth-service-develop.rnd.ops.exberry.io",
       "provider":"websocket",
-      "order":292,
+      "order":297,
       "methods":[
          {
             "group":"Authentication Service",
@@ -825,12 +840,12 @@
             }
          }
       ],
-      "order":258
+      "order":263
    },
    "[custom]-new-env-7":{
       "url":"wss://exchange-backoffice-master.ops.rnd.exberry.io/api",
       "provider":"rsocket",
-      "order":273,
+      "order":278,
       "methods":[
          {
             "group":"Lists",
@@ -928,7 +943,7 @@
       ]
    },
    "[custom]-new-env-8":{
-      "url":"wss://exchange-gateway-uat.gw.uat.exchange.exberry.io",
+      "url":"wss://exchange-gateway-uat.exchange.uat.exberry.io",
       "provider":"websocket",
       "methods":[
          {
@@ -967,7 +982,7 @@
                      "id":"apiKey",
                      "label":"apiKey",
                      "valueType":"text",
-                     "initialValue":"3b3df6d7-7fbc-4c47-b08b-2adf9e47e758",
+                     "initialValue":"960b63fb-c9d6-4eaf-82ff-b1dbc82cc20b",
                      "required":true
                   },
                   "secret":{
@@ -975,7 +990,7 @@
                      "id":"secret",
                      "label":"secret",
                      "valueType":"text",
-                     "initialValue":"1077c54309b77285dc23ea4930ca30abf2470fb74a6bac27f6f12583e4c2047f",
+                     "initialValue":"e38e6d98dd45bba61b5152166abdac724cadca660256a9c7f310f6db5cf57428",
                      "required":true
                   },
                   "timestamp":{
@@ -1462,7 +1477,7 @@
             }
          }
       ],
-      "order":202
+      "order":205
    },
    "[custom]-new-env-9":{
       "url":"wss://exchange-gateway-rc.exchange.rnd.exberry.io",
@@ -1504,7 +1519,7 @@
                      "id":"apiKey",
                      "label":"apiKey",
                      "valueType":"text",
-                     "initialValue":"c86ce45d-b9a9-4eed-932e-cce526a97b19",
+                     "initialValue":"ac48005a-c798-4243-9a2b-a761cdf62f6f",
                      "required":true
                   },
                   "secret":{
@@ -1512,7 +1527,7 @@
                      "id":"secret",
                      "label":"secret",
                      "valueType":"text",
-                     "initialValue":"1e83b8e0b652fdd579f55bcd77a7afddbc115b62ccb97b39ed9ed7adb91eb21b",
+                     "initialValue":"fbba34e362bdc702723aa64b9314e7ecd7cbf4d5cd2cf8cfdf8262f82ceab216",
                      "required":true
                   },
                   "timestamp":{
@@ -1999,7 +2014,7 @@
             }
          }
       ],
-      "order":93
+      "order":94
    },
    "[custom]-new-env-10":{
       "url":"wss://exchange-gateway-master.exchange.rnd.exberry.io",
@@ -2536,7 +2551,7 @@
             }
          }
       ],
-      "order":49
+      "order":50
    },
    "[custom]-new-env-11":{
       "url":"wss://exchange-gateway-release.exchange.rnd.exberry.io",
@@ -2578,7 +2593,7 @@
                      "id":"apiKey",
                      "label":"apiKey",
                      "valueType":"text",
-                     "initialValue":"057640a5-0cda-42d4-ab55-f1dd12c4c585",
+                     "initialValue":"a9cb07ae-b5d3-4765-b379-df95a75cc52a",
                      "required":true
                   },
                   "secret":{
@@ -2586,7 +2601,7 @@
                      "id":"secret",
                      "label":"secret",
                      "valueType":"text",
-                     "initialValue":"f32154bcb8abc16c756fa1bf45f7fe96fb237d8432b5c8adfcb2a8b9775e7984",
+                     "initialValue":"12dc50471d932a830b0c055f258882f80b263989f5d66dcb2c7dfec186e28b2e",
                      "required":true
                   },
                   "timestamp":{
@@ -3047,6 +3062,6 @@
             }
          }
       ],
-      "order":130
+      "order":132
    }
 }
