@@ -72,7 +72,7 @@
       },
       {
          "serviceName":"EnvironmentRegistryService",
-         "path":"http://localhost:1113/index.js",
+         "path":"https://sandbox-dev.exchange.om2.com/PR/feature/get-rid-of-CS-usage/exchange-sandbox/exchange-sandbox-application-environment-registry/index.js",
          "definition":{
             "serviceName":"EnvironmentRegistryService",
             "methods":{
@@ -95,7 +95,7 @@
       },
       {
          "serviceName":"ApplicationFlowService",
-         "path":"http://localhost:1111/index.js",
+         "path":"https://sandbox-dev.exchange.om2.com/PR/feature/get-rid-of-CS-usage/exchange-sandbox/exchange-sandbox-application-flow/index.js",
          "definition":{
             "serviceName":"ApplicationFlowService",
             "methods":{
@@ -190,7 +190,7 @@
       "layouts":{
          "capsulahub-root":{
             "componentName":"web-exchange-sandbox",
-            "path":"http://localhost:1112/index.js",
+            "path":"https://sandbox-dev.exchange.om2.com/PR/feature/get-rid-of-CS-usage/exchange-sandbox/exchange-sandbox-application-widget/index.js",
             "config":{
                
             }
