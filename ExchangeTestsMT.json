@@ -345,7 +345,7 @@
    "[custom]-new-env-2":{
       "url":"wss://exchange-auth-service-develop.rnd.ops.exberry.io",
       "provider":"websocket",
-      "order":375,
+      "order":379,
       "methods":[
          {
             "group":"Authentication Service",
@@ -646,12 +646,12 @@
             }
          }
       ],
-      "order":339
+      "order":343
    },
    "[custom]-new-env-7":{
       "url":"wss://exchange-backoffice-master.ops.rnd.exberry.io/api",
       "provider":"rsocket",
-      "order":356,
+      "order":360,
       "methods":[
          {
             "group":"Lists",
@@ -1059,6 +1059,32 @@
                   },
                   "q":"v1/exchange.market/modifyOrder",
                   "sid":1
+               }
+            }
+         },
+         {
+            "group":"Private Data API",
+            "methodName":"executionReports",
+            "payload":{
+               "sample":{
+                  "d":{
+                     
+                  },
+                  "q":"v1/exchange.market/executionReports",
+                  "sid":103
+               }
+            }
+         },
+         {
+            "group":"Private Data API",
+            "methodName":"massOrderStatus",
+            "payload":{
+               "sample":{
+                  "d":{
+                     
+                  },
+                  "q":"v1/exchange.market/massOrderStatus",
+                  "sid":102
                }
             }
          }
@@ -2407,8 +2433,34 @@
                   "sid":1
                }
             }
+         },
+         {
+            "group":"Private Data API",
+            "methodName":"massOrderStatus",
+            "payload":{
+               "sample":{
+                  "d":{
+                     
+                  },
+                  "q":"v1/exchange.market/massOrderStatus",
+                  "sid":102
+               }
+            }
+         },
+         {
+            "group":"Private Data API",
+            "methodName":"executionReports",
+            "payload":{
+               "sample":{
+                  "d":{
+                     
+                  },
+                  "q":"v1/exchange.market/executionReports",
+                  "sid":103
+               }
+            }
          }
       ],
-      "order":268
+      "order":270
    }
 }
