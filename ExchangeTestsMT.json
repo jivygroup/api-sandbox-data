@@ -39,7 +39,7 @@
                      "id":"apiKey",
                      "label":"apiKey",
                      "valueType":"text",
-                     "initialValue":"d28f3a06-407a-4d0f-afb7-020ca768ecd9",
+                     "initialValue":"4071ebe5-f379-49c4-afd7-f7fecbd668f5",
                      "required":true
                   },
                   "secret":{
@@ -47,7 +47,7 @@
                      "id":"secret",
                      "label":"secret",
                      "valueType":"text",
-                     "initialValue":"0cbe4adf1735917cfe800069ea7bbda421c4180e91143aa64e7a9ab2f218defe",
+                     "initialValue":"6d7f25c1d10876f3139d4536315cc615011e06d1bd1622fc0cac30748e967293",
                      "required":true
                   },
                   "timestamp":{
@@ -79,8 +79,8 @@
             }
          },
          {
-            "group":"Trading API -v1",
-            "methodName":"placeOrder-v1",
+            "group":"Trading API",
+            "methodName":"placeOrder",
             "payload":{
                "sample":{
                   "d":{
@@ -246,231 +246,11 @@
             }
          },
          {
-            "group":"Trading API -v1",
-            "methodName":"cancelOrder-v1",
-            "payload":{
-               "sample":{
-                  "q":"v1/exchange.market/cancelOrder",
-                  "sid":1,
-                  "d":{
-                     "orderId":"",
-                     "instrument":"AMZ"
-                  }
-               }
-            }
-         },
-         {
-            "group":"Trading API -v1",
-            "methodName":"massCancel-v1",
-            "payload":{
-               "sample":{
-                  "q":"v1/exchange.market/massCancel",
-                  "sid":1,
-                  "d":{
-                     "instrument":"AMZ"
-                  }
-               }
-            }
-         },
-         {
-            "group":"Market Data API -V1",
-            "methodName":"orderBookDepth-v1",
-            "payload":{
-               "sample":{
-                  "q":"v1/exchange.market/orderBookDepth",
-                  "sid":10,
-                  "d":{
-                     "trackingNumber":0
-                  }
-               }
-            }
-         },
-         {
-            "group":"Market Data API -V1",
-            "methodName":"orderBookState-v1",
-            "payload":{
-               "sample":{
-                  "q":"v1/exchange.market/orderBookState",
-                  "sid":100,
-                  "d":{
-                     
-                  }
-               }
-            }
-         },
-         {
-            "group":"Trading API",
-            "methodName":"placeOrder",
-            "payload":{
-               "sample":{
-                  "d":{
-                     "orderType":"Limit",
-                     "instrument":"AMZ",
-                     "side":"Buy",
-                     "quantity":1.3,
-                     "price":100.33,
-                     "timeInForce":"GTC",
-                     "brokerOrderId":10,
-                     "userId":"UserTest1"
-                  },
-                  "q":"exchange.market/placeOrder",
-                  "sid":1
-               },
-               "metadata":{
-                  "q":{
-                     "hidden":true,
-                     "readonly":true,
-                     "valueType":"text",
-                     "id":"q",
-                     "label":"q",
-                     "type":"input",
-                     "initialValue":"exchange.market/placeOrder",
-                     "required":true
-                  },
-                  "orderType":{
-                     "id":"orderType",
-                     "label":"orderType",
-                     "data":[
-                        "Market",
-                        "Limit"
-                     ],
-                     "type":"select",
-                     "initialValue":"Limit",
-                     "required":true
-                  },
-                  "instrument":{
-                     "id":"instrument",
-                     "label":"instrument",
-                     "data":[
-                        "AMZ"
-                     ],
-                     "type":"select",
-                     "required":true
-                  },
-                  "side":{
-                     "id":"side",
-                     "label":"side",
-                     "data":[
-                        "Buy",
-                        "Sell"
-                     ],
-                     "type":"select",
-                     "initialValue":"Buy",
-                     "required":true
-                  },
-                  "quantity":{
-                     "id":"quantity",
-                     "label":"quantity",
-                     "type":"input",
-                     "required":true,
-                     "initialValue":1.25,
-                     "valueType":"number"
-                  },
-                  "price":{
-                     "hidden":true,
-                     "dependency":{
-                        "override":{
-                           "hidden":false,
-                           "omitted":false,
-                           "required":true
-                        },
-                        "operator":"oneOf",
-                        "values":[
-                           "Limit"
-                        ],
-                        "fieldId":"orderType"
-                     },
-                     "valueType":"number",
-                     "omitted":true,
-                     "id":"price",
-                     "label":"price",
-                     "type":"input",
-                     "initialValue":100.5,
-                     "required":false
-                  },
-                  "timeInForce":{
-                     "id":"timeInForce",
-                     "label":"timeInForce",
-                     "data":[
-                        "GTC",
-                        "GTD",
-                        "IOC",
-                        "FOK"
-                     ],
-                     "type":"select",
-                     "initialValue":"GTC",
-                     "required":true
-                  },
-                  "expiryDate":{
-                     "hidden":true,
-                     "dependency":{
-                        "override":{
-                           "hidden":false,
-                           "omitted":false,
-                           "required":true
-                        },
-                        "operator":"oneOf",
-                        "values":[
-                           "GTD"
-                        ],
-                        "fieldId":"timeInForce"
-                     },
-                     "valueType":"number",
-                     "omitted":true,
-                     "id":"expiryDate",
-                     "label":"expiryDate",
-                     "type":"input",
-                     "initialValue":"__TIMESTAMP_SEC__",
-                     "required":false
-                  },
-                  "brokerOrderId":{
-                     "id":"brokerOrderId",
-                     "label":"brokerOrderId",
-                     "type":"input",
-                     "initialValue":"__TIMESTAMP__",
-                     "required":true,
-                     "valueType":"number"
-                  },
-                  "userId":{
-                     "id":"userId",
-                     "label":"userId",
-                     "type":"input",
-                     "initialValue":"UserTest1",
-                     "required":true,
-                     "valueType":"text"
-                  },
-                  "sid":{
-                     "id":"sid",
-                     "label":"sid",
-                     "type":"input",
-                     "initialValue":1,
-                     "required":true,
-                     "valueType":"number"
-                  }
-               },
-               "structure":{
-                  "d":[
-                     "orderType",
-                     "instrument",
-                     "side",
-                     "quantity",
-                     "price",
-                     "timeInForce",
-                     "expiryDate",
-                     "mpOrderId",
-                     "userId"
-                  ],
-                  "q":"q",
-                  "sid":"sid"
-               }
-            }
-         },
-         {
             "group":"Trading API",
             "methodName":"cancelOrder",
             "payload":{
                "sample":{
-                  "q":"exchange.market/cancelOrder",
+                  "q":"v1/exchange.market/cancelOrder",
                   "sid":1,
                   "d":{
                      "orderId":"",
@@ -484,7 +264,7 @@
             "methodName":"massCancel",
             "payload":{
                "sample":{
-                  "q":"exchange.market/massCancel",
+                  "q":"v1/exchange.market/massCancel",
                   "sid":1,
                   "d":{
                      "instrument":"AMZ"
@@ -493,15 +273,15 @@
             }
          },
          {
-            "group":"Market Data API",
-            "methodName":"orderBookDepth",
+            "group":"Private Data API",
+            "methodName":"massOrderStatus",
             "payload":{
                "sample":{
-                  "q":"exchange.market/orderBookDepth",
-                  "sid":10,
                   "d":{
-                     "trackingNumber":0
-                  }
+                     
+                  },
+                  "q":"v1/exchange.market/massOrderStatus",
+                  "sid":102
                }
             }
          },
@@ -510,7 +290,7 @@
             "methodName":"orderBookState",
             "payload":{
                "sample":{
-                  "q":"exchange.market/orderBookState",
+                  "q":"v1/exchange.market/orderBookState",
                   "sid":100,
                   "d":{
                      
@@ -519,8 +299,8 @@
             }
          },
          {
-            "group":"Trading API -v1",
-            "methodName":"modifyOrder-v1",
+            "group":"Trading API",
+            "methodName":"modifyOrder",
             "payload":{
                "sample":{
                   "d":{
@@ -532,6 +312,32 @@
                   "sid":1
                }
             }
+         },
+         {
+            "group":"Private Data API",
+            "methodName":"executionReports",
+            "payload":{
+               "sample":{
+                  "d":{
+                     
+                  },
+                  "q":"v1/exchange.market/executionReports",
+                  "sid":103
+               }
+            }
+         },
+         {
+            "group":"Market Data API",
+            "methodName":"orderBookDepth",
+            "payload":{
+               "sample":{
+                  "q":"v1/exchange.market/orderBookDepth",
+                  "sid":10,
+                  "d":{
+                     "trackingNumber":0
+                  }
+               }
+            }
          }
       ],
       "order":2
@@ -539,7 +345,7 @@
    "[custom]-new-env-2":{
       "url":"wss://exchange-auth-service-develop.rnd.ops.exberry.io",
       "provider":"websocket",
-      "order":301,
+      "order":375,
       "methods":[
          {
             "group":"Authentication Service",
@@ -840,12 +646,12 @@
             }
          }
       ],
-      "order":267
+      "order":339
    },
    "[custom]-new-env-7":{
       "url":"wss://exchange-backoffice-master.ops.rnd.exberry.io/api",
       "provider":"rsocket",
-      "order":282,
+      "order":356,
       "methods":[
          {
             "group":"Lists",
@@ -982,7 +788,7 @@
                      "id":"apiKey",
                      "label":"apiKey",
                      "valueType":"text",
-                     "initialValue":"960b63fb-c9d6-4eaf-82ff-b1dbc82cc20b",
+                     "initialValue":"afad761f-dc20-403b-9011-b34e9bd45807",
                      "required":true
                   },
                   "secret":{
@@ -990,7 +796,7 @@
                      "id":"secret",
                      "label":"secret",
                      "valueType":"text",
-                     "initialValue":"e38e6d98dd45bba61b5152166abdac724cadca660256a9c7f310f6db5cf57428",
+                     "initialValue":"05248a767482fc0ae74f5c39e742e8ae2ae98766b784a7698ebd174cfb3db280",
                      "required":true
                   },
                   "timestamp":{
@@ -1022,8 +828,8 @@
             }
          },
          {
-            "group":"Trading API -v1",
-            "methodName":"placeOrder-v1",
+            "group":"Trading API",
+            "methodName":"placeOrder",
             "payload":{
                "sample":{
                   "d":{
@@ -1189,246 +995,11 @@
             }
          },
          {
-            "group":"Trading API -v1",
-            "methodName":"cancelOrder-v1",
-            "payload":{
-               "sample":{
-                  "q":"v1/exchange.market/cancelOrder",
-                  "sid":1,
-                  "d":{
-                     "orderId":"",
-                     "instrument":"AMZ"
-                  }
-               }
-            }
-         },
-         {
-            "group":"Trading API -v1",
-            "methodName":"massCancel-v1",
-            "payload":{
-               "sample":{
-                  "q":"v1/exchange.market/massCancel",
-                  "sid":1,
-                  "d":{
-                     "instrument":"AMZ"
-                  }
-               }
-            }
-         },
-         {
-            "group":"Market Data API -v1",
-            "methodName":"orderBookDepth-v1",
-            "payload":{
-               "sample":{
-                  "q":"v1/exchange.market/orderBookDepth",
-                  "sid":10,
-                  "d":{
-                     "trackingNumber":0
-                  }
-               }
-            }
-         },
-         {
-            "group":"Market Data API -v1",
-            "methodName":"orderBookState-v1",
-            "payload":{
-               "sample":{
-                  "q":"v1/exchange.market/orderBookState",
-                  "sid":100,
-                  "d":{
-                     
-                  }
-               }
-            }
-         },
-         {
-            "group":"Trading API -v1",
-            "methodName":"modifyOrder-v1",
-            "payload":{
-               "sample":{
-                  "d":{
-                     "orderId":1,
-                     "instrument":"AMZ",
-                     "quantity":1
-                  },
-                  "q":"v1/exchange.market/modifyOrder",
-                  "sid":1
-               }
-            }
-         },
-         {
-            "group":"Trading API",
-            "methodName":"placeOrder",
-            "payload":{
-               "sample":{
-                  "d":{
-                     "orderType":"Limit",
-                     "instrument":"AMZ",
-                     "side":"Buy",
-                     "quantity":1.3,
-                     "price":100.33,
-                     "timeInForce":"GTC",
-                     "brokerOrderId":1564403702076,
-                     "userId":"UserTest1"
-                  },
-                  "q":"exchange.market/placeOrder",
-                  "sid":1
-               },
-               "metadata":{
-                  "q":{
-                     "hidden":true,
-                     "readonly":true,
-                     "valueType":"text",
-                     "id":"q",
-                     "label":"q",
-                     "type":"input",
-                     "initialValue":"exchange.market/placeOrder",
-                     "required":true
-                  },
-                  "orderType":{
-                     "id":"orderType",
-                     "label":"orderType",
-                     "data":[
-                        "Market",
-                        "Limit"
-                     ],
-                     "type":"select",
-                     "initialValue":"Limit",
-                     "required":true
-                  },
-                  "instrument":{
-                     "id":"instrument",
-                     "label":"instrument",
-                     "data":[
-                        "AMZ"
-                     ],
-                     "type":"select",
-                     "required":true
-                  },
-                  "side":{
-                     "id":"side",
-                     "label":"side",
-                     "data":[
-                        "Buy",
-                        "Sell"
-                     ],
-                     "type":"select",
-                     "initialValue":"Buy",
-                     "required":true
-                  },
-                  "quantity":{
-                     "id":"quantity",
-                     "label":"quantity",
-                     "type":"input",
-                     "required":true,
-                     "initialValue":1.25,
-                     "valueType":"number"
-                  },
-                  "price":{
-                     "hidden":true,
-                     "dependency":{
-                        "override":{
-                           "hidden":false,
-                           "omitted":false,
-                           "required":true
-                        },
-                        "operator":"oneOf",
-                        "values":[
-                           "Limit"
-                        ],
-                        "fieldId":"orderType"
-                     },
-                     "valueType":"number",
-                     "omitted":true,
-                     "id":"price",
-                     "label":"price",
-                     "type":"input",
-                     "initialValue":100.5,
-                     "required":false
-                  },
-                  "timeInForce":{
-                     "id":"timeInForce",
-                     "label":"timeInForce",
-                     "data":[
-                        "GTC",
-                        "GTD",
-                        "IOC",
-                        "FOK"
-                     ],
-                     "type":"select",
-                     "initialValue":"GTC",
-                     "required":true
-                  },
-                  "expiryDate":{
-                     "hidden":true,
-                     "dependency":{
-                        "override":{
-                           "hidden":false,
-                           "omitted":false,
-                           "required":true
-                        },
-                        "operator":"oneOf",
-                        "values":[
-                           "GTD"
-                        ],
-                        "fieldId":"timeInForce"
-                     },
-                     "valueType":"number",
-                     "omitted":true,
-                     "id":"expiryDate",
-                     "label":"expiryDate",
-                     "type":"input",
-                     "initialValue":"__TIMESTAMP_SEC__",
-                     "required":false
-                  },
-                  "brokerOrderId":{
-                     "id":"brokerOrderId",
-                     "label":"brokerOrderId",
-                     "type":"input",
-                     "initialValue":"__TIMESTAMP__",
-                     "required":true,
-                     "valueType":"number"
-                  },
-                  "userId":{
-                     "id":"userId",
-                     "label":"userId",
-                     "type":"input",
-                     "initialValue":"UserTest1",
-                     "required":true,
-                     "valueType":"text"
-                  },
-                  "sid":{
-                     "id":"sid",
-                     "label":"sid",
-                     "type":"input",
-                     "initialValue":1,
-                     "required":true,
-                     "valueType":"number"
-                  }
-               },
-               "structure":{
-                  "d":[
-                     "orderType",
-                     "instrument",
-                     "side",
-                     "quantity",
-                     "price",
-                     "timeInForce",
-                     "expiryDate",
-                     "mpOrderId",
-                     "userId"
-                  ],
-                  "q":"q",
-                  "sid":"sid"
-               }
-            }
-         },
-         {
             "group":"Trading API",
             "methodName":"cancelOrder",
             "payload":{
                "sample":{
-                  "q":"exchange.market/cancelOrder",
+                  "q":"v1/exchange.market/cancelOrder",
                   "sid":1,
                   "d":{
                      "orderId":"",
@@ -1442,7 +1013,7 @@
             "methodName":"massCancel",
             "payload":{
                "sample":{
-                  "q":"exchange.market/massCancel",
+                  "q":"v1/exchange.market/massCancel",
                   "sid":1,
                   "d":{
                      "instrument":"AMZ"
@@ -1455,7 +1026,7 @@
             "methodName":"orderBookDepth",
             "payload":{
                "sample":{
-                  "q":"exchange.market/orderBookDepth",
+                  "q":"v1/exchange.market/orderBookDepth",
                   "sid":10,
                   "d":{
                      "trackingNumber":0
@@ -1468,16 +1039,31 @@
             "methodName":"orderBookState",
             "payload":{
                "sample":{
-                  "q":"exchange.market/orderBookState",
+                  "q":"v1/exchange.market/orderBookState",
                   "sid":100,
                   "d":{
                      
                   }
                }
             }
+         },
+         {
+            "group":"Trading API",
+            "methodName":"modifyOrder",
+            "payload":{
+               "sample":{
+                  "d":{
+                     "orderId":1,
+                     "instrument":"AMZ",
+                     "quantity":1
+                  },
+                  "q":"v1/exchange.market/modifyOrder",
+                  "sid":1
+               }
+            }
          }
       ],
-      "order":209
+      "order":266
    },
    "[custom]-new-env-9":{
       "url":"wss://exchange-gateway-rc.exchange.rnd.exberry.io",
@@ -1519,7 +1105,7 @@
                      "id":"apiKey",
                      "label":"apiKey",
                      "valueType":"text",
-                     "initialValue":"ac48005a-c798-4243-9a2b-a761cdf62f6f",
+                     "initialValue":"bc7a8cb3-aae5-49a9-8506-cb2a94b8f9c4",
                      "required":true
                   },
                   "secret":{
@@ -1527,7 +1113,7 @@
                      "id":"secret",
                      "label":"secret",
                      "valueType":"text",
-                     "initialValue":"fbba34e362bdc702723aa64b9314e7ecd7cbf4d5cd2cf8cfdf8262f82ceab216",
+                     "initialValue":"04794eaf8841e701e237861bf77bfa92d182e8daa3d20b57065de66df5ab1782",
                      "required":true
                   },
                   "timestamp":{
@@ -1559,8 +1145,8 @@
             }
          },
          {
-            "group":"Trading API -v1",
-            "methodName":"placeOrder-v1",
+            "group":"Trading API",
+            "methodName":"placeOrder",
             "payload":{
                "sample":{
                   "d":{
@@ -1726,246 +1312,11 @@
             }
          },
          {
-            "group":"Trading API -v1",
-            "methodName":"cancelOrder-v1",
-            "payload":{
-               "sample":{
-                  "q":"v1/exchange.market/cancelOrder",
-                  "sid":1,
-                  "d":{
-                     "orderId":"",
-                     "instrument":"AMZ"
-                  }
-               }
-            }
-         },
-         {
-            "group":"Trading API -v1",
-            "methodName":"massCancel-v1",
-            "payload":{
-               "sample":{
-                  "q":"v1/exchange.market/massCancel",
-                  "sid":1,
-                  "d":{
-                     "instrument":"AMZ"
-                  }
-               }
-            }
-         },
-         {
-            "group":"Market Data API -v1",
-            "methodName":"orderBookDepth-v1",
-            "payload":{
-               "sample":{
-                  "q":"v1/exchange.market/orderBookDepth",
-                  "sid":10,
-                  "d":{
-                     "trackingNumber":0
-                  }
-               }
-            }
-         },
-         {
-            "group":"Market Data API -v1",
-            "methodName":"orderBookState-v1",
-            "payload":{
-               "sample":{
-                  "q":"v1/exchange.market/orderBookState",
-                  "sid":100,
-                  "d":{
-                     
-                  }
-               }
-            }
-         },
-         {
-            "group":"Trading API -v1",
-            "methodName":"modifyOrder-v1",
-            "payload":{
-               "sample":{
-                  "d":{
-                     "orderId":1,
-                     "instrument":"AMZ",
-                     "quantity":1
-                  },
-                  "q":"v1/exchange.market/modifyOrder",
-                  "sid":1
-               }
-            }
-         },
-         {
-            "group":"Trading API",
-            "methodName":"placeOrder",
-            "payload":{
-               "sample":{
-                  "d":{
-                     "orderType":"Limit",
-                     "instrument":"AMZ",
-                     "side":"Buy",
-                     "quantity":1.3,
-                     "price":100.3,
-                     "timeInForce":"GTC",
-                     "brokerOrderId":10,
-                     "userId":"UserTest1"
-                  },
-                  "q":"exchange.market/placeOrder",
-                  "sid":1
-               },
-               "metadata":{
-                  "q":{
-                     "hidden":true,
-                     "readonly":true,
-                     "valueType":"text",
-                     "id":"q",
-                     "label":"q",
-                     "type":"input",
-                     "initialValue":"exchange.market/placeOrder",
-                     "required":true
-                  },
-                  "orderType":{
-                     "id":"orderType",
-                     "label":"orderType",
-                     "data":[
-                        "Market",
-                        "Limit"
-                     ],
-                     "type":"select",
-                     "initialValue":"Limit",
-                     "required":true
-                  },
-                  "instrument":{
-                     "id":"instrument",
-                     "label":"instrument",
-                     "data":[
-                        "AMZ"
-                     ],
-                     "type":"select",
-                     "required":true
-                  },
-                  "side":{
-                     "id":"side",
-                     "label":"side",
-                     "data":[
-                        "Buy",
-                        "Sell"
-                     ],
-                     "type":"select",
-                     "initialValue":"Buy",
-                     "required":true
-                  },
-                  "quantity":{
-                     "id":"quantity",
-                     "label":"quantity",
-                     "type":"input",
-                     "required":true,
-                     "initialValue":1.25,
-                     "valueType":"number"
-                  },
-                  "price":{
-                     "hidden":true,
-                     "dependency":{
-                        "override":{
-                           "hidden":false,
-                           "omitted":false,
-                           "required":true
-                        },
-                        "operator":"oneOf",
-                        "values":[
-                           "Limit"
-                        ],
-                        "fieldId":"orderType"
-                     },
-                     "valueType":"number",
-                     "omitted":true,
-                     "id":"price",
-                     "label":"price",
-                     "type":"input",
-                     "initialValue":100.5,
-                     "required":false
-                  },
-                  "timeInForce":{
-                     "id":"timeInForce",
-                     "label":"timeInForce",
-                     "data":[
-                        "GTC",
-                        "GTD",
-                        "IOC",
-                        "FOK"
-                     ],
-                     "type":"select",
-                     "initialValue":"GTC",
-                     "required":true
-                  },
-                  "expiryDate":{
-                     "hidden":true,
-                     "dependency":{
-                        "override":{
-                           "hidden":false,
-                           "omitted":false,
-                           "required":true
-                        },
-                        "operator":"oneOf",
-                        "values":[
-                           "GTD"
-                        ],
-                        "fieldId":"timeInForce"
-                     },
-                     "valueType":"number",
-                     "omitted":true,
-                     "id":"expiryDate",
-                     "label":"expiryDate",
-                     "type":"input",
-                     "initialValue":"__TIMESTAMP_SEC__",
-                     "required":false
-                  },
-                  "brokerOrderId":{
-                     "id":"brokerOrderId",
-                     "label":"brokerOrderId",
-                     "type":"input",
-                     "initialValue":"__TIMESTAMP__",
-                     "required":true,
-                     "valueType":"number"
-                  },
-                  "userId":{
-                     "id":"userId",
-                     "label":"userId",
-                     "type":"input",
-                     "initialValue":"UserTest1",
-                     "required":true,
-                     "valueType":"text"
-                  },
-                  "sid":{
-                     "id":"sid",
-                     "label":"sid",
-                     "type":"input",
-                     "initialValue":1,
-                     "required":true,
-                     "valueType":"number"
-                  }
-               },
-               "structure":{
-                  "d":[
-                     "orderType",
-                     "instrument",
-                     "side",
-                     "quantity",
-                     "price",
-                     "timeInForce",
-                     "expiryDate",
-                     "mpOrderId",
-                     "userId"
-                  ],
-                  "q":"q",
-                  "sid":"sid"
-               }
-            }
-         },
-         {
             "group":"Trading API",
             "methodName":"cancelOrder",
             "payload":{
                "sample":{
-                  "q":"exchange.market/cancelOrder",
+                  "q":"v1/exchange.market/cancelOrder",
                   "sid":1,
                   "d":{
                      "orderId":"",
@@ -1979,7 +1330,7 @@
             "methodName":"massCancel",
             "payload":{
                "sample":{
-                  "q":"exchange.market/massCancel",
+                  "q":"v1/exchange.market/massCancel",
                   "sid":1,
                   "d":{
                      "instrument":"AMZ"
@@ -1992,7 +1343,7 @@
             "methodName":"orderBookDepth",
             "payload":{
                "sample":{
-                  "q":"exchange.market/orderBookDepth",
+                  "q":"v1/exchange.market/orderBookDepth",
                   "sid":10,
                   "d":{
                      "trackingNumber":0
@@ -2005,16 +1356,57 @@
             "methodName":"orderBookState",
             "payload":{
                "sample":{
-                  "q":"exchange.market/orderBookState",
+                  "q":"v1/exchange.market/orderBookState",
                   "sid":100,
                   "d":{
                      
                   }
                }
             }
+         },
+         {
+            "group":"Trading API",
+            "methodName":"modifyOrder",
+            "payload":{
+               "sample":{
+                  "d":{
+                     "orderId":1,
+                     "instrument":"AMZ",
+                     "quantity":1
+                  },
+                  "q":"v1/exchange.market/modifyOrder",
+                  "sid":1
+               }
+            }
+         },
+         {
+            "group":"Private Data API",
+            "methodName":"massOrderStatus",
+            "payload":{
+               "sample":{
+                  "d":{
+                     
+                  },
+                  "q":"v1/exchange.market/massOrderStatus",
+                  "sid":102
+               }
+            }
+         },
+         {
+            "group":"Private Data API",
+            "methodName":"executionReports",
+            "payload":{
+               "sample":{
+                  "d":{
+                     
+                  },
+                  "q":"v1/exchange.market/executionReports",
+                  "sid":103
+               }
+            }
          }
       ],
-      "order":98
+      "order":129
    },
    "[custom]-new-env-10":{
       "url":"wss://exchange-gateway-master.exchange.rnd.exberry.io",
@@ -2056,7 +1448,7 @@
                      "id":"apiKey",
                      "label":"apiKey",
                      "valueType":"text",
-                     "initialValue":"a554a2a2-a024-4c11-bf4f-772c92be067d",
+                     "initialValue":"85d56082-6c7d-4d6e-83dc-64e6b8e7f917",
                      "required":true
                   },
                   "secret":{
@@ -2064,7 +1456,7 @@
                      "id":"secret",
                      "label":"secret",
                      "valueType":"text",
-                     "initialValue":"0ffffe139b307f7cfac6921fb5bf4e4e1c9cbf8a953fec0429aac8b489a0e320",
+                     "initialValue":"521e3ea25b6b9d6dc20c79623a6b0498f0e1ffbf73f2058063bd2a39e59a9fde",
                      "required":true
                   },
                   "timestamp":{
@@ -2096,8 +1488,8 @@
             }
          },
          {
-            "group":"Trading API -v1",
-            "methodName":"placeOrder-v1",
+            "group":"Trading API",
+            "methodName":"placeOrder",
             "payload":{
                "sample":{
                   "d":{
@@ -2263,272 +1655,11 @@
             }
          },
          {
-            "group":"Trading API -v1",
-            "methodName":"cancelOrder-v1",
-            "payload":{
-               "sample":{
-                  "q":"v1/exchange.market/cancelOrder",
-                  "sid":1,
-                  "d":{
-                     "orderId":"",
-                     "instrument":"AMZ"
-                  }
-               }
-            }
-         },
-         {
-            "group":"Market Data API -v1",
-            "methodName":"orderBookDepth-v1",
-            "payload":{
-               "sample":{
-                  "q":"v1/exchange.market/orderBookDepth",
-                  "sid":10,
-                  "d":{
-                     "trackingNumber":0
-                  }
-               }
-            }
-         },
-         {
-            "group":"Trading API",
-            "methodName":"massCancel",
-            "payload":{
-               "sample":{
-                  "q":"exchange.market/massCancel",
-                  "sid":1,
-                  "d":{
-                     "instrument":"AMZ"
-                  }
-               }
-            }
-         },
-         {
-            "group":"Market Data API",
-            "methodName":"orderBookState",
-            "payload":{
-               "sample":{
-                  "q":"exchange.market/orderBookState",
-                  "sid":100,
-                  "d":{
-                     
-                  }
-               }
-            }
-         },
-         {
-            "group":"Market Data API -v1",
-            "methodName":"orderBookState-v1",
-            "payload":{
-               "sample":{
-                  "q":"v1/exchange.market/orderBookState",
-                  "sid":100,
-                  "d":{
-                     
-                  }
-               }
-            }
-         },
-         {
-            "group":"Trading API -v1",
-            "methodName":"massCancel-v1",
-            "payload":{
-               "sample":{
-                  "q":"v1/exchange.market/massCancel",
-                  "sid":1,
-                  "d":{
-                     "instrument":"AMZ"
-                  }
-               }
-            }
-         },
-         {
-            "group":"Trading API -v1",
-            "methodName":"modifyOrder-v1",
-            "payload":{
-               "sample":{
-                  "d":{
-                     "orderId":1,
-                     "instrument":"AMZ",
-                     "quantity":1
-                  },
-                  "q":"v1/exchange.market/modifyOrder",
-                  "sid":1
-               }
-            }
-         },
-         {
-            "group":"Trading API",
-            "methodName":"placeOrder",
-            "payload":{
-               "sample":{
-                  "d":{
-                     "orderType":"Limit",
-                     "instrument":"AMZ",
-                     "side":"Buy",
-                     "quantity":1.3,
-                     "price":100.33,
-                     "timeInForce":"GTC",
-                     "brokerOrderId":1564403702076,
-                     "userId":"UserTest1"
-                  },
-                  "q":"exchange.market/placeOrder",
-                  "sid":1
-               },
-               "metadata":{
-                  "q":{
-                     "hidden":true,
-                     "readonly":true,
-                     "valueType":"text",
-                     "id":"q",
-                     "label":"q",
-                     "type":"input",
-                     "initialValue":"exchange.market/placeOrder",
-                     "required":true
-                  },
-                  "orderType":{
-                     "id":"orderType",
-                     "label":"orderType",
-                     "data":[
-                        "Market",
-                        "Limit"
-                     ],
-                     "type":"select",
-                     "initialValue":"Limit",
-                     "required":true
-                  },
-                  "instrument":{
-                     "id":"instrument",
-                     "label":"instrument",
-                     "data":[
-                        "AMZ"
-                     ],
-                     "type":"select",
-                     "required":true
-                  },
-                  "side":{
-                     "id":"side",
-                     "label":"side",
-                     "data":[
-                        "Buy",
-                        "Sell"
-                     ],
-                     "type":"select",
-                     "initialValue":"Buy",
-                     "required":true
-                  },
-                  "quantity":{
-                     "id":"quantity",
-                     "label":"quantity",
-                     "type":"input",
-                     "required":true,
-                     "initialValue":1.25,
-                     "valueType":"number"
-                  },
-                  "price":{
-                     "hidden":true,
-                     "dependency":{
-                        "override":{
-                           "hidden":false,
-                           "omitted":false,
-                           "required":true
-                        },
-                        "operator":"oneOf",
-                        "values":[
-                           "Limit"
-                        ],
-                        "fieldId":"orderType"
-                     },
-                     "valueType":"number",
-                     "omitted":true,
-                     "id":"price",
-                     "label":"price",
-                     "type":"input",
-                     "initialValue":100.5,
-                     "required":false
-                  },
-                  "timeInForce":{
-                     "id":"timeInForce",
-                     "label":"timeInForce",
-                     "data":[
-                        "GTC",
-                        "GTD",
-                        "IOC",
-                        "FOK"
-                     ],
-                     "type":"select",
-                     "initialValue":"GTC",
-                     "required":true
-                  },
-                  "expiryDate":{
-                     "hidden":true,
-                     "dependency":{
-                        "override":{
-                           "hidden":false,
-                           "omitted":false,
-                           "required":true
-                        },
-                        "operator":"oneOf",
-                        "values":[
-                           "GTD"
-                        ],
-                        "fieldId":"timeInForce"
-                     },
-                     "valueType":"number",
-                     "omitted":true,
-                     "id":"expiryDate",
-                     "label":"expiryDate",
-                     "type":"input",
-                     "initialValue":"__TIMESTAMP_SEC__",
-                     "required":false
-                  },
-                  "brokerOrderId":{
-                     "id":"brokerOrderId",
-                     "label":"brokerOrderId",
-                     "type":"input",
-                     "initialValue":"__TIMESTAMP__",
-                     "required":true,
-                     "valueType":"number"
-                  },
-                  "userId":{
-                     "id":"userId",
-                     "label":"userId",
-                     "type":"input",
-                     "initialValue":"UserTest1",
-                     "required":true,
-                     "valueType":"text"
-                  },
-                  "sid":{
-                     "id":"sid",
-                     "label":"sid",
-                     "type":"input",
-                     "initialValue":1,
-                     "required":true,
-                     "valueType":"number"
-                  }
-               },
-               "structure":{
-                  "d":[
-                     "orderType",
-                     "instrument",
-                     "side",
-                     "quantity",
-                     "price",
-                     "timeInForce",
-                     "expiryDate",
-                     "mpOrderId",
-                     "userId"
-                  ],
-                  "q":"q",
-                  "sid":"sid"
-               }
-            }
-         },
-         {
             "group":"Trading API",
             "methodName":"cancelOrder",
             "payload":{
                "sample":{
-                  "q":"exchange.market/cancelOrder",
+                  "q":"v1/exchange.market/cancelOrder",
                   "sid":1,
                   "d":{
                      "orderId":"",
@@ -2542,7 +1673,7 @@
             "methodName":"orderBookDepth",
             "payload":{
                "sample":{
-                  "q":"exchange.market/orderBookDepth",
+                  "q":"v1/exchange.market/orderBookDepth",
                   "sid":10,
                   "d":{
                      "trackingNumber":0
@@ -2551,21 +1682,49 @@
             }
          },
          {
-            "group":"Market Data API -v1",
-            "methodName":"executionReports-v1",
+            "group":"Market Data API",
+            "methodName":"orderBookState",
             "payload":{
                "sample":{
-                  "q":"v1/exchange.market/executionReports",
-                  "sid":12,
+                  "q":"v1/exchange.market/orderBookState",
+                  "sid":100,
                   "d":{
-                     "trackingNumber":0
+                     
                   }
                }
             }
          },
          {
-            "group":"Market Data API -v1",
-            "methodName":"massOrderStatus-v1",
+            "group":"Trading API",
+            "methodName":"massCancel",
+            "payload":{
+               "sample":{
+                  "q":"v1/exchange.market/massCancel",
+                  "sid":1,
+                  "d":{
+                     "instrument":"AMZ"
+                  }
+               }
+            }
+         },
+         {
+            "group":"Trading API",
+            "methodName":"modifyOrder",
+            "payload":{
+               "sample":{
+                  "d":{
+                     "orderId":1,
+                     "instrument":"AMZ",
+                     "quantity":1
+                  },
+                  "q":"v1/exchange.market/modifyOrder",
+                  "sid":1
+               }
+            }
+         },
+         {
+            "group":"Private Data API",
+            "methodName":"massOrderStatus",
             "payload":{
                "sample":{
                   "q":"v1/exchange.market/massOrderStatus",
@@ -2575,9 +1734,22 @@
                   }
                }
             }
+         },
+         {
+            "group":"Private Data API",
+            "methodName":"executionReports",
+            "payload":{
+               "sample":{
+                  "q":"v1/exchange.market/executionReports",
+                  "sid":12,
+                  "d":{
+                     "trackingNumber":0
+                  }
+               }
+            }
          }
       ],
-      "order":50
+      "order":65
    },
    "[custom]-new-env-11":{
       "url":"wss://exchange-gateway-release.exchange.rnd.exberry.io",
@@ -2619,7 +1791,7 @@
                      "id":"apiKey",
                      "label":"apiKey",
                      "valueType":"text",
-                     "initialValue":"a9cb07ae-b5d3-4765-b379-df95a75cc52a",
+                     "initialValue":"373fa4d0-8b0e-415a-953f-709a5b9c2cfb",
                      "required":true
                   },
                   "secret":{
@@ -2627,7 +1799,7 @@
                      "id":"secret",
                      "label":"secret",
                      "valueType":"text",
-                     "initialValue":"12dc50471d932a830b0c055f258882f80b263989f5d66dcb2c7dfec186e28b2e",
+                     "initialValue":"785da53ef65fda78e3703b4d3ddbf4a0c0539144abb9f06258d2f4cc598fbf44",
                      "required":true
                   },
                   "timestamp":{
@@ -2659,8 +1831,8 @@
             }
          },
          {
-            "group":"Trading API -v1",
-            "methodName":"placeOrder-v1",
+            "group":"Trading API",
+            "methodName":"placeOrder",
             "payload":{
                "sample":{
                   "d":{
@@ -2826,8 +1998,8 @@
             }
          },
          {
-            "group":"Trading API -v1",
-            "methodName":"cancelOrder-v1",
+            "group":"Trading API",
+            "methodName":"cancelOrder",
             "payload":{
                "sample":{
                   "q":"v1/exchange.market/cancelOrder",
@@ -2840,8 +2012,8 @@
             }
          },
          {
-            "group":"Trading API -v1",
-            "methodName":"massCancel-v1",
+            "group":"Trading API",
+            "methodName":"massCancel",
             "payload":{
                "sample":{
                   "q":"v1/exchange.market/massCancel",
@@ -2853,8 +2025,8 @@
             }
          },
          {
-            "group":"Market Data API -v1",
-            "methodName":"orderBookDepth-v1",
+            "group":"Market Data API",
+            "methodName":"orderBookDepth",
             "payload":{
                "sample":{
                   "q":"v1/exchange.market/orderBookDepth",
@@ -2866,8 +2038,8 @@
             }
          },
          {
-            "group":"Market Data API -v1",
-            "methodName":"orderBookState-v1",
+            "group":"Market Data API",
+            "methodName":"orderBookState",
             "payload":{
                "sample":{
                   "q":"v1/exchange.market/orderBookState",
@@ -2879,8 +2051,8 @@
             }
          },
          {
-            "group":"Trading API -v1",
-            "methodName":"modifyOrder-v1",
+            "group":"Trading API",
+            "methodName":"modifyOrder",
             "payload":{
                "sample":{
                   "d":{
@@ -2894,7 +2066,115 @@
             }
          },
          {
-            "group":"TRading API",
+            "group":"Private Data API",
+            "methodName":"executionReports",
+            "payload":{
+               "sample":{
+                  "d":{
+                     
+                  },
+                  "q":"v1/exchange.market/executionReports",
+                  "sid":103
+               }
+            }
+         },
+         {
+            "group":"Private Data API",
+            "methodName":"massOrderStatus",
+            "payload":{
+               "sample":{
+                  "d":{
+                     
+                  },
+                  "q":"v1/exchange.market/massOrderStatus",
+                  "sid":102
+               }
+            }
+         }
+      ],
+      "order":181
+   },
+   "[custom]-new-env-12":{
+      "url":"wss://sandbox-shared.staging.exberry-uat.io",
+      "provider":"websocket",
+      "methods":[
+         {
+            "group":"Authentication API",
+            "methodName":"createSession - Broker",
+            "payload":{
+               "sample":{
+                  "q":"exchange.market/createSession",
+                  "sid":1,
+                  "d":{
+                     "apiKey":"",
+                     "timestamp":"",
+                     "signature":""
+                  }
+               },
+               "metadata":{
+                  "q":{
+                     "type":"input",
+                     "id":"q",
+                     "label":"q",
+                     "valueType":"text",
+                     "initialValue":"exchange.market/createSession",
+                     "hidden":true,
+                     "required":true
+                  },
+                  "sid":{
+                     "type":"input",
+                     "id":"sid",
+                     "label":"sid",
+                     "valueType":"number",
+                     "initialValue":1,
+                     "required":true
+                  },
+                  "apiKey":{
+                     "type":"input",
+                     "id":"apiKey",
+                     "label":"apiKey",
+                     "valueType":"text",
+                     "initialValue":"afad761f-dc20-403b-9011-b34e9bd45807",
+                     "required":true
+                  },
+                  "secret":{
+                     "type":"input",
+                     "id":"secret",
+                     "label":"secret",
+                     "valueType":"text",
+                     "initialValue":"05248a767482fc0ae74f5c39e742e8ae2ae98766b784a7698ebd174cfb3db280",
+                     "required":true
+                  },
+                  "timestamp":{
+                     "type":"input",
+                     "id":"timestamp",
+                     "label":"timestamp",
+                     "valueType":"number",
+                     "initialValue":"__TIMESTAMP__",
+                     "required":true
+                  },
+                  "signature":{
+                     "type":"input",
+                     "id":"signature",
+                     "label":"signature",
+                     "valueType":"text",
+                     "hidden":true,
+                     "initialValue":"__SIGNATURE__"
+                  }
+               },
+               "structure":{
+                  "q":"q",
+                  "sid":"sid",
+                  "d":[
+                     "apiKey",
+                     "timestamp",
+                     "signature"
+                  ]
+               }
+            }
+         },
+         {
+            "group":"Trading API",
             "methodName":"placeOrder",
             "payload":{
                "sample":{
@@ -2905,10 +2185,10 @@
                      "quantity":1.3,
                      "price":100.33,
                      "timeInForce":"GTC",
-                     "brokerOrderId":30,
+                     "mpOrderId":1564403702076,
                      "userId":"UserTest1"
                   },
-                  "q":"exchange.market/placeOrder",
+                  "q":"v1/exchange.market/placeOrder",
                   "sid":1
                },
                "metadata":{
@@ -2919,7 +2199,7 @@
                      "id":"q",
                      "label":"q",
                      "type":"input",
-                     "initialValue":"exchange.market/placeOrder",
+                     "initialValue":"v1/exchange.market/placeOrder",
                      "required":true
                   },
                   "orderType":{
@@ -3018,9 +2298,9 @@
                      "initialValue":"__TIMESTAMP_SEC__",
                      "required":false
                   },
-                  "brokerOrderId":{
-                     "id":"brokerOrderId",
-                     "label":"brokerOrderId",
+                  "mpOrderId":{
+                     "id":"mpOrderId",
+                     "label":"mpOrderId",
                      "type":"input",
                      "initialValue":"__TIMESTAMP__",
                      "required":true,
@@ -3061,11 +2341,11 @@
             }
          },
          {
-            "group":"TRading API",
+            "group":"Trading API",
             "methodName":"cancelOrder",
             "payload":{
                "sample":{
-                  "q":"exchange.market/cancelOrder",
+                  "q":"v1/exchange.market/cancelOrder",
                   "sid":1,
                   "d":{
                      "orderId":"",
@@ -3075,19 +2355,60 @@
             }
          },
          {
-            "group":"TRading API",
+            "group":"Trading API",
             "methodName":"massCancel",
             "payload":{
                "sample":{
-                  "q":"exchange.market/massCancel",
+                  "q":"v1/exchange.market/massCancel",
                   "sid":1,
                   "d":{
                      "instrument":"AMZ"
                   }
                }
             }
+         },
+         {
+            "group":"Market Data API",
+            "methodName":"orderBookDepth",
+            "payload":{
+               "sample":{
+                  "q":"v1/exchange.market/orderBookDepth",
+                  "sid":10,
+                  "d":{
+                     "trackingNumber":0
+                  }
+               }
+            }
+         },
+         {
+            "group":"Market Data API",
+            "methodName":"orderBookState",
+            "payload":{
+               "sample":{
+                  "q":"v1/exchange.market/orderBookState",
+                  "sid":100,
+                  "d":{
+                     
+                  }
+               }
+            }
+         },
+         {
+            "group":"Trading API",
+            "methodName":"modifyOrder",
+            "payload":{
+               "sample":{
+                  "d":{
+                     "orderId":1,
+                     "instrument":"AMZ",
+                     "quantity":1
+                  },
+                  "q":"v1/exchange.market/modifyOrder",
+                  "sid":1
+               }
+            }
          }
       ],
-      "order":136
+      "order":268
    }
 }
